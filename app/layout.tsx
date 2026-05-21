@@ -19,10 +19,57 @@ const instrumentSerif = Instrument_Serif({
 })
 
 export const metadata: Metadata = {
-  title: "Brillance - Effortless Custom Contract Billing",
-  description:
-    "Streamline your billing process with seamless automation for every custom contract, tailored by Brillance.",
-    generator: 'v0.app'
+  title: {
+    default: "Sagent — Send faster. Close more.",
+    template: "%s | Sagent",
+  },
+  description: "Save your best messages once. Share them anywhere in under 10 seconds. Built for sellers, recruiters, and support agents who send the same messages every day.",
+  keywords: [
+    "message sharing app",
+    "sales messaging tool",
+    "WhatsApp sales tool",
+    "send messages faster",
+    "sales scripts app",
+    "text share platform",
+    "mobile sales tool",
+    "Sagent",
+  ],
+  authors: [{ name: "Nogeybix Labs" }],
+  creator: "Nogeybix Labs",
+  metadataBase: new URL("https://gosagent.com"),
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://gosagent.com",
+    siteName: "Sagent",
+    title: "Sagent — Send faster. Close more.",
+    description: "Save your best messages once. Share them anywhere in under 10 seconds.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Sagent — Send faster. Close more.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sagent — Send faster. Close more.",
+    description: "Save your best messages once. Share them anywhere in under 10 seconds.",
+    images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 }
 
 export default function RootLayout({

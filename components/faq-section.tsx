@@ -9,34 +9,31 @@ interface FAQItem {
 
 const faqData: FAQItem[] = [
   {
-    question: "What is Brillance and who is it for?",
+    question: "Is Sagent free?",
     answer:
-      "Brillance is a comprehensive billing automation platform designed for businesses that need custom contract management. It's perfect for SaaS companies, service providers, and enterprises looking to streamline their billing processes.",
+      "Yes. Sagent is free to download with 25 sends per month included. Upgrade to Pro Closer for unlimited sends and no watermark.",
   },
   {
-    question: "How does the custom contract billing work?",
+    question: "Do I need to create an account?",
     answer:
-      "Our platform automatically processes your custom contracts, calculates billing amounts based on your specific terms, and generates invoices. You can set up complex pricing structures, usage-based billing, and custom billing cycles.",
+      "No. Sagent works entirely offline. Your messages are stored locally on your device. No sign-in required.",
   },
   {
-    question: "Can I integrate Brillance with my existing tools?",
+    question: "Which apps can I send to?",
     answer:
-      "Yes! Brillance integrates seamlessly with popular CRM systems, accounting software, and payment processors. We support APIs and webhooks for custom integrations with your existing workflow.",
+      "Any app on your phone that accepts shared text - WhatsApp, Gmail, Telegram, SMS, LinkedIn, and more.",
   },
   {
-    question: "What kind of support do you provide?",
-    answer:
-      "We offer 24/7 customer support, dedicated account managers for enterprise clients, comprehensive documentation, and onboarding assistance to help you get started quickly.",
+    question: "What is the watermark?",
+    answer: "Free plan messages include 'Sent via Sagent' at the end. Upgrade to Pro Closer to remove it.",
   },
   {
-    question: "Is my data secure with Brillance?",
-    answer:
-      "Absolutely. We use enterprise-grade security measures including end-to-end encryption, SOC 2 compliance, and regular security audits. Your data is stored in secure, redundant data centers.",
+    question: "Is my data private?",
+    answer: "Yes. All your messages are stored locally on your device only. Nothing is uploaded to any server.",
   },
   {
-    question: "How do I get started with Brillance?",
-    answer:
-      "Getting started is simple! Sign up for our free trial, connect your existing systems, and our onboarding team will help you set up your first custom billing workflow within 24 hours.",
+    question: "Is there an iOS version?",
+    answer: "Android is available now. iOS is coming soon. Join the waitlist to be notified.",
   },
 ]
 
@@ -68,12 +65,10 @@ export default function FAQSection() {
         {/* Left Column - Header */}
         <div className="w-full lg:flex-1 flex flex-col justify-center items-start gap-4 lg:py-5">
           <div className="w-full flex flex-col justify-center text-[#49423D] font-semibold leading-tight md:leading-[44px] font-sans text-4xl tracking-tight">
-            Frequently Asked Questions
+            Common questions
           </div>
           <div className="w-full text-[#605A57] text-base font-normal leading-7 font-sans">
-            Explore your data, build your dashboard,
-            <br className="hidden md:block" />
-            bring your team together.
+            Got questions about Sagent? We have got answers.
           </div>
         </div>
 
