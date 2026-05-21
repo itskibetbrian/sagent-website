@@ -1,4 +1,10 @@
+import type { Metadata } from "next"
 import { LegalPage, MarketingPageShell } from "@/components/sagent-marketing-sections"
+import { createPageMetadata, seoRoutes } from "@/lib/seo"
+
+const route = seoRoutes.find((item) => item.path === "/terms")!
+
+export const metadata: Metadata = createPageMetadata(route)
 
 const sections = [
   {

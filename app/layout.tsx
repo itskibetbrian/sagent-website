@@ -1,6 +1,7 @@
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Inter, Instrument_Serif } from "next/font/google"
+import { defaultDescription, iconPath, ogImage, ogImagePath, siteName, siteUrl, themeColor } from "@/lib/seo"
 import "./globals.css"
 
 const inter = Inter({
@@ -19,11 +20,13 @@ const instrumentSerif = Instrument_Serif({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  applicationName: siteName,
   title: {
     default: "Sagent — Send faster. Close more.",
     template: "%s | Sagent",
   },
-  description: "Save your best messages once. Share them anywhere in under 10 seconds. Built for sellers, recruiters, and support agents who send the same messages every day.",
+  description: defaultDescription,
   keywords: [
     "message sharing app",
     "sales messaging tool",
@@ -36,19 +39,24 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Nogeybix Labs" }],
   creator: "Nogeybix Labs",
-  metadataBase: new URL("https://gosagent.com"),
+  publisher: "Nogeybix Labs",
+  category: "productivity",
+  referrer: "origin-when-cross-origin",
+  icons: {
+    icon: [{ url: iconPath, type: "image/png" }],
+    shortcut: [iconPath],
+    apple: [{ url: iconPath, type: "image/png" }],
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://gosagent.com",
-    siteName: "Sagent",
+    url: siteUrl,
+    siteName,
     title: "Sagent — Send faster. Close more.",
-    description: "Save your best messages once. Share them anywhere in under 10 seconds.",
+    description: defaultDescription,
     images: [
       {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
+        ...ogImage,
         alt: "Sagent — Send faster. Close more.",
       },
     ],
@@ -56,8 +64,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Sagent — Send faster. Close more.",
-    description: "Save your best messages once. Share them anywhere in under 10 seconds.",
-    images: ["/og-image.png"],
+    description: defaultDescription,
+    images: [ogImagePath],
   },
   robots: {
     index: true,
@@ -70,6 +78,10 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+}
+
+export const viewport: Viewport = {
+  themeColor,
 }
 
 export default function RootLayout({

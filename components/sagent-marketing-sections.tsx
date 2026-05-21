@@ -142,7 +142,7 @@ function PhonePlaceholder({ caption }: { caption?: string }) {
   return (
     <div className="w-[180px] sm:w-[210px] shrink-0 flex flex-col justify-start items-center gap-4">
       <div className="w-full h-[360px] sm:h-[420px] p-2 bg-[#37322F] shadow-[0px_2px_4px_rgba(55,50,47,0.12)] overflow-hidden rounded-[28px]">
-        <div className="w-full h-full rounded-[22px] border border-[rgba(255,255,255,0.14)] bg-[#F7F5F3] flex justify-center items-center">
+        <div className="w-full h-full rounded-[22px] border border-[rgba(255,255,255,0.14)] bg-[#EDE9F6] flex justify-center items-center">
           <div className="w-16 h-1.5 absolute mt-[-360px] bg-[rgba(255,255,255,0.28)] rounded-full" />
           <div className="text-[#605A57] text-sm font-medium leading-5 font-sans">Phone frame</div>
         </div>
@@ -171,7 +171,7 @@ function SectionHeader({ title, subtitle }: { title: string; subtitle?: string }
 
 export function MarketingPageShell({ children }: { children: React.ReactNode }) {
   return (
-    <div className="w-full min-h-screen relative bg-[#F7F5F3] overflow-x-hidden flex flex-col justify-start items-center">
+    <div className="w-full min-h-screen relative bg-[#EDE9F6] overflow-x-hidden flex flex-col justify-start items-center">
       <Header />
       <main className="w-full max-w-none px-4 sm:px-6 md:px-8 lg:px-0 lg:max-w-[1060px] lg:w-[1060px] relative flex flex-col justify-start items-start border-l border-r border-[rgba(55,50,47,0.12)]">
         {children}
