@@ -268,10 +268,10 @@ export default function LandingPage() {
                   <div className="border-b border-r-0 md:border-r border-[rgba(55,50,47,0.12)] p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-start items-start gap-4 sm:gap-6">
                     <div className="flex flex-col gap-2">
                       <h3 className="text-[#37322F] text-lg sm:text-xl font-semibold leading-tight font-sans">
-                        Smart. Simple. Brilliant.
+                        Save. Organize. Send.
                       </h3>
                       <p className="text-[#605A57] text-sm md:text-base font-normal leading-relaxed font-sans">
-                        Your data is beautifully organized so you see everything clearly without the clutter.
+                        Keep your messages in smart folders so you can find and reuse them instantly every time.
                       </p>
                     </div>
                     <div className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-lg flex items-center justify-center overflow-hidden">
@@ -288,10 +288,10 @@ export default function LandingPage() {
                   <div className="border-b border-[rgba(55,50,47,0.12)] p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-start items-start gap-4 sm:gap-6">
                     <div className="flex flex-col gap-2">
                       <h3 className="text-[#37322F] font-semibold leading-tight font-sans text-lg sm:text-xl">
-                        Your work, in sync
+                        Message faster than ever
                       </h3>
                       <p className="text-[#605A57] text-sm md:text-base font-normal leading-relaxed font-sans">
-                        Every update flows instantly across your team and keeps collaboration effortless and fast.
+                        Send personalized messages to your network instantly without repetitive typing or manual work.
                       </p>
                     </div>
                     <div className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-lg flex overflow-hidden text-right items-center justify-center">
@@ -308,10 +308,10 @@ export default function LandingPage() {
                   <div className="border-r-0 md:border-r border-[rgba(55,50,47,0.12)] p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-start items-start gap-4 sm:gap-6 bg-transparent">
                     <div className="flex flex-col gap-2">
                       <h3 className="text-[#37322F] text-lg sm:text-xl font-semibold leading-tight font-sans">
-                        Effortless integration
+                        Works everywhere you do
                       </h3>
                       <p className="text-[#605A57] text-sm md:text-base font-normal leading-relaxed font-sans">
-                        All your favorite tools connect in one place and work together seamlessly by design.
+                        Use Sagent on any messaging platform - LinkedIn, email, SMS, WhatsApp, and more.
                       </p>
                     </div>
                     <div className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-lg flex overflow-hidden justify-center items-center relative bg-transparent">
@@ -327,10 +327,10 @@ export default function LandingPage() {
                   <div className="p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-start items-start gap-4 sm:gap-6">
                     <div className="flex flex-col gap-2">
                       <h3 className="text-[#37322F] text-lg sm:text-xl font-semibold leading-tight font-sans">
-                        Numbers that speak
+                        10x your productivity
                       </h3>
                       <p className="text-[#605A57] text-sm md:text-base font-normal leading-relaxed font-sans">
-                        Track growth with precision and turn raw data into confident decisions you can trust.
+                        Save hours every week by sending more messages faster with templates and smart organization.
                       </p>
                     </div>
                     <div className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-lg flex overflow-hidden items-center justify-center relative">
