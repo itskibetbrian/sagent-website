@@ -359,10 +359,10 @@ export function HowItWorksSteps() {
 }
 
 export function SagentFAQ() {
-  const [openItems, setOpenItems] = useState<number[]>([])
+  const [openItem, setOpenItem] = useState<number>(0)
 
   const toggleItem = (index: number) => {
-    setOpenItems((prev) => (prev.includes(index) ? prev.filter((item) => item !== index) : [...prev, index]))
+    setOpenItem(openItem === index ? -1 : index)
   }
 
   return (
@@ -376,7 +376,7 @@ export function SagentFAQ() {
         <div className="w-full lg:flex-1 flex flex-col justify-center items-center">
           <div className="w-full flex flex-col">
             {faqItems.map((item, index) => {
-              const isOpen = openItems.includes(index)
+              const isOpen = openItem === index
 
               return (
                 <div key={item.question} className="w-full border-b border-[rgba(73,66,61,0.16)] overflow-hidden">
