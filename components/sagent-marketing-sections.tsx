@@ -13,7 +13,7 @@ const faqItems = [
   {
     question: "Is Sagent free?",
     answer:
-      "Yes. Sagent is free to download with 25 sends per month included. Upgrade to Pro Closer for unlimited sends and no watermark.",
+      "Yes. Sagent is free to download with 50 sends per month included. Upgrade to Pro Closer for unlimited sends and no watermark.",
   },
   {
     question: "Do I need to create an account?",
@@ -88,7 +88,7 @@ const pricingCards = [
     price: "$0",
     subline: "Forever free",
     features: [
-      "25 sends per month",
+      "50 sends per month",
       "Unlimited saved messages",
       "Unlimited folders",
       "All message types",

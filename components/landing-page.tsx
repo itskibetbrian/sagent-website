@@ -11,10 +11,9 @@ import NumbersThatSpeak from "@/components/numbers-that-speak"
 import DocumentationSection from "@/components/documentation-section"
 import TestimonialsSection from "@/components/testimonials-section"
 import FAQSection from "@/components/faq-section"
-import PricingSection from "@/components/pricing-section"
 import CTASection from "@/components/cta-section"
 import FooterSection from "@/components/footer-section"
-import { SagentHomeSections } from "@/components/sagent-marketing-sections"
+import { SagentHomeSections, SagentPricing } from "@/components/sagent-marketing-sections"
 
 // Reusable Badge Component
 function Badge({ icon, text }: { icon: React.ReactNode; text: string }) {
@@ -540,7 +539,7 @@ export default function LandingPage() {
               <TestimonialsSection />
 
               {/* Pricing Section */}
-              <PricingSection />
+              <SagentPricing />
 
               {/* FAQ Section */}
               <FAQSection />
