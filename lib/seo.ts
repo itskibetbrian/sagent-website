@@ -4,7 +4,7 @@ export const siteUrl = "https://gosagent.com"
 export const siteName = "Sagent"
 export const themeColor = "#EDE9F6"
 export const defaultDescription =
-  "Save your best messages once. Share them anywhere in under 10 seconds. Built for sellers, recruiters, and support agents who send the same messages every day."
+  "Sagent: Save your best messages once and send them anywhere in under 10 seconds. The fast messaging app for sales reps, recruiters, and support agents."
 export const iconPath = "/icon.png"
 export const ogImagePath = "/analytics-dashboard.png"
 export const ogImage = {
@@ -23,32 +23,32 @@ export const seoRoutes = [
   },
   {
     path: "/how-it-works",
-    title: "How Sagent Works",
-    description: "Set up Sagent in 60 seconds, save reusable messages, and send polished replies anywhere from your phone.",
+    title: "How Sagent Works | Save & Send Messages Fast",
+    description: "Learn how Sagent works: Save messages in templates, organize them in folders, and send personalized replies instantly from any device.",
     priority: 0.9,
   },
   {
     path: "/pricing",
-    title: "Sagent Pricing",
-    description: "Simple Sagent pricing for individuals and teams who want to save messages once and send them faster.",
+    title: "Sagent Pricing Plans | Free & Pro Options",
+    description: "Choose Sagent's flexible pricing: Free with 50 monthly sends or Pro Closer with unlimited sends. No credit card required.",
     priority: 0.8,
   },
   {
     path: "/contact",
-    title: "Contact Sagent",
-    description: "Contact the Sagent team for support, product questions, partnerships, and feedback.",
+    title: "Contact Sagent | Get Support & Feedback",
+    description: "Contact Sagent for customer support, product inquiries, partnerships, and feature requests.",
     priority: 0.7,
   },
   {
     path: "/privacy",
-    title: "Sagent Privacy Policy",
-    description: "Read how Sagent handles privacy, local message storage, third-party services, and support requests.",
+    title: "Sagent Privacy Policy | Your Data Protection",
+    description: "Sagent's privacy policy: Learn how we protect your messages, handle local storage, and manage third-party integrations securely.",
     priority: 0.4,
   },
   {
     path: "/terms",
-    title: "Sagent Terms & Conditions",
-    description: "Review the terms and conditions for using Sagent and Sagent Inc. services.",
+    title: "Sagent Terms & Conditions | Legal Agreement",
+    description: "Review Sagent's terms and conditions, usage guidelines, and legal agreement for using our messaging platform.",
     priority: 0.4,
   },
 ] as const
