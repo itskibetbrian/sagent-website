@@ -78,6 +78,12 @@ export default function FooterSection() {
               >
                 Pricing
               </Link>
+              <div className="text-[#49423D] text-sm font-normal leading-5 font-sans hover:text-[#37322F] transition-colors cursor-pointer">
+                Features
+              </div>
+              <div className="text-[#49423D] text-sm font-normal leading-5 font-sans hover:text-[#37322F] transition-colors cursor-pointer">
+                Security
+              </div>
             </div>
           </div>
 
@@ -88,12 +94,18 @@ export default function FooterSection() {
               <div className="text-[#49423D] text-sm font-normal leading-5 font-sans hover:text-[#37322F] transition-colors cursor-pointer">
                 About us
               </div>
+              <div className="text-[#49423D] text-sm font-normal leading-5 font-sans hover:text-[#37322F] transition-colors cursor-pointer">
+                Careers
+              </div>
               <Link
                 href="/contact"
                 className="text-[#49423D] text-sm font-normal leading-5 font-sans hover:text-[#37322F] transition-colors"
               >
                 Contact
               </Link>
+              <div className="text-[#49423D] text-sm font-normal leading-5 font-sans hover:text-[#37322F] transition-colors cursor-pointer">
+                Team
+              </div>
             </div>
           </div>
 
