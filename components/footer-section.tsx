@@ -5,8 +5,9 @@ export default function FooterSection() {
   return (
     <div className="w-full pt-10 flex flex-col justify-start items-start">
       {/* Main Footer Content */}
-      <div className="self-stretch h-auto flex flex-col md:flex-row justify-between items-stretch pr-0 pb-8 pt-0">
-        <div className="h-auto p-4 md:p-8 flex flex-col justify-start items-start gap-8">
+      <div className="self-stretch h-auto flex flex-col lg:flex-row justify-between items-stretch pr-0 pb-8 pt-0 gap-8 lg:gap-0">
+        {/* Left Section - Brand & Social */}
+        <div className="h-auto px-4 md:px-8 flex flex-col justify-start items-start gap-8">
           {/* Brand Section */}
           <div className="self-stretch flex justify-start items-center gap-3">
             <BrandMark />
@@ -59,55 +60,37 @@ export default function FooterSection() {
           </div>
         </div>
 
-        {/* Navigation Links */}
-        <div className="self-stretch p-4 md:p-8 flex flex-col sm:flex-row flex-wrap justify-start sm:justify-between items-start gap-6 md:gap-8">
+        {/* Right Section - Navigation Links */}
+        <div className="px-4 md:px-8 w-full lg:w-auto flex flex-col sm:flex-row flex-wrap justify-start sm:justify-end items-start gap-6 md:gap-8 lg:gap-12">
           {/* Product Column */}
-          <div className="flex flex-col justify-start items-start gap-3 flex-1 min-w-[120px]">
-            <div className="text-[rgba(73,66,61,0.50)] text-sm font-medium leading-5 font-sans">Product</div>
-            <div className="flex flex-col justify-center items-center gap-2">
+          <div className="flex flex-col justify-start items-start gap-3 min-w-[120px]">
+            <div className="text-[rgba(73,66,61,0.50)] text-xs md:text-sm font-medium leading-5 font-sans uppercase tracking-wide">Product</div>
+            <div className="flex flex-col justify-start items-start gap-3">
               <Link
                 href="/how-it-works"
-                className="self-stretch text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors"
+                className="text-[#49423D] text-sm font-normal leading-5 font-sans hover:text-[#37322F] transition-colors"
               >
                 How it works
               </Link>
               <Link
                 href="/pricing"
-                className="self-stretch text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors"
+                className="text-[#49423D] text-sm font-normal leading-5 font-sans hover:text-[#37322F] transition-colors"
               >
                 Pricing
-              </Link>
-              <Link
-                href="/blog"
-                className="self-stretch text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors"
-              >
-                Blog
-              </Link>
-              <Link
-                href="/help"
-                className="self-stretch text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors"
-              >
-                Help Center
               </Link>
             </div>
           </div>
 
           {/* Company Column */}
-          <div className="flex flex-col justify-start items-start gap-3 flex-1 min-w-[120px]">
-            <div className="text-[rgba(73,66,61,0.50)] text-sm font-medium leading-5 font-sans">Company</div>
-            <div className="flex flex-col justify-center items-center gap-2">
-              <div className="text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors">
+          <div className="flex flex-col justify-start items-start gap-3 min-w-[120px]">
+            <div className="text-[rgba(73,66,61,0.50)] text-xs md:text-sm font-medium leading-5 font-sans uppercase tracking-wide">Company</div>
+            <div className="flex flex-col justify-start items-start gap-3">
+              <div className="text-[#49423D] text-sm font-normal leading-5 font-sans hover:text-[#37322F] transition-colors cursor-pointer">
                 About us
-              </div>
-              <div className="text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors">
-                Our team
-              </div>
-              <div className="text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors">
-                Careers
               </div>
               <Link
                 href="/contact"
-                className="self-stretch text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors"
+                className="text-[#49423D] text-sm font-normal leading-5 font-sans hover:text-[#37322F] transition-colors"
               >
                 Contact
               </Link>
@@ -115,30 +98,30 @@ export default function FooterSection() {
           </div>
 
           {/* Resources Column */}
-          <div className="flex flex-col justify-start items-start gap-3 flex-1 min-w-[120px]">
-            <div className="text-[rgba(73,66,61,0.50)] text-sm font-medium leading-5 font-sans">Resources</div>
-            <div className="flex flex-col justify-center items-center gap-2">
+          <div className="flex flex-col justify-start items-start gap-3 min-w-[120px]">
+            <div className="text-[rgba(73,66,61,0.50)] text-xs md:text-sm font-medium leading-5 font-sans uppercase tracking-wide">Resources</div>
+            <div className="flex flex-col justify-start items-start gap-3">
               <Link
                 href="/blog"
-                className="self-stretch text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors"
+                className="text-[#49423D] text-sm font-normal leading-5 font-sans hover:text-[#37322F] transition-colors"
               >
                 Blog
               </Link>
               <Link
                 href="/help"
-                className="self-stretch text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors"
+                className="text-[#49423D] text-sm font-normal leading-5 font-sans hover:text-[#37322F] transition-colors"
               >
                 Help Center
               </Link>
               <Link
                 href="/terms"
-                className="self-stretch text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors"
+                className="text-[#49423D] text-sm font-normal leading-5 font-sans hover:text-[#37322F] transition-colors"
               >
                 Terms
               </Link>
               <Link
                 href="/privacy"
-                className="self-stretch text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors"
+                className="text-[#49423D] text-sm font-normal leading-5 font-sans hover:text-[#37322F] transition-colors"
               >
                 Privacy
               </Link>
@@ -147,11 +130,12 @@ export default function FooterSection() {
         </div>
       </div>
 
-      <div className="self-stretch px-4 md:px-8 py-4 border-t border-[rgba(55,50,47,0.12)] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-        <div className="text-[#605A57] text-sm font-normal leading-5 font-sans">
+      {/* Bottom Copyright Section */}
+      <div className="self-stretch px-4 md:px-8 py-4 border-t border-[rgba(55,50,47,0.12)] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-2">
+        <div className="text-[#605A57] text-xs md:text-sm font-normal leading-5 font-sans">
           © 2026 Sagent Inc. All rights reserved.
         </div>
-        <div className="text-[#605A57] text-sm font-medium leading-5 font-sans">Made for closers worldwide</div>
+        <div className="text-[#605A57] text-xs md:text-sm font-medium leading-5 font-sans">Made for closers worldwide</div>
       </div>
 
       {/* Bottom Section with Pattern */}
