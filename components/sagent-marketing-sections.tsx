@@ -281,7 +281,9 @@ export function SagentHomeSections() {
             </div>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-3">
               <Link
-                href="#playstore"
+                href="https://play.google.com/store/apps/details?id=com.sagent.app"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="h-10 px-8 py-[6px] relative bg-[#37322F] shadow-[0px_0px_0px_2.5px_rgba(255,255,255,0.08)_inset] overflow-hidden rounded-full flex justify-center items-center"
               >
                 <span className="flex flex-col justify-center text-white text-[13px] font-medium leading-5 font-sans">
@@ -289,7 +291,9 @@ export function SagentHomeSections() {
                 </span>
               </Link>
               <Link
-                href="#appstore"
+                href="https://apps.apple.com/app/sagent/id1234567890"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="h-10 px-8 py-[6px] bg-white shadow-[0px_1px_2px_rgba(55,50,47,0.12)] overflow-hidden rounded-full flex justify-center items-center"
               >
                 <span className="flex flex-col justify-center text-[#37322F] text-[13px] font-medium leading-5 font-sans">
@@ -528,10 +532,11 @@ export function ContactPageContent() {
           ))}
         </div>
         <div className="self-stretch px-6 md:px-12 py-12 flex justify-center">
-          <form className="w-full max-w-[586px] flex flex-col gap-4">
-            <Input placeholder="Name" aria-label="Name" className="bg-white border-[#E0DEDB]" />
-            <Input placeholder="Email" aria-label="Email" type="email" className="bg-white border-[#E0DEDB]" />
-            <Textarea placeholder="Message" aria-label="Message" className="min-h-36 bg-white border-[#E0DEDB]" />
+          <form className="w-full max-w-[586px] flex flex-col gap-4" action="/api/contact" method="POST">
+            <Input placeholder="Name" name="name" aria-label="Name" className="bg-white border-[#E0DEDB]" required />
+            <Input placeholder="Email" name="email" aria-label="Email" type="email" className="bg-white border-[#E0DEDB]" required />
+            <Input placeholder="Subject" name="subject" aria-label="Subject" className="bg-white border-[#E0DEDB]" required />
+            <Textarea placeholder="Message" name="message" aria-label="Message" className="min-h-36 bg-white border-[#E0DEDB]" required />
             <Button type="submit" className="self-start bg-[#37322F] hover:bg-[#2A2520] text-white rounded-full px-8">
               Send message
             </Button>

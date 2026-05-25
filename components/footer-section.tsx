@@ -1,9 +1,58 @@
 import { BrandMark } from "@/components/brand-mark"
 import Link from "next/link"
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
 
 export default function FooterSection() {
   return (
     <div className="w-full pt-10 flex flex-col justify-start items-start">
+      {/* Newsletter Signup */}
+      <div className="w-full px-4 md:px-8 lg:px-12 py-8 md:py-12 border-b border-[rgba(55,50,47,0.12)]">
+        <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+          <div className="flex-1">
+            <h3 className="text-[#37322F] text-xl font-semibold leading-tight font-sans mb-2">
+              Stay in the loop
+            </h3>
+            <p className="text-[#605A57] text-sm font-normal leading-6 font-sans">
+              Get tips, updates, and new features delivered to your inbox.
+            </p>
+          </div>
+          <form action="/api/newsletter" method="POST" className="flex-1 md:flex-none w-full md:w-auto flex gap-2">
+            <Input
+              type="email"
+              name="email"
+              placeholder="your@email.com"
+              className="flex-1 bg-white border-[#E0DEDB]"
+              required
+            />
+            <Button type="submit" className="bg-[#37322F] hover:bg-[#2A2520] text-white px-6">
+              Subscribe
+            </Button>
+          </form>
+        </div>
+      </div>
+
+      {/* Trust Signals */}
+      <div className="w-full px-4 md:px-8 lg:px-12 py-8 md:py-12 border-b border-[rgba(55,50,47,0.12)] bg-[rgba(237,233,246,0.5)]">
+        <div className="max-w-[1200px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          <div className="flex flex-col justify-start items-start gap-2">
+            <div className="text-[#37322F] text-lg md:text-2xl font-bold font-sans">50K+</div>
+            <div className="text-[#605A57] text-sm font-normal leading-6 font-sans">Downloads</div>
+          </div>
+          <div className="flex flex-col justify-start items-start gap-2">
+            <div className="text-[#37322F] text-lg md:text-2xl font-bold font-sans">4.8★</div>
+            <div className="text-[#605A57] text-sm font-normal leading-6 font-sans">App Store Rating</div>
+          </div>
+          <div className="flex flex-col justify-start items-start gap-2">
+            <div className="text-[#37322F] text-lg md:text-2xl font-bold font-sans">100%</div>
+            <div className="text-[#605A57] text-sm font-normal leading-6 font-sans">Offline Secure</div>
+          </div>
+          <div className="flex flex-col justify-start items-start gap-2">
+            <div className="text-[#37322F] text-lg md:text-2xl font-bold font-sans">24h</div>
+            <div className="text-[#605A57] text-sm font-normal leading-6 font-sans">Support Response</div>
+          </div>
+        </div>
+      </div>
       {/* Main Footer Content */}
       <div className="self-stretch h-auto flex flex-col md:flex-row justify-between items-stretch pr-0 pb-8 pt-0">
         <div className="h-auto p-4 md:p-8 flex flex-col justify-start items-start gap-8">
@@ -123,6 +172,18 @@ export default function FooterSection() {
             <div className="text-[rgba(73,66,61,0.50)] text-sm font-medium leading-5 font-sans">Resources</div>
             <div className="flex flex-col justify-center items-center gap-2">
               <Link
+                href="/blog"
+                className="self-stretch text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors"
+              >
+                Blog
+              </Link>
+              <Link
+                href="/help"
+                className="self-stretch text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors"
+              >
+                Help Center
+              </Link>
+              <Link
                 href="/terms"
                 className="self-stretch text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors"
               >
@@ -134,18 +195,6 @@ export default function FooterSection() {
               >
                 Privacy
               </Link>
-              <div className="self-stretch text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors">
-                API Reference
-              </div>
-              <div className="self-stretch text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors">
-                Documentation
-              </div>
-              <div className="self-stretch text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors">
-                Community
-              </div>
-              <div className="self-stretch text-[#49423D] text-sm font-normal leading-5 font-sans cursor-pointer hover:text-[#37322F] transition-colors">
-                Support
-              </div>
             </div>
           </div>
         </div>

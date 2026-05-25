@@ -4,7 +4,7 @@ export const siteUrl = "https://gosagent.com"
 export const siteName = "Sagent"
 export const themeColor = "#EDE9F6"
 export const defaultDescription =
-  "Sagent: Save your best messages once and send them anywhere in under 10 seconds. The fast messaging app for sales reps, recruiters, and support agents."
+  "Save your best messages once. Share them anywhere in under 10 seconds. Built for sellers, recruiters, and support agents who send the same messages every day."
 export const iconPath = "/icon.png"
 export const ogImagePath = "/analytics-dashboard.png"
 export const ogImage = {
@@ -31,6 +31,18 @@ export const seoRoutes = [
     path: "/pricing",
     title: "Sagent Pricing Plans | Free & Pro Options",
     description: "Choose Sagent's flexible pricing: Free with 50 monthly sends or Pro Closer with unlimited sends. No credit card required.",
+    priority: 0.8,
+  },
+  {
+    path: "/blog",
+    title: "Sagent Blog | Sales & Recruiting Tips",
+    description: "Read articles about sales messaging, recruiting strategies, and productivity tips from the Sagent blog.",
+    priority: 0.8,
+  },
+  {
+    path: "/help",
+    title: "Sagent Help Center | Getting Started & FAQ",
+    description: "Find answers to common questions about using Sagent. Learn how to create templates, send messages, and more.",
     priority: 0.8,
   },
   {
