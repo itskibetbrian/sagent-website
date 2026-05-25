@@ -5,7 +5,7 @@ export const siteName = "Sagent"
 export const themeColor = "#EDE9F6"
 export const defaultDescription =
   "Save your best messages once. Share them anywhere in under 10 seconds. Built for sellers, recruiters, and support agents who send the same messages every day."
-export const iconPath = "/assets/icon.png"
+export const iconPath = "/icon.png"
 export const ogImagePath = "/analytics-dashboard.png"
 export const ogImage = {
   url: ogImagePath,

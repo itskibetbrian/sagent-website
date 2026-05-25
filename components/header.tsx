@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import Image from "next/image"
 
 export function Header() {
   return (
@@ -7,8 +8,8 @@ export function Header() {
       <div className="max-w-[1060px] mx-auto px-4">
         <nav className="flex items-center justify-between py-4">
           <div className="flex items-center space-x-8">
-            <Link href="/" className="text-[#37322f] font-semibold text-lg">
-              Sagent
+            <Link href="/" className="flex items-center">
+              <Image src="/icon.png" alt="Sagent" width={32} height={32} />
             </Link>
             <div className="hidden md:flex items-center space-x-6">
               <Link href="/how-it-works" className="text-[#37322f] hover:text-[#37322f]/80 text-sm font-medium">
