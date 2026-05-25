@@ -149,7 +149,7 @@ export default function FooterSection() {
 
       <div className="self-stretch px-4 md:px-8 py-4 border-t border-[rgba(55,50,47,0.12)] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
         <div className="text-[#605A57] text-sm font-normal leading-5 font-sans">
-          © 2025 Nogeybix Labs. All rights reserved.
+          © 2026 Sagent Inc. All rights reserved.
         </div>
         <div className="text-[#605A57] text-sm font-medium leading-5 font-sans">Made for closers worldwide</div>
       </div>
