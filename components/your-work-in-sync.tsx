@@ -130,7 +130,7 @@ const YourWorkInSync: React.FC<YourWorkInSyncProps> = ({
                   whiteSpace: "nowrap",
                 }}
               >
-                Team updates flow seamlessly
+                Check out this template
               </span>
             </div>
           </div>
@@ -170,7 +170,7 @@ const YourWorkInSync: React.FC<YourWorkInSyncProps> = ({
                   whiteSpace: "nowrap",
                 }}
               >
-                Hi everyone
+                Send it now
               </span>
             </div>
             {/* Avatar */}
@@ -237,7 +237,7 @@ const YourWorkInSync: React.FC<YourWorkInSyncProps> = ({
                   whiteSpace: "nowrap",
                 }}
               >
-                How about this instead?
+                I&apos;ll use this one
               </span>
             </div>
           </div>
@@ -278,7 +278,7 @@ const YourWorkInSync: React.FC<YourWorkInSyncProps> = ({
                   whiteSpace: "nowrap",
                 }}
               >
-                Great work, everyone!
+                Perfect! Sending now
               </span>
             </div>
             {/* Send button */}

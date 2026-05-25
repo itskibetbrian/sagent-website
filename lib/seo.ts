@@ -48,7 +48,7 @@ export const seoRoutes = [
   {
     path: "/terms",
     title: "Sagent Terms & Conditions",
-    description: "Review the terms and conditions for using Sagent and Nogeybix Labs services.",
+    description: "Review the terms and conditions for using Sagent and Sagent Inc. services.",
     priority: 0.4,
   },
 ] as const

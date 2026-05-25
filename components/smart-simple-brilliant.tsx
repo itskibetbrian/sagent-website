@@ -119,7 +119,7 @@ const SmartSimpleBrilliant: React.FC<SmartSimpleBrilliantProps> = ({
                     </div>
                   </div>
                   <div style={{ fontFamily: "Inter, sans-serif", fontWeight: 600, fontSize: "9px", color: "#92400E" }}>
-                    1:1 with Heather
+                    Client Follow-up
                   </div>
                 </div>
               </div>
@@ -160,7 +160,7 @@ const SmartSimpleBrilliant: React.FC<SmartSimpleBrilliantProps> = ({
                     </div>
                   </div>
                   <div style={{ fontFamily: "Inter, sans-serif", fontWeight: 600, fontSize: "9px", color: "#0C4A6E" }}>
-                    Concept Design Review II
+                    Template: Introduction
                   </div>
                 </div>
               </div>
@@ -192,7 +192,7 @@ const SmartSimpleBrilliant: React.FC<SmartSimpleBrilliantProps> = ({
                     </span>
                   </div>
                   <div style={{ fontFamily: "Inter, sans-serif", fontWeight: 600, fontSize: "9px", color: "#064E3B" }}>
-                    Webinar: Figma ...
+                    Folder: Sales
                   </div>
                 </div>
               </div>
@@ -248,7 +248,7 @@ const SmartSimpleBrilliant: React.FC<SmartSimpleBrilliantProps> = ({
                     </div>
                   </div>
                   <div style={{ fontFamily: "Inter, sans-serif", fontWeight: 600, fontSize: "9px", color: "#581C87" }}>
-                    Onboarding Presentation
+                    Template: Outreach
                   </div>
                 </div>
               </div>
@@ -289,7 +289,7 @@ const SmartSimpleBrilliant: React.FC<SmartSimpleBrilliantProps> = ({
                     </div>
                   </div>
                   <div style={{ fontFamily: "Inter, sans-serif", fontWeight: 600, fontSize: "9px", color: "#BE123C" }}>
-                    🍷 Happy Hour
+                    🚀 Send Batch
                   </div>
                 </div>
               </div>
@@ -321,7 +321,7 @@ const SmartSimpleBrilliant: React.FC<SmartSimpleBrilliantProps> = ({
                     </span>
                   </div>
                   <div style={{ fontFamily: "Inter, sans-serif", fontWeight: 600, fontSize: "9px", color: "#581C87" }}>
-                    🍔 New Employee Welcome Lunch!
+                    📧 Saved Messages
                   </div>
                 </div>
               </div>

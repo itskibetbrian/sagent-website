@@ -22,25 +22,25 @@ export default function TestimonialsSection() {
   const testimonials = [
     {
       quote:
-        "In just a few minutes, we transformed our data into actionable insights. The process was seamless and incredibly efficient!",
+        "Sagent has completely changed how I send messages. I can save templates, organize them in folders, and send them in seconds. Best app for sales messaging!",
       name: "Jamie Marshall",
-      company: "Co-founder, Exponent",
+      company: "Sales Director, Exponent",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Sep%2011%2C%202025%2C%2011_35_19%20AM-z4zSRLsbOQDp7MJS1t8EXmGNB6Al9Z.png",
     },
     {
       quote:
-        "Brillance has revolutionized how we handle custom contracts. The automation saves us hours every week and eliminates errors completely.",
+        "Our team productivity increased dramatically after switching to Sagent. The unlimited saved messages and smart organization features save us hours every week.",
       name: "Sarah Chen",
-      company: "VP Operations, TechFlow",
+      company: "VP Sales, TechFlow",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Sep%2011%2C%202025%2C%2010_54_18%20AM-nbiecp92QNdTudmCrHr97uekrIPzCP.png",
     },
     {
       quote:
-        "The billing automation is a game-changer. What used to take our team days now happens automatically with perfect accuracy.",
+        "As a closer, Sagent is my secret weapon. I can send personalized messages at scale and track everything effortlessly. The Pro plan is totally worth it.",
       name: "Marcus Rodriguez",
-      company: "Finance Director, InnovateCorp",
+      company: "Top Performer, InnovateCorp",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Sep%2011%2C%202025%2C%2011_01_05%20AM-TBOe92trRxKn4G5So1m9D2h7LRH4PG.png",
     },

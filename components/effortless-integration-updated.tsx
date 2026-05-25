@@ -127,7 +127,7 @@ const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 4
             color: "#ffffff",
           }}
         >
-          b
+          S
         </div>
 
         {/* GitHub - 180° (left) */}
