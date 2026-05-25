@@ -11,7 +11,7 @@ const faqData: FAQItem[] = [
   {
     question: "Is Sagent free?",
     answer:
-      "Yes. Sagent is free to download with 25 sends per month included. Upgrade to Pro Closer for unlimited sends and no watermark.",
+      "Yes. Sagent is free to download with 50 sends per month included. Upgrade to Pro Closer for unlimited sends and no watermark.",
   },
   {
     question: "Do I need to create an account?",
