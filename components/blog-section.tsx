@@ -192,6 +192,14 @@ export function BlogPostDetail({ post }: { post: BlogPost }) {
             <span className="text-sm text-[#605A57]">{post.date}</span>
           </div>
 
+          {/* Featured Image Section */}
+          <div className="w-full h-80 md:h-96 bg-gradient-to-br from-[#EDE9F6] to-[#E8DFF4] rounded-lg flex items-center justify-center mb-12">
+            <div className="text-center">
+              <div className="text-6xl mb-2">📚</div>
+              <p className="text-[#605A57] font-medium text-sm">{post.title}</p>
+            </div>
+          </div>
+
           {/* Post Content */}
           <div className="prose prose-lg text-[#49423D] leading-relaxed max-w-none">
             {post.content.split("\n\n").map((paragraph, idx) => (

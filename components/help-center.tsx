@@ -340,6 +340,14 @@ export function HelpArticleDetail({ article }: { article: HelpArticle }) {
             {article.title}
           </h1>
 
+          {/* Featured Image Section */}
+          <div className="w-full h-80 md:h-96 bg-gradient-to-br from-[#EDE9F6] to-[#E8DFF4] rounded-lg flex items-center justify-center mb-12">
+            <div className="text-center">
+              <div className="text-6xl mb-2">🎓</div>
+              <p className="text-[#605A57] font-medium text-sm">{article.title}</p>
+            </div>
+          </div>
+
           {/* Article Content */}
           <div className="prose prose-lg text-[#49423D] leading-relaxed max-w-none">
             {article.content.split("\n\n").map((section, idx) => {

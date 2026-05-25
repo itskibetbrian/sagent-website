@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { MarketingPageShell } from "@/components/sagent-marketing-sections"
 import { BlogPostDetail, blogPosts } from "@/components/blog-section"
-import { createPageMetadata } from "@/lib/seo"
 
 type Props = {
   params: Promise<{ slug: string }>
@@ -10,7 +9,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
-  const post = blogPosts.find((p) => p.slug === slug)
+  const post = blogPosts?.find?.((p: any) => p.slug === slug)
 
   if (!post) {
     return {
@@ -18,14 +17,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
   }
 
-  return createPageMetadata({
-    title: post.title,
+  return {
+    title: `${post.title} | Sagent Blog`,
     description: post.excerpt,
-    path: `/blog/${slug}`,
-  })
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: `https://sagent.io/blog/${slug}`,
+      type: "article",
+      publishedTime: post.date,
+      authors: [post.author],
+    },
+  }
 }
 
 export async function generateStaticParams() {
+  if (!Array.isArray(blogPosts)) {
+    return []
+  }
   return blogPosts.map((post) => ({
     slug: post.slug,
   }))
@@ -33,7 +42,7 @@ export async function generateStaticParams() {
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params
-  const post = blogPosts.find((p) => p.slug === slug)
+  const post = blogPosts?.find?.((p: any) => p.slug === slug)
 
   if (!post) {
     notFound()
@@ -45,3 +54,4 @@ export default async function BlogPostPage({ params }: Props) {
     </MarketingPageShell>
   )
 }
+

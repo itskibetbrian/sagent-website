@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { MarketingPageShell } from "@/components/sagent-marketing-sections"
 import { HelpArticleDetail, helpArticles } from "@/components/help-center"
-import { createPageMetadata } from "@/lib/seo"
 
 type Props = {
   params: Promise<{ slug: string }>
@@ -10,7 +9,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
-  const article = helpArticles.find((a) => a.slug === slug)
+  const article = helpArticles?.find?.((a: any) => a.slug === slug)
 
   if (!article) {
     return {
@@ -18,14 +17,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
   }
 
-  return createPageMetadata({
-    title: article.title,
+  return {
+    title: `${article.title} | Sagent Help Center`,
     description: article.shortDescription,
-    path: `/help/${slug}`,
-  })
+    openGraph: {
+      title: article.title,
+      description: article.shortDescription,
+      url: `https://sagent.io/help/${slug}`,
+      type: "article",
+    },
+  }
 }
 
 export async function generateStaticParams() {
+  if (!Array.isArray(helpArticles)) {
+    return []
+  }
   return helpArticles.map((article) => ({
     slug: article.slug,
   }))
@@ -33,7 +40,7 @@ export async function generateStaticParams() {
 
 export default async function HelpArticlePage({ params }: Props) {
   const { slug } = await params
-  const article = helpArticles.find((a) => a.slug === slug)
+  const article = helpArticles?.find?.((a: any) => a.slug === slug)
 
   if (!article) {
     notFound()
