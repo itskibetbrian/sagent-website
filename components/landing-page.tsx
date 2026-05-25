@@ -104,9 +104,7 @@ export default function LandingPage() {
                   </div>
                   <div className="flex flex-col sm:flex-row justify-center items-center gap-3">
                     <Link
-                      href="https://play.google.com/store/apps/details?id=com.sagent.app"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href="#playstore"
                       className="h-10 px-8 py-[6px] relative bg-[#37322F] shadow-[0px_0px_0px_2.5px_rgba(255,255,255,0.08)_inset] overflow-hidden rounded-full flex justify-center items-center"
                     >
                       <span className="flex flex-col justify-center text-white text-[13px] font-medium leading-5 font-sans">
@@ -114,9 +112,7 @@ export default function LandingPage() {
                       </span>
                     </Link>
                     <Link
-                      href="https://apps.apple.com/app/sagent/id1234567890"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href="#appstore"
                       className="h-10 px-8 py-[6px] bg-white shadow-[0px_1px_2px_rgba(55,50,47,0.12)] overflow-hidden rounded-full flex justify-center items-center"
                     >
                       <span className="flex flex-col justify-center text-[#37322F] text-[13px] font-medium leading-5 font-sans">
