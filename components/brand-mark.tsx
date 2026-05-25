@@ -5,7 +5,7 @@ export function BrandMark({ className = "" }: { className?: string }) {
   return (
     <Link href="/" className={`flex items-center gap-3 ${className}`}>
       <Image
-        src="/assets/icon.png"
+        src="/icon.png"
         alt="Sagent logo"
         width={36}
         height={36}
