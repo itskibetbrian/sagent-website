@@ -115,17 +115,12 @@ const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 4
             left: `${centerX - 36}px`,
             top: `${centerY - 36}px`,
             position: "absolute",
-<<<<<<< HEAD
             background: "#ffffff",
-=======
-            background: "#37322f",
->>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
             boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.15)",
             borderRadius: "99px",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-<<<<<<< HEAD
             overflow: "hidden",
           }}
         >
@@ -141,18 +136,6 @@ const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 4
         </div>
 
         {/* WhatsApp - 180° (left) */}
-=======
-            fontFamily: "'Inter', sans-serif",
-            fontWeight: 700,
-            fontSize: "32px",
-            color: "#ffffff",
-          }}
-        >
-          S
-        </div>
-
-        {/* GitHub - 180° (left) */}
->>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
         <div
           style={{
             width: "32px",
@@ -160,11 +143,7 @@ const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 4
             left: `${getPositionOnRing(80, Math.PI).x - 16}px`,
             top: `${getPositionOnRing(80, Math.PI).y - 16}px`,
             position: "absolute",
-<<<<<<< HEAD
             background: "#ffffff",
-=======
-            background: "#000000",
->>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
             boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.15)",
             borderRadius: "50%",
             display: "flex",
@@ -173,20 +152,11 @@ const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 4
           }}
         >
           <img
-<<<<<<< HEAD
             src="/whatsapp-icon.svg"
             alt="WhatsApp"
             style={{
               width: "18px",
               height: "18px",
-=======
-            src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg"
-            alt="GitHub"
-            style={{
-              width: "18px",
-              height: "18px",
-              filter: "brightness(0) invert(1)",
->>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
             }}
           />
         </div>
@@ -208,11 +178,7 @@ const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 4
           }}
         >
           <img
-<<<<<<< HEAD
             src="/slack-logo.svg"
-=======
-            src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/slack.svg"
->>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
             alt="Slack"
             style={{
               width: "18px",
@@ -221,11 +187,7 @@ const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 4
           />
         </div>
 
-<<<<<<< HEAD
         {/* Gmail - 315° (top-right) */}
-=======
-        {/* Figma - 315° (top-right) */}
->>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
         <div
           style={{
             width: "32px",
@@ -233,11 +195,7 @@ const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 4
             left: `${getPositionOnRing(120, -Math.PI / 4).x - 16}px`,
             top: `${getPositionOnRing(120, -Math.PI / 4).y - 16}px`,
             position: "absolute",
-<<<<<<< HEAD
             background: "#ffffff",
-=======
-            background: "#EEEFE8",
->>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
             boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.15)",
             borderRadius: "50%",
             display: "flex",
@@ -246,28 +204,16 @@ const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 4
           }}
         >
           <img
-<<<<<<< HEAD
             src="/gmail-icon.svg"
             alt="Gmail"
             style={{
               width: "18px",
               height: "18px",
-=======
-            src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/figma.svg"
-            alt="Figma"
-            style={{
-              width: "16px",
-              height: "16px",
->>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
             }}
           />
         </div>
 
-<<<<<<< HEAD
         {/* Telegram - 135° (bottom-left) */}
-=======
-        {/* Discord - 135° (bottom-left) */}
->>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
         <div
           style={{
             width: "32px",
@@ -275,11 +221,7 @@ const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 4
             left: `${getPositionOnRing(120, (3 * Math.PI) / 4).x - 16}px`,
             top: `${getPositionOnRing(120, (3 * Math.PI) / 4).y - 16}px`,
             position: "absolute",
-<<<<<<< HEAD
             background: "#ffffff",
-=======
-            background: "#5865F2",
->>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
             boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.15)",
             borderRadius: "50%",
             display: "flex",
@@ -288,29 +230,16 @@ const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 4
           }}
         >
           <img
-<<<<<<< HEAD
             src="/telegram-icon.svg"
             alt="Telegram"
             style={{
               width: "18px",
               height: "18px",
-=======
-            src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/discord.svg"
-            alt="Discord"
-            style={{
-              width: "18px",
-              height: "18px",
-              filter: "brightness(0) invert(1)",
->>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
             }}
           />
         </div>
 
-<<<<<<< HEAD
         {/* LinkedIn - 225° (bottom-left diagonal) */}
-=======
-        {/* Notion - 225° (bottom-left diagonal) */}
->>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
         <div
           style={{
             width: "32px",
@@ -327,13 +256,8 @@ const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 4
           }}
         >
           <img
-<<<<<<< HEAD
             src="/linkedin-icon.svg"
             alt="LinkedIn"
-=======
-            src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/notion.svg"
-            alt="Notion"
->>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
             style={{
               width: "18px",
               height: "18px",
@@ -341,11 +265,7 @@ const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 4
           />
         </div>
 
-<<<<<<< HEAD
         {/* Instagram - 180° (left) */}
-=======
-        {/* Stripe - 180° (left) */}
->>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
         <div
           style={{
             width: "32px",
@@ -353,11 +273,7 @@ const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 4
             left: `${getPositionOnRing(160, Math.PI).x - 16}px`,
             top: `${getPositionOnRing(160, Math.PI).y - 16}px`,
             position: "absolute",
-<<<<<<< HEAD
             background: "#ffffff",
-=======
-            background: "#635BFF",
->>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
             boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.15)",
             borderRadius: "50%",
             display: "flex",
@@ -366,29 +282,16 @@ const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 4
           }}
         >
           <img
-<<<<<<< HEAD
             src="/instagram-icon.svg"
             alt="Instagram"
             style={{
               width: "18px",
               height: "18px",
-=======
-            src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/stripe.svg"
-            alt="Stripe"
-            style={{
-              width: "18px",
-              height: "18px",
-              filter: "brightness(0) invert(1)",
->>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
             }}
           />
         </div>
 
-<<<<<<< HEAD
         {/* SMS/Messages - 0° (right) */}
-=======
-        {/* Framer - 0° (right) */}
->>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
         <div
           style={{
             width: "32px",
@@ -396,11 +299,7 @@ const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 4
             left: `${getPositionOnRing(160, 0).x - 16}px`,
             top: `${getPositionOnRing(160, 0).y - 16}px`,
             position: "absolute",
-<<<<<<< HEAD
             background: "#ffffff",
-=======
-            background: "#000000",
->>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
             boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.15)",
             borderRadius: "50%",
             display: "flex",
@@ -409,20 +308,11 @@ const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 4
           }}
         >
           <img
-<<<<<<< HEAD
             src="/messages-icon.svg"
             alt="SMS"
             style={{
               width: "18px",
               height: "18px",
-=======
-            src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/framer.svg"
-            alt="Framer"
-            style={{
-              width: "16px",
-              height: "16px",
-              filter: "brightness(0) invert(1)",
->>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
             }}
           />
         </div>

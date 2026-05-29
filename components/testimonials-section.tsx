@@ -158,11 +158,7 @@ export default function TestimonialsSection() {
         <div className="max-w-[1200px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           <div className="flex flex-col justify-start items-start gap-2">
             <div className="text-[#37322F] text-lg md:text-2xl font-bold font-sans">50K+</div>
-<<<<<<< HEAD
             <div className="text-[#605A57] text-sm font-normal leading-6 font-sans">Messages sent daily</div>
-=======
-            <div className="text-[#605A57] text-sm font-normal leading-6 font-sans">Downloads</div>
->>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
           </div>
           <div className="flex flex-col justify-start items-start gap-2">
             <div className="text-[#37322F] text-lg md:text-2xl font-bold font-sans">4.8★</div>
@@ -173,13 +169,8 @@ export default function TestimonialsSection() {
             <div className="text-[#605A57] text-sm font-normal leading-6 font-sans">Offline Secure</div>
           </div>
           <div className="flex flex-col justify-start items-start gap-2">
-<<<<<<< HEAD
             <div className="text-[#37322F] text-lg md:text-2xl font-bold font-sans">&lt;10s</div>
             <div className="text-[#605A57] text-sm font-normal leading-6 font-sans">Average send time</div>
-=======
-            <div className="text-[#37322F] text-lg md:text-2xl font-bold font-sans">24h</div>
-            <div className="text-[#605A57] text-sm font-normal leading-6 font-sans">Support Response</div>
->>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
           </div>
         </div>
       </div>

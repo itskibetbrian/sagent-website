@@ -2,10 +2,6 @@
   "name": "sagent-app",
   "version": "0.1.0",
   "private": true,
-<<<<<<< HEAD
-=======
-  "packageManager": "npm@10.9.2",
->>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
   "scripts": {
     "build": "next build",
     "dev": "next dev",
