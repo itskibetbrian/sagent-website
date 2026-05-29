@@ -1,6 +1,10 @@
 "use client"
 
+<<<<<<< HEAD
 import React, { useState } from "react"
+=======
+import type React from "react"
+>>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
 
 import Link from "next/link"
 import SmartSimpleBrilliant from "@/components/smart-simple-brilliant"
@@ -28,6 +32,7 @@ function Badge({ icon, text }: { icon: React.ReactNode; text: string }) {
 }
 
 export default function LandingPage() {
+<<<<<<< HEAD
   const [activeVideo, setActiveVideo] = useState(0)
   const videos = [
     "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
@@ -35,6 +40,8 @@ export default function LandingPage() {
     "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
   ]
 
+=======
+>>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
   return (
     <div className="page-shell">
       <Header />
@@ -45,6 +52,7 @@ export default function LandingPage() {
 
           <div className="w-full flex flex-col items-stretch gap-4 sm:gap-6 md:gap-8 lg:gap-12 relative z-10">
             {/* Start sending faster today CTA Section */}
+<<<<<<< HEAD
             <section className="section-block pt-12 sm:pt-16 md:pt-20 lg:pt-24 relative overflow-hidden min-h-[400px] flex items-center justify-center">
               {/* Background Video Player */}
               <div className="absolute inset-0 w-full h-full z-0 bg-[#EDE9F6]">
@@ -66,6 +74,10 @@ export default function LandingPage() {
               </div>
 
               <div className="section-block-inner max-w-xl relative z-10">
+=======
+            <section className="section-block pt-12 sm:pt-16 md:pt-20 lg:pt-24">
+              <div className="section-block-inner max-w-xl">
+>>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
                   <div className="self-stretch flex flex-col justify-start items-start gap-3">
                     <div className="self-stretch text-center flex justify-center flex-col text-[#49423D] text-3xl md:text-5xl font-semibold leading-tight md:leading-[56px] font-sans tracking-tight">
                       Start sending faster today
@@ -77,7 +89,11 @@ export default function LandingPage() {
                   <div className="flex flex-col sm:flex-row justify-center items-stretch sm:items-center gap-3 w-full max-w-md sm:max-w-none">
                     <Link
                       href="#playstore"
+<<<<<<< HEAD
                       className="h-10 px-8 py-[6px] w-full sm:w-auto relative bg-[#37322F] shadow-[0px_0px_0px_2.5px_rgba(255,255,255,0.08)_inset] overflow-hidden rounded-full flex justify-center items-center hover:bg-primary hover:shadow-[0_0_20px_rgba(124,58,237,0.4)] hover:scale-[1.02] transition-all duration-300"
+=======
+                      className="h-10 px-8 py-[6px] w-full sm:w-auto relative bg-[#37322F] shadow-[0px_0px_0px_2.5px_rgba(255,255,255,0.08)_inset] overflow-hidden rounded-full flex justify-center items-center"
+>>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
                     >
                       <span className="flex flex-col justify-center text-white text-[13px] font-medium leading-5 font-sans">
                         Get it on Google Play
@@ -85,7 +101,11 @@ export default function LandingPage() {
                     </Link>
                     <Link
                       href="#appstore"
+<<<<<<< HEAD
                       className="h-10 px-8 py-[6px] w-full sm:w-auto bg-white shadow-[0px_1px_2px_rgba(55,50,47,0.12)] overflow-hidden rounded-full flex justify-center items-center hover:text-primary hover:border-primary hover:shadow-[0_4px_15px_rgba(124,58,237,0.2)] hover:scale-[1.02] transition-all duration-300 border border-transparent"
+=======
+                      className="h-10 px-8 py-[6px] w-full sm:w-auto bg-white shadow-[0px_1px_2px_rgba(55,50,47,0.12)] overflow-hidden rounded-full flex justify-center items-center"
+>>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
                     >
                       <span className="flex flex-col justify-center text-[#37322F] text-[13px] font-medium leading-5 font-sans">
                         Download on App Store
@@ -119,15 +139,25 @@ export default function LandingPage() {
                         <rect x="9.5" y="5" width="1" height="1" fill="#37322F" />
                       </svg>
                     }
+<<<<<<< HEAD
                     text="Trusted by closers"
+=======
+                    text="Social Proof"
+>>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
                   />
                   <div className="w-full text-center flex justify-center flex-col text-[#49423D] text-xl sm:text-2xl md:text-3xl lg:text-5xl font-semibold leading-tight md:leading-[1.15] font-sans tracking-tight text-balance">
                     Confidence backed by results
                   </div>
                   <div className="self-stretch text-center text-[#605A57] text-sm sm:text-base font-normal leading-6 sm:leading-7 font-sans">
+<<<<<<< HEAD
                     Sellers, recruiters, and support agents
                     <br className="hidden sm:block" />
                     send faster with Sagent every day.
+=======
+                    Our customers achieve more each day
+                    <br className="hidden sm:block" />
+                    because their tools are simple, powerful, and clear.
+>>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
                   </div>
                 </div>
               </div>
@@ -160,7 +190,11 @@ export default function LandingPage() {
                     return (
                       <div
                         key={index}
+<<<<<<< HEAD
                         className={`group h-24 xs:h-28 sm:h-32 md:h-36 lg:h-40 flex justify-center items-center gap-1 xs:gap-2 sm:gap-3 border-b border-[rgba(227,226,225,0.5)] transition-colors duration-300 hover:bg-primary-soft ${
+=======
+                        className={`h-24 xs:h-28 sm:h-32 md:h-36 lg:h-40 flex justify-center items-center gap-1 xs:gap-2 sm:gap-3 border-b border-[rgba(227,226,225,0.5)] ${
+>>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
                           index < 6 ? "sm:border-b-[0.5px]" : "sm:border-b"
                         } ${index >= 6 ? "border-b" : ""} ${isMobileFirstColumn ? "border-r-[0.5px]" : ""} sm:border-r-[0.5px] sm:border-l-0 ${
                           isDesktopFirstColumn ? "md:border-l" : "md:border-l-[0.5px]"
@@ -168,6 +202,7 @@ export default function LandingPage() {
                           isDesktopTopRow ? "md:border-b-[0.5px]" : ""
                         } ${isDesktopBottomRow ? "md:border-t-[0.5px] md:border-b" : ""} border-[#E3E2E1]`}
                       >
+<<<<<<< HEAD
                         <div className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 relative shadow-[0px_-4px_8px_rgba(255,255,255,0.64)_inset] overflow-hidden rounded-full flex items-center justify-center bg-white group-hover:scale-110 group-hover:shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-all duration-300">
                           <img 
                             src={["/slack-logo.svg", "/whatsapp-icon.svg", "/gmail-icon.svg", "/telegram-icon.svg", "/linkedin-icon.svg", "/instagram-icon.svg", "/messages-icon.svg", "/facebook-messenger-icon.svg"][index]} 
@@ -177,6 +212,13 @@ export default function LandingPage() {
                         </div>
                         <div className="text-center flex justify-center flex-col text-[#37322F] text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-tight md:leading-9 font-sans">
                           {["Slack","WhatsApp","Email","Telegram","LinkedIn","Instagram","SMS","Messenger"][index]}
+=======
+                        <div className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 relative shadow-[0px_-4px_8px_rgba(255,255,255,0.64)_inset] overflow-hidden rounded-full">
+                          <img src="/horizon-icon.svg" alt="Horizon" className="w-full h-full object-contain" />
+                        </div>
+                        <div className="text-center flex justify-center flex-col text-[#37322F] text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-tight md:leading-9 font-sans">
+                          Acute
+>>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
                         </div>
                       </div>
                     )
@@ -210,7 +252,11 @@ export default function LandingPage() {
                         <rect x="7" y="7" width="4" height="4" stroke="#37322F" strokeWidth="1" fill="none" />
                       </svg>
                     }
+<<<<<<< HEAD
                     text="How it works"
+=======
+                    text="Bento grid"
+>>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
                   />
                   <div className="w-full text-center flex justify-center flex-col text-[#49423D] text-xl sm:text-2xl md:text-3xl lg:text-5xl font-semibold leading-tight md:leading-[1.15] font-sans tracking-tight text-balance">
                     Built for absolute clarity and focused work
@@ -239,7 +285,11 @@ export default function LandingPage() {
 
                 <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-0 border-l border-r border-[rgba(55,50,47,0.12)]">
                   {/* Top Left - Smart. Simple. Brilliant. */}
+<<<<<<< HEAD
                   <div className="border-b border-r-0 md:border-r border-[rgba(55,50,47,0.12)] p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-start items-start gap-4 sm:gap-6 transition-colors duration-300 hover:bg-primary-soft">
+=======
+                  <div className="border-b border-r-0 md:border-r border-[rgba(55,50,47,0.12)] p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-start items-start gap-4 sm:gap-6">
+>>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
                     <div className="flex flex-col gap-2">
                       <h3 className="text-[#37322F] text-lg sm:text-xl font-semibold leading-tight font-sans">
                         Save. Organize. Send.
@@ -259,7 +309,11 @@ export default function LandingPage() {
                   </div>
 
                   {/* Top Right - Your work, in sync */}
+<<<<<<< HEAD
                   <div className="border-b border-[rgba(55,50,47,0.12)] p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-start items-start gap-4 sm:gap-6 transition-colors duration-300 hover:bg-primary-soft">
+=======
+                  <div className="border-b border-[rgba(55,50,47,0.12)] p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-start items-start gap-4 sm:gap-6">
+>>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
                     <div className="flex flex-col gap-2">
                       <h3 className="text-[#37322F] font-semibold leading-tight font-sans text-lg sm:text-xl">
                         Message faster than ever
@@ -279,7 +333,11 @@ export default function LandingPage() {
                   </div>
 
                   {/* Bottom Left - Effortless integration */}
+<<<<<<< HEAD
                   <div className="border-r-0 md:border-r border-[rgba(55,50,47,0.12)] p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-start items-start gap-4 sm:gap-6 bg-transparent transition-colors duration-300 hover:bg-primary-soft">
+=======
+                  <div className="border-r-0 md:border-r border-[rgba(55,50,47,0.12)] p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-start items-start gap-4 sm:gap-6 bg-transparent">
+>>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
                     <div className="flex flex-col gap-2">
                       <h3 className="text-[#37322F] text-lg sm:text-xl font-semibold leading-tight font-sans">
                         Works everywhere you do
@@ -298,7 +356,11 @@ export default function LandingPage() {
                   </div>
 
                   {/* Bottom Right - Numbers that speak */}
+<<<<<<< HEAD
                   <div className="p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-start items-start gap-4 sm:gap-6 transition-colors duration-300 hover:bg-primary-soft">
+=======
+                  <div className="p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-start items-start gap-4 sm:gap-6">
+>>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
                     <div className="flex flex-col gap-2">
                       <h3 className="text-[#37322F] text-lg sm:text-xl font-semibold leading-tight font-sans">
                         10x your productivity

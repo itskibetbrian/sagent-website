@@ -444,8 +444,13 @@ export function SagentPricing() {
               </div>
               <Link
                 href="#playstore"
+<<<<<<< HEAD
                 className={`self-stretch px-4 py-[10px] relative shadow-[0px_2px_4px_rgba(55,50,47,0.12)] overflow-hidden rounded-[99px] flex justify-center items-center hover:scale-[1.02] transition-all duration-300 ${
                   highlighted ? "bg-[#FBFAF9] hover:text-primary hover:border-primary hover:shadow-[0_4px_15px_rgba(124,58,237,0.2)]" : "bg-[#37322F] hover:bg-primary hover:shadow-[0_0_20px_rgba(124,58,237,0.5)]"
+=======
+                className={`self-stretch px-4 py-[10px] relative shadow-[0px_2px_4px_rgba(55,50,47,0.12)] overflow-hidden rounded-[99px] flex justify-center items-center ${
+                  highlighted ? "bg-[#FBFAF9]" : "bg-[#37322F]"
+>>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
                 }`}
               >
                 <span className={highlighted ? "text-[#37322F] text-[13px] font-medium leading-5 font-sans" : "text-[#FBFAF9] text-[13px] font-medium leading-5 font-sans"}>

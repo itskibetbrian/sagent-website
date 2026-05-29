@@ -21,6 +21,7 @@ export default function DocumentationSection() {
 
   const cards = [
     {
+<<<<<<< HEAD
       title: "Save your best messages",
       description: "Keep your winning scripts, price lists,\nand follow-ups ready to go.",
       image: "/modern-dashboard-interface-with-data-visualization.jpg",
@@ -33,6 +34,20 @@ export default function DocumentationSection() {
     {
       title: "Send to any app in seconds",
       description: "One tap opens the share sheet.\nWhatsApp, Gmail, SMS — you choose.",
+=======
+      title: "Plan your schedules",
+      description: "Explore your data, build your dashboard,\nbring your team together.",
+      image: "/modern-dashboard-interface-with-data-visualization.jpg",
+    },
+    {
+      title: "Data to insights in minutes",
+      description: "Transform raw data into actionable insights\nwith powerful analytics tools.",
+      image: "/analytics-dashboard.png",
+    },
+    {
+      title: "Collaborate seamlessly",
+      description: "Work together in real-time with your team\nand share insights instantly.",
+>>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
       image: "/team-collaboration-interface-with-shared-workspace.jpg",
     },
   ]
@@ -60,6 +75,7 @@ export default function DocumentationSection() {
             icon={
               <div className="w-[10.50px] h-[10.50px] outline outline-[1.17px] outline-[#37322F] outline-offset-[-0.58px] rounded-full"></div>
             }
+<<<<<<< HEAD
             text="Your message library"
           />
           <div className="self-stretch text-center flex justify-center flex-col text-[#49423D] text-3xl md:text-5xl font-semibold leading-tight md:leading-[60px] font-sans tracking-tight">
@@ -69,6 +85,17 @@ export default function DocumentationSection() {
             Save once, send anywhere. The fastest way to share
             <br />
             your go-to messages across every platform.
+=======
+            text="Platform Features"
+          />
+          <div className="self-stretch text-center flex justify-center flex-col text-[#49423D] text-3xl md:text-5xl font-semibold leading-tight md:leading-[60px] font-sans tracking-tight">
+            Streamline your business operations
+          </div>
+          <div className="self-stretch text-center text-[#605A57] text-base font-normal leading-7 font-sans">
+            Manage schedules, analyze data, and collaborate with your team
+            <br />
+            all in one powerful platform.
+>>>>>>> 4d6b4a6fbd2987a2732c8826c0a47d3463d43e46
           </div>
         </div>
       </div>
