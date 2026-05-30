@@ -23,7 +23,7 @@ export default function TestimonialsSection() {
     {
       quote:
         "Sagent has completely changed how I send messages. I can save templates, organize them in folders, and send them in seconds. Best app for sales messaging!",
-      name: "Jamie Marshall",
+      name: "Sarah Marshall",
       company: "Sales Director, Exponent",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Sep%2011%2C%202025%2C%2011_35_19%20AM-z4zSRLsbOQDp7MJS1t8EXmGNB6Al9Z.png",
@@ -31,7 +31,7 @@ export default function TestimonialsSection() {
     {
       quote:
         "Our team productivity increased dramatically after switching to Sagent. The unlimited saved messages and smart organization features save us hours every week.",
-      name: "Sarah Chen",
+      name: "Dan Maina",
       company: "VP Sales, TechFlow",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Sep%2011%2C%202025%2C%2010_54_18%20AM-nbiecp92QNdTudmCrHr97uekrIPzCP.png",
@@ -39,7 +39,7 @@ export default function TestimonialsSection() {
     {
       quote:
         "As a closer, Sagent is my secret weapon. I can send personalized messages at scale and track everything effortlessly. The Pro plan is totally worth it.",
-      name: "Marcus Rodriguez",
+      name: "Marcus De Jong",
       company: "Top Performer, InnovateCorp",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Sep%2011%2C%202025%2C%2011_01_05%20AM-TBOe92trRxKn4G5So1m9D2h7LRH4PG.png",
