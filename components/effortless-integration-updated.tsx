@@ -234,7 +234,7 @@ const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 4
             justifyContent: "center",
           }}
         >
-          <img src="/messenger-icon.svg" alt="Messenger" style={{ width: "18px", height: "18px" }} />
+          <img src="/facebook-messenger-icon.svg" alt="Messenger" style={{ width: "18px", height: "18px" }} />
         </div>
 
         {/* Instagram - 180° (left) */}
