@@ -1,25 +1,18 @@
 import type React from "react"
 
 interface EffortlessIntegrationProps {
-  /** Fixed width from Figma: 482px */
   width?: number | string
-  /** Fixed height from Figma: 300px */
   height?: number | string
-  /** Optional className to pass to root */
   className?: string
 }
 
-/**
- * Effortless Integration – Service integration constellation
- * Three concentric rings with logos positioned on ring axes
- */
 const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 482, height = 300, className = "" }) => {
   const centerX = 250
   const centerY = 179
   const rings = [
-    { radius: 80, logos: 2 }, // Inner ring - 2 logos
-    { radius: 120, logos: 3 }, // Middle ring - 3 logos
-    { radius: 160, logos: 2 }, // Outer ring - 2 logos
+    { radius: 80, logos: 2 },
+    { radius: 120, logos: 3 },
+    { radius: 160, logos: 2 },
   ]
 
   const getPositionOnRing = (ringRadius: number, angle: number) => ({
@@ -96,7 +89,6 @@ const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 4
         }}
       />
 
-      {/* Company logos positioned systematically on ring axes */}
       <div
         style={{
           width: "500px",
@@ -127,11 +119,7 @@ const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 4
           <img
             src="/icon.png"
             alt="Sagent"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-            }}
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
         </div>
 
@@ -151,14 +139,7 @@ const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 4
             justifyContent: "center",
           }}
         >
-          <img
-            src="/whatsapp-icon.svg"
-            alt="WhatsApp"
-            style={{
-              width: "18px",
-              height: "18px",
-            }}
-          />
+          <img src="/whatsapp-icon.svg" alt="WhatsApp" style={{ width: "18px", height: "18px" }} />
         </div>
 
         {/* Slack - 0° (right) */}
@@ -177,17 +158,10 @@ const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 4
             justifyContent: "center",
           }}
         >
-          <img
-            src="/slack-logo.svg"
-            alt="Slack"
-            style={{
-              width: "18px",
-              height: "18px",
-            }}
-          />
+          <img src="/slack-logo.svg" alt="Slack" style={{ width: "18px", height: "18px" }} />
         </div>
 
-        {/* Gmail - 315° (top-right) */}
+        {/* Gmail - 315° / top-right */}
         <div
           style={{
             width: "32px",
@@ -203,17 +177,10 @@ const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 4
             justifyContent: "center",
           }}
         >
-          <img
-            src="/gmail-icon.svg"
-            alt="Gmail"
-            style={{
-              width: "18px",
-              height: "18px",
-            }}
-          />
+          <img src="/gmail-icon.svg" alt="Gmail" style={{ width: "18px", height: "18px" }} />
         </div>
 
-        {/* Telegram - 135° (bottom-left) */}
+        {/* Telegram - 135° / bottom-left */}
         <div
           style={{
             width: "32px",
@@ -229,17 +196,10 @@ const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 4
             justifyContent: "center",
           }}
         >
-          <img
-            src="/telegram-icon.svg"
-            alt="Telegram"
-            style={{
-              width: "18px",
-              height: "18px",
-            }}
-          />
+          <img src="/telegram-icon.svg" alt="Telegram" style={{ width: "18px", height: "18px" }} />
         </div>
 
-        {/* LinkedIn - 225° (bottom-left diagonal) */}
+        {/* LinkedIn - 225° / top-left */}
         <div
           style={{
             width: "32px",
@@ -255,14 +215,26 @@ const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 4
             justifyContent: "center",
           }}
         >
-          <img
-            src="/linkedin-icon.svg"
-            alt="LinkedIn"
-            style={{
-              width: "18px",
-              height: "18px",
-            }}
-          />
+          <img src="/linkedin-icon.svg" alt="LinkedIn" style={{ width: "18px", height: "18px" }} />
+        </div>
+
+        {/* Messenger - 45° / bottom-right */}
+        <div
+          style={{
+            width: "32px",
+            height: "32px",
+            left: `${getPositionOnRing(120, Math.PI / 4).x - 16}px`,
+            top: `${getPositionOnRing(120, Math.PI / 4).y - 16}px`,
+            position: "absolute",
+            background: "#ffffff",
+            boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.15)",
+            borderRadius: "50%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <img src="/facebook-messenger-icon.svg" alt="Messenger" style={{ width: "18px", height: "18px" }} />
         </div>
 
         {/* Instagram - 180° (left) */}
@@ -281,14 +253,7 @@ const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 4
             justifyContent: "center",
           }}
         >
-          <img
-            src="/instagram-icon.svg"
-            alt="Instagram"
-            style={{
-              width: "18px",
-              height: "18px",
-            }}
-          />
+          <img src="/instagram-icon.svg" alt="Instagram" style={{ width: "18px", height: "18px" }} />
         </div>
 
         {/* SMS/Messages - 0° (right) */}
@@ -307,14 +272,7 @@ const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 4
             justifyContent: "center",
           }}
         >
-          <img
-            src="/messages-icon.svg"
-            alt="SMS"
-            style={{
-              width: "18px",
-              height: "18px",
-            }}
-          />
+          <img src="/messages-icon.svg" alt="SMS" style={{ width: "18px", height: "18px" }} />
         </div>
 
         <svg
@@ -335,73 +293,18 @@ const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 4
           </defs>
 
           {/* Inner ring connections */}
-          <line
-            x1={centerX}
-            y1={centerY}
-            x2={getPositionOnRing(80, 0).x}
-            y2={getPositionOnRing(80, 0).y}
-            stroke="url(#connectionGradient)"
-            strokeWidth="1"
-            opacity="0.2"
-          />
-          <line
-            x1={centerX}
-            y1={centerY}
-            x2={getPositionOnRing(80, Math.PI).x}
-            y2={getPositionOnRing(80, Math.PI).y}
-            stroke="url(#connectionGradient)"
-            strokeWidth="1"
-            opacity="0.2"
-          />
+          <line x1={centerX} y1={centerY} x2={getPositionOnRing(80, 0).x} y2={getPositionOnRing(80, 0).y} stroke="url(#connectionGradient)" strokeWidth="1" opacity="0.2" />
+          <line x1={centerX} y1={centerY} x2={getPositionOnRing(80, Math.PI).x} y2={getPositionOnRing(80, Math.PI).y} stroke="url(#connectionGradient)" strokeWidth="1" opacity="0.2" />
 
           {/* Middle ring connections */}
-          <line
-            x1={centerX}
-            y1={centerY}
-            x2={getPositionOnRing(120, -Math.PI / 4).x}
-            y2={getPositionOnRing(120, -Math.PI / 4).y}
-            stroke="url(#connectionGradient)"
-            strokeWidth="1"
-            opacity="0.15"
-          />
-          <line
-            x1={centerX}
-            y1={centerY}
-            x2={getPositionOnRing(120, (3 * Math.PI) / 4).x}
-            y2={getPositionOnRing(120, (3 * Math.PI) / 4).y}
-            stroke="url(#connectionGradient)"
-            strokeWidth="1"
-            opacity="0.15"
-          />
-          <line
-            x1={centerX}
-            y1={centerY}
-            x2={getPositionOnRing(120, (5 * Math.PI) / 4).x}
-            y2={getPositionOnRing(120, (5 * Math.PI) / 4).y}
-            stroke="url(#connectionGradient)"
-            strokeWidth="1"
-            opacity="0.15"
-          />
+          <line x1={centerX} y1={centerY} x2={getPositionOnRing(120, -Math.PI / 4).x} y2={getPositionOnRing(120, -Math.PI / 4).y} stroke="url(#connectionGradient)" strokeWidth="1" opacity="0.15" />
+          <line x1={centerX} y1={centerY} x2={getPositionOnRing(120, (3 * Math.PI) / 4).x} y2={getPositionOnRing(120, (3 * Math.PI) / 4).y} stroke="url(#connectionGradient)" strokeWidth="1" opacity="0.15" />
+          <line x1={centerX} y1={centerY} x2={getPositionOnRing(120, (5 * Math.PI) / 4).x} y2={getPositionOnRing(120, (5 * Math.PI) / 4).y} stroke="url(#connectionGradient)" strokeWidth="1" opacity="0.15" />
+          <line x1={centerX} y1={centerY} x2={getPositionOnRing(120, Math.PI / 4).x} y2={getPositionOnRing(120, Math.PI / 4).y} stroke="url(#connectionGradient)" strokeWidth="1" opacity="0.15" />
 
           {/* Outer ring connections */}
-          <line
-            x1={centerX}
-            y1={centerY}
-            x2={getPositionOnRing(160, 0).x}
-            y2={getPositionOnRing(160, 0).y}
-            stroke="url(#connectionGradient)"
-            strokeWidth="1"
-            opacity="0.1"
-          />
-          <line
-            x1={centerX}
-            y1={centerY}
-            x2={getPositionOnRing(160, Math.PI).x}
-            y2={getPositionOnRing(160, Math.PI).y}
-            stroke="url(#connectionGradient)"
-            strokeWidth="1"
-            opacity="0.1"
-          />
+          <line x1={centerX} y1={centerY} x2={getPositionOnRing(160, 0).x} y2={getPositionOnRing(160, 0).y} stroke="url(#connectionGradient)" strokeWidth="1" opacity="0.1" />
+          <line x1={centerX} y1={centerY} x2={getPositionOnRing(160, Math.PI).x} y2={getPositionOnRing(160, Math.PI).y} stroke="url(#connectionGradient)" strokeWidth="1" opacity="0.1" />
         </svg>
       </div>
     </div>
