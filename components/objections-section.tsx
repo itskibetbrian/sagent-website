@@ -2,12 +2,12 @@
 
 import { useState } from "react"
 
-interface FAQItem {
+interface ObjectionItem {
   question: string
   answer: string
 }
 
-const faqData: FAQItem[] = [
+const objectionsData: ObjectionItem[] = [
   {
     question: "I already save messages in Notes.",
     answer: "Sagent stores all your messages in one app, never lose a message. Send a message quickly with Sagent (much faster than copy pasting).",
@@ -19,26 +19,6 @@ const faqData: FAQItem[] = [
   {
     question: "Is it safe to store my sales messages here?",
     answer: "Everything is stored locally on your device. Your messages never leave your phone. No external server. No data risk.",
-  },
-  {
-    question: "Does Sagent work on iPhone?",
-    answer: "Yes. Available on both Android and iOS.",
-  },
-  {
-    question: "Does it work in WhatsApp?",
-    answer: "Yes. Sagent lives in your share sheet and works in WhatsApp, Gmail, LinkedIn, SMS, and any app that uses the standard share function.",
-  },
-  {
-    question: "Do I need to create an account?",
-    answer: "No. Download and start immediately.",
-  },
-  {
-    question: "What happens when I hit 50 free sends?",
-    answer: "Upgrade to Pro for unlimited sends. Or wait, your count resets every month.",
-  },
-  {
-    question: "Is my data private?",
-    answer: "All messages are stored locally on your device. Nothing is sent to any external server.",
   },
 ]
 
@@ -57,7 +37,7 @@ function ChevronDownIcon({ className }: { className?: string }) {
   )
 }
 
-export default function FAQSection() {
+export default function ObjectionsSection() {
   const [openItem, setOpenItem] = useState<number>(0)
 
   const toggleItem = (index: number) => {
@@ -70,17 +50,17 @@ export default function FAQSection() {
         {/* Left Column - Header */}
         <div className="w-full lg:flex-1 flex flex-col justify-center items-start gap-4 lg:py-5">
           <div className="w-full flex flex-col justify-center text-[#49423D] font-semibold leading-tight md:leading-[44px] font-sans text-4xl tracking-tight">
-            Quick answers.
+            Common doubts
           </div>
           <div className="w-full text-[#605A57] text-base font-normal leading-7 font-sans">
-            Got questions about Sagent? We have got answers.
+            Got doubts about Sagent? We have got answers.
           </div>
         </div>
 
-        {/* Right Column - FAQ Items */}
+        {/* Right Column - Accordion Items */}
         <div className="w-full lg:flex-1 flex flex-col justify-center items-center">
           <div className="w-full flex flex-col">
-            {faqData.map((item, index) => {
+            {objectionsData.map((item, index) => {
               const isOpen = openItem === index
 
               return (

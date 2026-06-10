@@ -21,19 +21,29 @@ export default function DocumentationSection() {
 
   const cards = [
     {
-      title: "Save your best messages",
-      description: "Keep your winning scripts, price lists,\nand follow-ups ready to go.",
+      title: "Save your messages in one place",
+      description: "Your small business. Or sales, customer support or real estate realtors. Every message in its place. Find anything in one place, not needing to scroll 200 notes.",
       image: "/modern-dashboard-interface-with-data-visualization.jpg",
     },
     {
-      title: "Organise into smart folders",
-      description: "Group messages by client, deal stage,\nor message type for instant access.",
+      title: "Send to any app",
+      description: "Open WhatsApp. Open Gmail. Open LinkedIn. Tap share. Sagent is already there. Works in every app without switching.",
+      image: "/team-collaboration-interface-with-shared-workspace.jpg",
+    },
+    {
+      title: "Favourites for your most-sent messages",
+      description: "Pin your top messages. Price list. Intro. Follow-up. One tap from any conversation, every time.",
       image: "/analytics-dashboard.png",
     },
     {
-      title: "Send to any app in seconds",
-      description: "One tap opens the share sheet.\nWhatsApp, Gmail, SMS — you choose.",
-      image: "/team-collaboration-interface-with-shared-workspace.jpg",
+      title: "Copy when you need to",
+      description: "Tap the clipboard icon to copy any message without opening the share sheet. No interruption to your flow.",
+      image: "/modern-dashboard-interface-with-data-visualization.jpg",
+    },
+    {
+      title: "No watermark on Pro",
+      description: "Free plan adds a small Sent via Sagent line. Pro removes it. Your messages look entirely yours.",
+      image: "/analytics-dashboard.png",
     },
   ]
 
@@ -60,15 +70,10 @@ export default function DocumentationSection() {
             icon={
               <div className="w-[10.50px] h-[10.50px] outline outline-[1.17px] outline-[#37322F] outline-offset-[-0.58px] rounded-full"></div>
             }
-            text="Your message library"
+            text="Features"
           />
           <div className="self-stretch text-center flex justify-center flex-col text-[#49423D] text-3xl md:text-5xl font-semibold leading-tight md:leading-[60px] font-sans tracking-tight">
-            Your messages, always ready to send
-          </div>
-          <div className="self-stretch text-center text-[#605A57] text-base font-normal leading-7 font-sans">
-            Save once, send anywhere. The fastest way to share
-            <br />
-            your go-to messages across every platform.
+            Send your messages in just one tap.
           </div>
         </div>
       </div>
@@ -121,7 +126,11 @@ export default function DocumentationSection() {
                     ? "bg-gradient-to-br from-blue-50 to-blue-100"
                     : activeCard === 1
                       ? "bg-gradient-to-br from-purple-50 to-purple-100"
-                      : "bg-gradient-to-br from-green-50 to-green-100"
+                      : activeCard === 2
+                        ? "bg-gradient-to-br from-green-50 to-green-100"
+                        : activeCard === 3
+                          ? "bg-gradient-to-br from-amber-50 to-amber-100"
+                          : "bg-gradient-to-br from-rose-50 to-rose-100"
                 }`}
               />
             </div>

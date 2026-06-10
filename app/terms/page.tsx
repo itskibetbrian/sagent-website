@@ -21,7 +21,7 @@ const sections = [
   },
   {
     title: "4. Free and Premium Plans",
-    body: "Sagent offers a Free plan with 50 sends per month and a Pro Closer plan with unlimited sends. Plan features, limits, and pricing may change with notice. Unused sends do not carry over to the next billing month. Premium plans are non-refundable after purchase except as required by law. Subscription renewals will occur automatically unless canceled before the renewal date. You can cancel your subscription at any time through App settings.",
+    body: "Sagent offers a Free plan with 50 sends per month and a Pro plan with unlimited sends. Plan features, limits, and pricing may change with notice. Unused sends do not carry over to the next billing month. Premium plans are non-refundable after purchase except as required by law. Subscription renewals will occur automatically unless canceled before the renewal date. You can cancel your subscription at any time through App settings.",
   },
   {
     title: "5. User Content & Responsibility",

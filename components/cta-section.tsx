@@ -1,5 +1,7 @@
 "use client"
 
+import Link from "next/link"
+
 export default function CTASection() {
   return (
     <div className="w-full relative overflow-hidden flex flex-col justify-center items-center gap-2">
@@ -24,22 +26,33 @@ export default function CTASection() {
         <div className="w-full max-w-[586px] px-6 py-5 md:py-8 overflow-hidden rounded-lg flex flex-col justify-start items-center gap-6 relative z-20">
           <div className="self-stretch flex flex-col justify-start items-start gap-3">
             <div className="self-stretch text-center flex justify-center flex-col text-[#49423D] text-3xl md:text-5xl font-semibold leading-tight md:leading-[56px] font-sans tracking-tight">
-              Ready to send faster and close more?
+              Stop typing. Start closing.
             </div>
             <div className="self-stretch text-center text-[#605A57] text-base leading-7 font-sans font-medium">
-              Join thousands of sellers, recruiters, and agents
-              <br />
-              who save hours every week with Sagent.
+              Send your first message in under 60 seconds.
             </div>
           </div>
-          <div className="w-full max-w-[497px] flex flex-col justify-center items-center gap-12">
-            <div className="flex justify-start items-center gap-4">
-              <div className="h-10 px-12 py-[6px] relative bg-[#37322F] shadow-[0px_0px_0px_2.5px_rgba(255,255,255,0.08)_inset] overflow-hidden rounded-full flex justify-center items-center cursor-pointer hover:bg-primary hover:shadow-[0_0_20px_rgba(124,58,237,0.5)] hover:scale-[1.02] transition-all duration-300">
-                <div className="w-44 h-[41px] absolute left-0 top-0 bg-gradient-to-b from-[rgba(255,255,255,0)] to-[rgba(0,0,0,0.10)] mix-blend-multiply"></div>
-                <div className="flex flex-col justify-center text-white text-[13px] font-medium leading-5 font-sans">
-                  Download free
-                </div>
-              </div>
+          <div className="w-full max-w-[497px] flex flex-col justify-center items-center gap-4">
+            <div className="flex flex-col sm:flex-row justify-center items-stretch sm:items-center gap-3 w-full">
+              <Link
+                href="#playstore"
+                className="h-10 px-8 py-[6px] w-full sm:w-auto relative bg-[#37322F] shadow-[0px_0px_0px_2.5px_rgba(255,255,255,0.08)_inset] overflow-hidden rounded-full flex justify-center items-center hover:bg-primary hover:shadow-[0_0_20px_rgba(124,58,237,0.5)] hover:scale-[1.02] transition-all duration-300"
+              >
+                <span className="flex flex-col justify-center text-white text-[13px] font-medium leading-5 font-sans">
+                  Get it on Google Play
+                </span>
+              </Link>
+              <Link
+                href="#appstore"
+                className="h-10 px-8 py-[6px] w-full sm:w-auto bg-white shadow-[0px_1px_2px_rgba(55,50,47,0.12)] overflow-hidden rounded-full flex justify-center items-center hover:text-primary hover:border-primary hover:shadow-[0_4px_15px_rgba(124,58,237,0.2)] hover:scale-[1.02] transition-all duration-300 border border-[rgba(55,50,47,0.12)]"
+              >
+                <span className="flex flex-col justify-center text-[#37322F] text-[13px] font-medium leading-5 font-sans">
+                  Download on App Store
+                </span>
+              </Link>
+            </div>
+            <div className="text-center text-[#605A57] text-xs font-normal leading-5 font-sans mt-2">
+              4.8 stars &middot; No credit card &middot; No setup
             </div>
           </div>
         </div>
@@ -47,3 +60,4 @@ export default function CTASection() {
     </div>
   )
 }
+

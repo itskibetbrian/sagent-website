@@ -151,7 +151,7 @@ Free Plan:
 - "Sent via Sagent" watermark
 - Perfect for trying the app
 
-Pro Closer Plan:
+Pro Plan:
 - Unlimited sends (no monthly limit)
 - Everything in Free plus:
 - Remove the watermark

@@ -31,7 +31,7 @@ const screenshots = [
   "One-tap share",
   "Organised folders",
   "Add new message",
-  "Pro Closer upgrade",
+  "Pro upgrade",
 ]
 
 const testimonials = [
@@ -56,26 +56,29 @@ const testimonials = [
 
 const pricingCards = [
   {
-    label: "Free",
+    label: "FREE",
     price: "$0",
     subline: "Forever free",
     features: [
       "50 sends per month",
-      "Unlimited saved messages",
-      "Unlimited folders",
-      "All message types",
-      '"Sent via Sagent" watermark',
+      "All message categories",
+      "Share sheet access",
+      "Sent via Sagent tag on messages",
     ],
-    cta: "Download Free",
+    cta: "Get Sagent free",
     variant: "secondary",
   },
   {
-    label: "Pro",
+    label: "PRO",
     badge: "Most Popular",
     price: "$9.99",
-    subline: "/month",
-    note: "$89.99/year - save 25%",
-    features: ["Unlimited sends", "Unlimited saved messages", "Unlimited folders", "No watermark", "Priority support"],
+    subline: "per month or $89.99 per year",
+    note: "Cancel anytime. No contracts. No hidden fees.",
+    features: [
+      "Unlimited sends",
+      "All message categories",
+      "No watermark",
+    ],
     cta: "Go Pro",
     variant: "primary",
   },

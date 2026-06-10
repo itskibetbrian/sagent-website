@@ -30,7 +30,7 @@ export const seoRoutes = [
   {
     path: "/pricing",
     title: "Sagent Pricing Plans | Free & Pro Options",
-    description: "Choose Sagent's flexible pricing: Free with 50 monthly sends or Pro Closer with unlimited sends. No credit card required.",
+    description: "Choose Sagent's flexible pricing: Free with 50 monthly sends or Pro with unlimited sends. No credit card required.",
     priority: 0.8,
   },
   {

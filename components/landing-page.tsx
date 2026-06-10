@@ -14,6 +14,7 @@ import CTASection from "@/components/cta-section"
 import FooterSection from "@/components/footer-section"
 import { Header } from "@/components/header"
 import { SagentHomeSections, SagentPricing } from "@/components/sagent-marketing-sections"
+import FoundersNoteSection from "@/components/founders-note-section"
 
 // Reusable Badge Component
 function Badge({ icon, text }: { icon: React.ReactNode; text: string }) {
@@ -68,32 +69,27 @@ export default function LandingPage() {
               <div className="section-block-inner max-w-xl relative z-10">
                   <div className="self-stretch flex flex-col justify-start items-start gap-3">
                     <div className="self-stretch text-center flex justify-center flex-col text-[#49423D] text-3xl md:text-5xl font-semibold leading-tight md:leading-[56px] font-sans tracking-tight">
-                      Start sending faster today
+                      Save 4 hours+ per month. Send any message in less than 10 seconds.
                     </div>
                     <div className="self-stretch text-center text-[#605A57] text-base leading-7 font-sans font-medium">
-                      Free to download. No account needed.
+                      Sagent saves your most-sent messages. Send to any app. Done.
                     </div>
                   </div>
-                  <div className="flex flex-col sm:flex-row justify-center items-stretch sm:items-center gap-3 w-full max-w-md sm:max-w-none">
+                  <div className="flex flex-col justify-center items-center gap-3 w-full max-w-md sm:max-w-none">
                     <Link
                       href="#playstore"
                       className="h-10 px-8 py-[6px] w-full sm:w-auto relative bg-[#37322F] shadow-[0px_0px_0px_2.5px_rgba(255,255,255,0.08)_inset] overflow-hidden rounded-full flex justify-center items-center hover:bg-primary hover:shadow-[0_0_20px_rgba(124,58,237,0.4)] hover:scale-[1.02] transition-all duration-300"
                     >
                       <span className="flex flex-col justify-center text-white text-[13px] font-medium leading-5 font-sans">
-                        Get it on Google Play
+                        Get Sagent now
                       </span>
                     </Link>
-                    <Link
-                      href="#appstore"
-                      className="h-10 px-8 py-[6px] w-full sm:w-auto bg-white shadow-[0px_1px_2px_rgba(55,50,47,0.12)] overflow-hidden rounded-full flex justify-center items-center hover:text-primary hover:border-primary hover:shadow-[0_4px_15px_rgba(124,58,237,0.2)] hover:scale-[1.02] transition-all duration-300 border border-transparent"
-                    >
-                      <span className="flex flex-col justify-center text-[#37322F] text-[13px] font-medium leading-5 font-sans">
-                        Download on App Store
-                      </span>
-                    </Link>
-                  </div>
-                  <div className="text-center text-[#605A57] text-xs font-normal leading-5 font-sans">
-                    Available on Android and iOS
+                    <div className="text-center text-[#605A57] text-xs font-normal leading-5 font-sans">
+                      No credit card &middot; No setup &middot; Start sending in 60 seconds
+                    </div>
+                    <div className="text-center text-[#605A57] text-xs font-normal leading-5 font-sans mt-1">
+                      ★ 4.8 rating &middot; Trusted by sales professionals, recruiters and real estate agents
+                    </div>
                   </div>
               </div>
             </section>
@@ -350,10 +346,22 @@ export default function LandingPage() {
             <TestimonialsSection />
 
             {/* Pricing Section */}
-            <SagentPricing />
+            <div className="w-full border-b border-[rgba(55,50,47,0.12)] flex flex-col justify-center items-center">
+              <div className="section-block-inner max-w-2xl pt-12 pb-6">
+                <div className="w-full text-center flex justify-center flex-col text-[#49423D] text-3xl md:text-5xl font-semibold leading-tight md:leading-[1.15] font-sans tracking-tight text-balance">
+                  Use it for free now. Try Pro later if you are a power user.
+                </div>
+              </div>
+              <SagentPricing />
+            </div>
+
+
 
             {/* FAQ Section */}
             <FAQSection />
+
+            {/* Founder's Note Section */}
+            <FoundersNoteSection />
 
             {/* CTA Section */}
             <CTASection />

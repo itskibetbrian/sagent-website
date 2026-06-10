@@ -9,7 +9,7 @@ export const metadata: Metadata = createPageMetadata(route)
 export default function PricingPage() {
   return (
     <MarketingPageShell>
-      <SagentHero title="Simple pricing" subtitle="Start free. Upgrade when you're ready." />
+      <SagentHero title="Use it for free now." subtitle="Try Pro later if you are a power user." />
       <SagentPricing />
       <SagentFAQ />
     </MarketingPageShell>
