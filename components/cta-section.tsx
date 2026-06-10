@@ -33,26 +33,18 @@ export default function CTASection() {
             </div>
           </div>
           <div className="w-full max-w-[497px] flex flex-col justify-center items-center gap-4">
-            <div className="flex flex-col sm:flex-row justify-center items-stretch sm:items-center gap-3 w-full">
+            <div className="flex flex-col justify-center items-center gap-3 w-full">
               <Link
                 href="#playstore"
                 className="h-10 px-8 py-[6px] w-full sm:w-auto relative bg-[#37322F] shadow-[0px_0px_0px_2.5px_rgba(255,255,255,0.08)_inset] overflow-hidden rounded-full flex justify-center items-center hover:bg-primary hover:shadow-[0_0_20px_rgba(124,58,237,0.5)] hover:scale-[1.02] transition-all duration-300"
               >
                 <span className="flex flex-col justify-center text-white text-[13px] font-medium leading-5 font-sans">
-                  Get it on Google Play
+                  Get Sagent now
                 </span>
               </Link>
-              <Link
-                href="#appstore"
-                className="h-10 px-8 py-[6px] w-full sm:w-auto bg-white shadow-[0px_1px_2px_rgba(55,50,47,0.12)] overflow-hidden rounded-full flex justify-center items-center hover:text-primary hover:border-primary hover:shadow-[0_4px_15px_rgba(124,58,237,0.2)] hover:scale-[1.02] transition-all duration-300 border border-[rgba(55,50,47,0.12)]"
-              >
-                <span className="flex flex-col justify-center text-[#37322F] text-[13px] font-medium leading-5 font-sans">
-                  Download on App Store
-                </span>
-              </Link>
-            </div>
-            <div className="text-center text-[#605A57] text-xs font-normal leading-5 font-sans mt-2">
-              4.8 stars &middot; No credit card &middot; No setup
+              <div className="text-center text-[#605A57] text-xs font-normal leading-5 font-sans">
+                No credit card &middot; No setup &middot; Available on Android and iOS
+              </div>
             </div>
           </div>
         </div>
