@@ -13,20 +13,16 @@ const faqData: FAQItem[] = [
     answer: "Sagent stores all your messages in one app, never lose a message. Send a message quickly with Sagent (much faster than copy pasting).",
   },
   {
-    question: "Does it actually work in WhatsApp?",
-    answer: "Yes, even there. Open Sagent > tap on message > select WhatsApp > send message.",
+    question: "Does it work in WhatsApp?",
+    answer: "Yes. Sagent lives in your share sheet and works in WhatsApp, Gmail, LinkedIn, SMS, and any app that uses the standard share function. Open Sagent › tap on message › select WhatsApp › send.",
   },
   {
-    question: "Is it safe to store my sales messages here?",
-    answer: "Everything is stored locally on your device. Your messages never leave your phone. No external server. No data risk.",
+    question: "Is my data safe and private?",
+    answer: "Everything is stored locally on your device. Your messages never leave your phone. No external server. No account required. No data risk.",
   },
   {
     question: "Does Sagent work on iPhone?",
     answer: "Yes. Available on both Android and iOS.",
-  },
-  {
-    question: "Does it work in WhatsApp?",
-    answer: "Yes. Sagent lives in your share sheet and works in WhatsApp, Gmail, LinkedIn, SMS, and any app that uses the standard share function.",
   },
   {
     question: "Do I need to create an account?",
@@ -35,10 +31,6 @@ const faqData: FAQItem[] = [
   {
     question: "What happens when I hit 50 free sends?",
     answer: "Upgrade to Pro for unlimited sends. Or wait, your count resets every month.",
-  },
-  {
-    question: "Is my data private?",
-    answer: "All messages are stored locally on your device. Nothing is sent to any external server.",
   },
 ]
 
