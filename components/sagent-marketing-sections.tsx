@@ -9,36 +9,7 @@ import { Header } from "./header"
 import { Button } from "./ui/button"
 import { Input } from "./ui/input"
 import { Textarea } from "./ui/textarea"
-
-const faqItems = [
-  {
-    question: "Is Sagent free?",
-    answer:
-      "Yes. Sagent is free to download with 50 sends per month included. Upgrade to Pro Closer for unlimited sends and no watermark.",
-  },
-  {
-    question: "Do I need to create an account?",
-    answer:
-      "No. Sagent works entirely offline. Your messages are stored locally on your device. No sign-in required.",
-  },
-  {
-    question: "Which apps can I send to?",
-    answer:
-      "Any app on your phone that accepts shared text - WhatsApp, Gmail, Telegram, SMS, LinkedIn, and more.",
-  },
-  {
-    question: "What is the watermark?",
-    answer: "Free plan messages include 'Sent via Sagent' at the end. Upgrade to Pro Closer to remove it.",
-  },
-  {
-    question: "Is my data private?",
-    answer: "Yes. All your messages are stored locally on your device only. Nothing is uploaded to any server.",
-  },
-  {
-    question: "Is there an iOS version?",
-    answer: "Android is available now. iOS is coming soon. Join the waitlist to be notified.",
-  },
-]
+import FAQSection from "./faq-section"
 
 const featureCards = [
   {
@@ -99,13 +70,13 @@ const pricingCards = [
     variant: "secondary",
   },
   {
-    label: "Pro Closer",
+    label: "Pro",
     badge: "Most Popular",
     price: "$9.99",
     subline: "/month",
     note: "$89.99/year - save 25%",
     features: ["Unlimited sends", "Unlimited saved messages", "Unlimited folders", "No watermark", "Priority support"],
-    cta: "Go Pro Closer",
+    cta: "Go Pro",
     variant: "primary",
   },
 ]
@@ -355,61 +326,7 @@ export function HowItWorksSteps() {
   )
 }
 
-export function SagentFAQ() {
-  const [openItem, setOpenItem] = useState<number>(0)
-
-  const toggleItem = (index: number) => {
-    setOpenItem(openItem === index ? -1 : index)
-  }
-
-  return (
-    <section className="section-block">
-      <div className="section-block-wide flex flex-col lg:flex-row justify-start items-start gap-8 lg:gap-12">
-        <div className="w-full lg:flex-1 flex flex-col justify-center items-start gap-4 lg:py-5">
-          <div className="w-full flex flex-col justify-center text-[#49423D] font-semibold leading-tight md:leading-[44px] font-sans text-4xl tracking-tight">
-            Common questions
-          </div>
-        </div>
-        <div className="w-full lg:flex-1 flex flex-col justify-center items-center">
-          <div className="w-full flex flex-col">
-            {faqItems.map((item, index) => {
-              const isOpen = openItem === index
-
-              return (
-                <div key={item.question} className="w-full border-b border-[rgba(73,66,61,0.16)] overflow-hidden">
-                  <button
-                    type="button"
-                    onClick={() => toggleItem(index)}
-                    className="w-full px-5 py-[18px] flex justify-between items-center gap-5 text-left hover:bg-brand/10 transition-colors duration-200"
-                    aria-expanded={isOpen}
-                  >
-                    <div className="flex-1 text-[#49423D] text-base font-medium leading-6 font-sans">
-                      {item.question}
-                    </div>
-                    <ChevronDownIcon
-                      className={`w-6 h-6 text-[rgba(73,66,61,0.60)] transition-transform duration-300 ease-in-out ${
-                        isOpen ? "rotate-180" : "rotate-0"
-                      }`}
-                    />
-                  </button>
-                  <div
-                    className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                      isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-                    }`}
-                  >
-                    <div className="px-5 pb-[18px] text-[#605A57] text-sm font-normal leading-6 font-sans">
-                      {item.answer}
-                    </div>
-                  </div>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
+export { FAQSection as SagentFAQ }
 
 export function SagentPricing() {
   return (
