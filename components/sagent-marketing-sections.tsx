@@ -253,7 +253,7 @@ export function SagentHomeSections() {
             </div>
             <div className="flex flex-col sm:flex-row justify-center items-stretch sm:items-center gap-3 w-full max-w-md sm:max-w-none">
               <Link
-                href="#playstore"
+                href="https://play.google.com/store/apps/details?id=com.sagent.app"
                 className="h-10 px-8 py-[6px] w-full sm:w-auto relative bg-[#37322F] shadow-[0px_0px_0px_2.5px_rgba(255,255,255,0.08)_inset] overflow-hidden rounded-full flex justify-center items-center"
               >
                 <span className="flex flex-col justify-center text-white text-[13px] font-medium leading-5 font-sans">
@@ -363,7 +363,7 @@ export function SagentPricing() {
                 {plan.note && <div className="text-[#D2C6BF] text-sm font-normal leading-5 font-sans">{plan.note}</div>}
               </div>
               <Link
-                href="#playstore"
+                href="https://play.google.com/store/apps/details?id=com.sagent.app"
                 className={`self-stretch px-4 py-[10px] relative shadow-[0px_2px_4px_rgba(55,50,47,0.12)] overflow-hidden rounded-[99px] flex justify-center items-center hover:scale-[1.02] transition-all duration-300 ${
                   highlighted ? "bg-[#FBFAF9] hover:text-primary hover:border-primary hover:shadow-[0_4px_15px_rgba(124,58,237,0.2)]" : "bg-[#37322F] hover:bg-primary hover:shadow-[0_0_20px_rgba(124,58,237,0.5)]"
                 }`}

@@ -35,7 +35,7 @@ export default function CTASection() {
           <div className="w-full max-w-[497px] flex flex-col justify-center items-center gap-4">
             <div className="flex flex-col justify-center items-center gap-3 w-full">
               <Link
-                href="#playstore"
+                href="https://play.google.com/store/apps/details?id=com.sagent.app"
                 className="h-10 px-8 py-[6px] w-full sm:w-auto relative bg-[#37322F] shadow-[0px_0px_0px_2.5px_rgba(255,255,255,0.08)_inset] overflow-hidden rounded-full flex justify-center items-center hover:bg-primary hover:shadow-[0_0_20px_rgba(124,58,237,0.5)] hover:scale-[1.02] transition-all duration-300"
               >
                 <span className="flex flex-col justify-center text-white text-[13px] font-medium leading-5 font-sans">
