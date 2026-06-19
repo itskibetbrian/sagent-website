@@ -1,18 +1,38 @@
 import Stripe from "stripe"
 
-const stripeSecretKey = process.env.STRIPE_SECRET_KEY
+let _stripe: Stripe | null = null
 
-if (!stripeSecretKey) {
-  console.warn(
-    "[Stripe] STRIPE_SECRET_KEY is not set. Stripe API calls will fail. " +
-    "Add it to your .env.local file."
-  )
+function getStripe(): Stripe {
+  if (_stripe) return _stripe
+
+  const stripeSecretKey = process.env.STRIPE_SECRET_KEY
+
+  if (!stripeSecretKey) {
+    throw new Error(
+      "[Stripe] STRIPE_SECRET_KEY is not set. " +
+      "Add it to your environment variables."
+    )
+  }
+
+  _stripe = new Stripe(stripeSecretKey, {
+    apiVersion: "2025-05-28.basil",
+    typescript: true,
+  })
+
+  return _stripe
 }
 
-export const stripe = new Stripe(stripeSecretKey || "", {
-  apiVersion: "2025-05-28.basil",
-  typescript: true,
-})
+
+
+// Re-export as a callable getter — usage: stripe.customers.list(...)
+// But callers use `stripe` as a Stripe instance, so we use a Proxy:
+const handler: ProxyHandler<object> = {
+  get(_target, prop) {
+    return (getStripe() as Record<string | symbol, unknown>)[prop]
+  },
+}
+
+export const stripe = new Proxy({} as Stripe, handler)
 
 export const PLANS = {
   monthly: {
