@@ -89,12 +89,12 @@ export default function LandingPage() {
                     >
                       Get it on Google Play
                     </Link>
-                    <Link
-                      href="#appstore"
-                      className="h-14 px-8 w-full sm:w-auto bg-white/10 backdrop-blur-md text-white border border-white/30 shadow-lg overflow-hidden rounded-full flex justify-center items-center hover:bg-white/20 hover:scale-105 transition-all duration-300 font-semibold text-lg"
+                    <button
+                      type="button"
+                      className="h-14 px-8 w-full sm:w-auto bg-white/10 backdrop-blur-md text-white border border-white/30 shadow-lg overflow-hidden rounded-full flex justify-center items-center hover:bg-white/20 hover:scale-105 transition-all duration-300 font-semibold text-lg cursor-default opacity-90"
                     >
                       Download on App Store
-                    </Link>
+                    </button>
                   </div>
               </div>
             </section>
@@ -120,15 +120,15 @@ export default function LandingPage() {
                         <rect x="9.5" y="5" width="1" height="1" fill="#37322F" />
                       </svg>
                     }
-                    text="Trusted by closers"
+                    text="Integrations"
                   />
                   <div className="w-full text-center flex justify-center flex-col text-[#49423D] text-xl sm:text-2xl md:text-3xl lg:text-5xl font-semibold leading-tight md:leading-[1.15] font-sans tracking-tight text-balance">
-                    Confidence backed by results
+                    Works with the apps you already use.
                   </div>
                   <div className="self-stretch text-center text-[#605A57] text-sm sm:text-base font-normal leading-6 sm:leading-7 font-sans">
-                    Sellers, recruiters, and support agents
+                    Share your saved messages to Slack, WhatsApp,
                     <br className="hidden sm:block" />
-                    send faster with Sagent every day.
+                    Email, and more with a single tap.
                   </div>
                 </div>
               </div>
@@ -365,14 +365,14 @@ export default function LandingPage() {
                       Get it on Google Play
                     </span>
                   </Link>
-                  <Link
-                    href="#appstore"
-                    className="h-10 px-8 py-[6px] w-full sm:w-auto bg-white shadow-[0px_1px_2px_rgba(55,50,47,0.12)] overflow-hidden rounded-full flex justify-center items-center hover:text-primary hover:border-primary hover:shadow-[0_4px_15px_rgba(124,58,237,0.2)] hover:scale-[1.02] transition-all duration-300 border border-[rgba(55,50,47,0.12)]"
-                  >
-                    <span className="flex flex-col justify-center text-[#37322F] text-[13px] font-medium leading-5 font-sans">
-                      Download on App Store
-                    </span>
-                  </Link>
+                  <button
+                      type="button"
+                      className="h-10 px-8 py-[6px] w-full sm:w-auto bg-white shadow-[0px_1px_2px_rgba(55,50,47,0.12)] overflow-hidden rounded-full flex justify-center items-center hover:text-primary hover:border-primary hover:shadow-[0_4px_15px_rgba(124,58,237,0.2)] hover:scale-[1.02] transition-all duration-300 border border-[rgba(55,50,47,0.12)] cursor-default opacity-90"
+                    >
+                      <span className="flex flex-col justify-center text-[#37322F] text-[13px] font-medium leading-5 font-sans">
+                        Download on App Store
+                      </span>
+                  </button>
                 </div>
                 <div className="text-center text-[#605A57] text-xs font-normal leading-5 font-sans">
                   Available on Android and iOS

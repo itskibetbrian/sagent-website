@@ -18,7 +18,7 @@ const faqData: FAQItem[] = [
   },
   {
     question: "Is my data safe and private?",
-    answer: "Everything is stored locally on your device. Your messages never leave your phone. No external server. No account required. No data risk.",
+    answer: "Yes. The free tier and message templates remain fully local with no account needed. Pro subscribers sign in with Google solely to verify their subscription—no other data is collected.",
   },
   {
     question: "Does Sagent work on iPhone?",
@@ -26,7 +26,7 @@ const faqData: FAQItem[] = [
   },
   {
     question: "Do I need to create an account?",
-    answer: "No. Download and start immediately.",
+    answer: "Not to start. You can download and start immediately. An account is only required if you upgrade to Pro to protect your subscription.",
   },
   {
     question: "What happens when I hit 50 free sends?",

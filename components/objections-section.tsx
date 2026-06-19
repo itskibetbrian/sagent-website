@@ -18,7 +18,7 @@ const objectionsData: ObjectionItem[] = [
   },
   {
     question: "Is it safe to store my sales messages here?",
-    answer: "Everything is stored locally on your device. Your messages never leave your phone. No external server. No data risk.",
+    answer: "Yes. The free tier and message templates remain fully local with no account needed. Pro subscribers sign in with Google solely to verify their subscription—no other data is collected.",
   },
 ]
 

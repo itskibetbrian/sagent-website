@@ -261,14 +261,14 @@ export function SagentHomeSections() {
                   Get it on Google Play
                 </span>
               </Link>
-              <Link
-                href="#appstore"
-                className="h-10 px-8 py-[6px] w-full sm:w-auto bg-white shadow-[0px_1px_2px_rgba(55,50,47,0.12)] overflow-hidden rounded-full flex justify-center items-center"
+              <button
+                type="button"
+                className="h-10 px-8 py-[6px] w-full sm:w-auto bg-white shadow-[0px_1px_2px_rgba(55,50,47,0.12)] overflow-hidden rounded-full flex justify-center items-center cursor-default opacity-90"
               >
                 <span className="flex flex-col justify-center text-[#37322F] text-[13px] font-medium leading-5 font-sans">
                   Download on App Store
                 </span>
-              </Link>
+              </button>
             </div>
             <div className="text-center text-[#605A57] text-xs font-normal leading-5 font-sans">
               Available on Android and iOS
