@@ -49,7 +49,7 @@ export default function LandingPage() {
 
           <div className="w-full flex flex-col items-stretch gap-4 sm:gap-6 md:gap-8 lg:gap-12 relative z-10">
             {/* Start sending faster today CTA Section */}
-            <section className="w-full relative overflow-hidden min-h-[85vh] flex items-center justify-center">
+            <section className="w-full relative overflow-hidden min-h-[85vh] flex items-center justify-center pt-32 pb-8 sm:pt-36 sm:pb-12">
               {/* Background Video Player */}
               <div className="absolute inset-0 w-full h-full z-0 bg-black">
                 {videos.map((src, idx) => (
@@ -78,26 +78,30 @@ export default function LandingPage() {
                     <h1 className="text-center text-white text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight drop-shadow-xl">
                       Send any message in under 10 seconds.
                     </h1>
-                    <p className="text-center text-white/90 text-lg md:text-2xl leading-relaxed font-medium drop-shadow-lg max-w-2xl">
-                      Save your best messages. Send to any app. Done.
-                    </p>
-                  </div>
-                  <div className="flex flex-col sm:flex-row justify-center items-center gap-4 w-full mt-10">
-                    <Link
-                      href="https://play.google.com/store/apps/details?id=com.sagent.app"
-                      className="h-14 px-8 w-full sm:w-auto relative text-white overflow-hidden rounded-full flex justify-center items-center hover:scale-105 transition-all duration-300 font-semibold text-lg bg-[length:200%_100%] animate-shimmer bg-gradient-to-r from-brand via-white/30 to-brand border border-brand/50 shadow-[0_0_40px_rgba(124,58,237,0.5)]"
-                    >
-                      Get it on Google Play
-                    </Link>
-                    <button
-                      type="button"
-                      className="h-14 px-8 w-full sm:w-auto bg-white/10 backdrop-blur-md text-white border border-white/30 shadow-lg overflow-hidden rounded-full flex justify-center items-center hover:bg-white/20 hover:scale-105 transition-all duration-300 font-semibold text-lg cursor-default opacity-90"
-                    >
-                      Download on App Store
-                    </button>
                   </div>
               </div>
             </section>
+
+            {/* App Download Buttons (Immediately below Hero) */}
+            <div className="w-full flex flex-col items-center gap-3 py-10 px-4 border-b border-[rgba(55,50,47,0.12)] bg-white/20 backdrop-blur-sm">
+              <div className="flex flex-col sm:flex-row justify-center items-stretch sm:items-center gap-3.5 w-full max-w-md sm:max-w-none">
+                <Link
+                  href="https://play.google.com/store/apps/details?id=com.sagent.app"
+                  className="h-12 px-8 py-[10px] w-full sm:w-auto relative text-white overflow-hidden rounded-full flex justify-center items-center hover:scale-[1.02] transition-all duration-300 font-semibold text-sm bg-brand border border-brand/50"
+                >
+                  Get it on Google Play
+                </Link>
+                <button
+                  type="button"
+                  className="h-12 px-8 py-[10px] w-full sm:w-auto bg-white shadow-[0px_1px_2px_rgba(55,50,47,0.12)] overflow-hidden rounded-full flex justify-center items-center hover:text-primary hover:border-primary hover:shadow-[0_4px_15px_rgba(124,58,237,0.2)] hover:scale-[1.02] transition-all duration-300 border border-[rgba(55,50,47,0.12)] text-[#37322F] text-sm font-semibold cursor-default opacity-90"
+                >
+                  Download on App Store
+                </button>
+              </div>
+              <div className="text-center text-[#605A57] text-xs font-normal font-sans">
+                Available on Android and iOS
+              </div>
+            </div>
 
             {/* Social Proof Section */}
             <ScrollReveal delay={0.2} className="section-block">
@@ -240,7 +244,7 @@ export default function LandingPage() {
 
                 <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 p-4 sm:p-6 lg:p-8">
                   {/* Top Left - Smart. Simple. Brilliant. */}
-                  <SpotlightCard className="p-4 sm:p-6 md:p-8 flex flex-col justify-start items-start gap-4 sm:gap-6">
+                  <SpotlightCard className="p-4 sm:p-6 md:p-8 flex flex-col justify-start items-stretch gap-4 sm:gap-6">
                     <div className="flex flex-col gap-2">
                       <h3 className="text-[#37322F] text-lg sm:text-xl font-semibold leading-tight font-sans">
                         Save. Organize. Send.
@@ -249,18 +253,22 @@ export default function LandingPage() {
                         Keep your messages in smart folders so you can find and reuse them instantly every time.
                       </p>
                     </div>
-                    <div className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-lg flex items-center justify-center overflow-hidden">
-                      <SmartSimpleBrilliant
-                        width="100%"
-                        height="100%"
-                        theme="light"
-                        className="scale-50 sm:scale-65 md:scale-75 lg:scale-90"
-                      />
+                    {/* Scaled graphic wrapper */}
+                    <div className="w-full rounded-lg overflow-hidden relative bg-transparent h-[200px] xs:h-[220px] sm:h-[250px] md:h-[280px] mt-4 flex items-center justify-center">
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div style={{ width: '350px', height: '260px', transformOrigin: 'center center' }} className="scale-[0.65] xs:scale-[0.75] sm:scale-[0.8] md:scale-[0.85] lg:scale-[0.95]">
+                          <SmartSimpleBrilliant
+                            width={350}
+                            height={260}
+                            theme="light"
+                          />
+                        </div>
+                      </div>
                     </div>
                   </SpotlightCard>
 
                   {/* Top Right - Your work, in sync */}
-                  <SpotlightCard className="p-4 sm:p-6 md:p-8 flex flex-col justify-start items-start gap-4 sm:gap-6">
+                  <SpotlightCard className="p-4 sm:p-6 md:p-8 flex flex-col justify-start items-stretch gap-4 sm:gap-6">
                     <div className="flex flex-col gap-2">
                       <h3 className="text-[#37322F] font-semibold leading-tight font-sans text-lg sm:text-xl">
                         Message faster than ever
@@ -269,18 +277,21 @@ export default function LandingPage() {
                         Send personalized messages to your network instantly without repetitive typing or manual work.
                       </p>
                     </div>
-                    <div className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-lg flex overflow-hidden items-center justify-center">
-                      <YourWorkInSync
-                        width="100%"
-                        height="100%"
-                        theme="light"
-                        className="w-full max-w-[400px] h-auto scale-75 sm:scale-90"
-                      />
+                    <div className="w-full rounded-lg overflow-hidden relative bg-transparent h-[200px] xs:h-[220px] sm:h-[250px] md:h-[280px] mt-4 flex items-center justify-center">
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div style={{ width: '400px', height: '260px', transformOrigin: 'center center' }} className="scale-[0.7] xs:scale-[0.8] sm:scale-[0.85] md:scale-[0.9] lg:scale-100">
+                          <YourWorkInSync
+                            width={400}
+                            height={260}
+                            theme="light"
+                          />
+                        </div>
+                      </div>
                     </div>
                   </SpotlightCard>
 
                   {/* Bottom Left - Effortless integration */}
-                  <SpotlightCard className="p-4 sm:p-6 md:p-8 flex flex-col justify-start items-start gap-4 sm:gap-6">
+                  <SpotlightCard className="p-4 sm:p-6 md:p-8 flex flex-col justify-start items-stretch gap-4 sm:gap-6">
                     <div className="flex flex-col gap-2">
                       <h3 className="text-[#37322F] text-lg sm:text-xl font-semibold leading-tight font-sans">
                         Works everywhere you do
@@ -289,17 +300,19 @@ export default function LandingPage() {
                         Use Sagent on any messaging platform - LinkedIn, email, SMS, WhatsApp, and more.
                       </p>
                     </div>
-                    <div className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-lg flex overflow-hidden justify-center items-center relative bg-transparent">
-                      <div className="w-full h-full flex items-center justify-center bg-transparent">
-                        <EffortlessIntegration width={400} height={250} className="max-w-full max-h-full" />
+                    <div className="w-full rounded-lg overflow-hidden relative bg-transparent h-[200px] xs:h-[220px] sm:h-[250px] md:h-[280px] mt-4 flex items-center justify-center">
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div style={{ width: '400px', height: '250px', transformOrigin: 'center center' }} className="scale-[0.7] xs:scale-[0.8] sm:scale-[0.85] md:scale-[0.9] lg:scale-100">
+                          <EffortlessIntegration width={400} height={250} />
+                        </div>
                       </div>
                       {/* Gradient mask for soft bottom edge */}
-                      <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-[#EDE9F6] to-transparent pointer-events-none"></div>
+                      <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-[#EDE9F6] to-transparent pointer-events-none z-10"></div>
                     </div>
                   </SpotlightCard>
 
                   {/* Bottom Right - Numbers that speak */}
-                  <SpotlightCard className="p-4 sm:p-6 md:p-8 flex flex-col justify-start items-start gap-4 sm:gap-6">
+                  <SpotlightCard className="p-4 sm:p-6 md:p-8 flex flex-col justify-start items-stretch gap-4 sm:gap-6">
                     <div className="flex flex-col gap-2">
                       <h3 className="text-[#37322F] text-lg sm:text-xl font-semibold leading-tight font-sans">
                         10x your productivity
@@ -308,17 +321,18 @@ export default function LandingPage() {
                         Save hours every week by sending more messages faster with templates and smart organization.
                       </p>
                     </div>
-                    <div className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-lg flex overflow-hidden items-center justify-center relative">
+                    <div className="w-full rounded-lg overflow-hidden relative bg-transparent h-[200px] xs:h-[220px] sm:h-[250px] md:h-[280px] mt-4 flex items-center justify-center">
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <NumbersThatSpeak
-                          width="100%"
-                          height="100%"
-                          theme="light"
-                          className="w-full h-full object-contain"
-                        />
+                        <div style={{ width: '420px', height: '280px', transformOrigin: 'center center' }} className="scale-[0.65] xs:scale-[0.75] sm:scale-[0.8] md:scale-[0.85] lg:scale-[0.95]">
+                          <NumbersThatSpeak
+                            width={420}
+                            height={280}
+                            theme="light"
+                          />
+                        </div>
                       </div>
                       {/* Gradient mask for soft bottom edge */}
-                      <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-[#EDE9F6] to-transparent pointer-events-none"></div>
+                      <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-[#EDE9F6] to-transparent pointer-events-none z-10"></div>
                     </div>
                   </SpotlightCard>
                 </div>

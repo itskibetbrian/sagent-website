@@ -157,19 +157,19 @@ export default function TestimonialsSection() {
       <div className="w-full px-4 sm:px-6 md:px-10 lg:px-12 py-8 md:py-12 bg-[rgba(237,233,246,0.5)]">
         <div className="max-w-[1200px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           <div className="flex flex-col justify-start items-start gap-2">
-            <div className="text-[#37322F] text-lg md:text-2xl font-bold font-sans">50K+</div>
+            <div className="text-[#37322F] text-2xl md:text-4xl font-normal font-serif">50K+</div>
             <div className="text-[#605A57] text-sm font-normal leading-6 font-sans">Messages sent daily</div>
           </div>
           <div className="flex flex-col justify-start items-start gap-2">
-            <div className="text-[#37322F] text-lg md:text-2xl font-bold font-sans">4.8★</div>
+            <div className="text-[#37322F] text-2xl md:text-4xl font-normal font-serif">4.8★</div>
             <div className="text-[#605A57] text-sm font-normal leading-6 font-sans">App Store Rating</div>
           </div>
           <div className="flex flex-col justify-start items-start gap-2">
-            <div className="text-[#37322F] text-lg md:text-2xl font-bold font-sans">100%</div>
+            <div className="text-[#37322F] text-2xl md:text-4xl font-normal font-serif">100%</div>
             <div className="text-[#605A57] text-sm font-normal leading-6 font-sans">Offline Secure</div>
           </div>
           <div className="flex flex-col justify-start items-start gap-2">
-            <div className="text-[#37322F] text-lg md:text-2xl font-bold font-sans">&lt;10s</div>
+            <div className="text-[#37322F] text-2xl md:text-4xl font-normal font-serif">&lt;10s</div>
             <div className="text-[#605A57] text-sm font-normal leading-6 font-sans">Average send time</div>
           </div>
         </div>

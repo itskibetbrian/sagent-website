@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import {
   Dialog,
   DialogContent,
@@ -21,6 +21,18 @@ export function ContactModal({ children }: ContactModalProps) {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
   const [category, setCategory] = useState("General Inquiry")
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search)
+      if (params.get("contact") === "true") {
+        setIsOpen(true)
+        // Clean URL params without reloading page
+        const newUrl = window.location.pathname + window.location.hash
+        window.history.replaceState({}, document.title, newUrl)
+      }
+    }
+  }, [])
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
