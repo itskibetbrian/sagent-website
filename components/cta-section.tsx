@@ -1,10 +1,11 @@
 "use client"
 
 import Link from "next/link"
+import { ContactModal } from "@/components/contact-modal"
 
 export default function CTASection() {
   return (
-    <div className="w-full relative overflow-hidden flex flex-col justify-center items-center gap-2">
+    <div id="contact" className="w-full relative overflow-hidden flex flex-col justify-center items-center gap-2">
       {/* Content */}
       <div className="section-block-inner max-w-xl border-t border-b border-[rgba(55,50,47,0.12)] relative z-10">
         <div className="absolute inset-0 w-full h-full overflow-hidden">
@@ -34,14 +35,16 @@ export default function CTASection() {
           </div>
           <div className="w-full max-w-[497px] flex flex-col justify-center items-center gap-4">
             <div className="flex flex-col justify-center items-center gap-3 w-full">
-              <Link
-                href="https://play.google.com/store/apps/details?id=com.sagent.app"
-                className="h-10 px-8 py-[6px] w-full sm:w-auto relative bg-[#37322F] shadow-[0px_0px_0px_2.5px_rgba(255,255,255,0.08)_inset] overflow-hidden rounded-full flex justify-center items-center hover:bg-primary hover:shadow-[0_0_20px_rgba(124,58,237,0.5)] hover:scale-[1.02] transition-all duration-300"
-              >
-                <span className="flex flex-col justify-center text-white text-[13px] font-medium leading-5 font-sans">
-                  Get Sagent now
-                </span>
-              </Link>
+              <ContactModal>
+                <button
+                  type="button"
+                  className="h-10 px-8 py-[6px] w-full sm:w-auto relative bg-[#37322F] shadow-[0px_0px_0px_2.5px_rgba(255,255,255,0.08)_inset] overflow-hidden rounded-full flex justify-center items-center hover:bg-primary hover:shadow-[0_0_20px_rgba(124,58,237,0.5)] hover:scale-[1.02] transition-all duration-300"
+                >
+                  <span className="flex flex-col justify-center text-white text-[13px] font-medium leading-5 font-sans">
+                    Talk to Sales
+                  </span>
+                </button>
+              </ContactModal>
               <div className="text-center text-[#605A57] text-xs font-normal leading-5 font-sans">
                 No credit card &middot; No setup &middot; Available on Android and iOS
               </div>

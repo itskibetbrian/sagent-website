@@ -15,7 +15,7 @@ function getStripe(): Stripe {
   }
 
   _stripe = new Stripe(stripeSecretKey, {
-    apiVersion: "2025-05-28.basil",
+    apiVersion: "2026-05-27.dahlia" as any,
     typescript: true,
   })
 
@@ -26,13 +26,13 @@ function getStripe(): Stripe {
 
 // Re-export as a callable getter — usage: stripe.customers.list(...)
 // But callers use `stripe` as a Stripe instance, so we use a Proxy:
-const handler: ProxyHandler<object> = {
+const handler: ProxyHandler<any> = {
   get(_target, prop) {
-    return (getStripe() as Record<string | symbol, unknown>)[prop]
+    return (getStripe() as any)[prop]
   },
 }
 
-export const stripe = new Proxy({} as Stripe, handler)
+export const stripe: Stripe = new Proxy({} as any, handler)
 
 export const PLANS = {
   monthly: {

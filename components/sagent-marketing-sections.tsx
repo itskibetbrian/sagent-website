@@ -403,23 +403,38 @@ export function LegalPage({
   sections: { title: string; body: string }[]
 }) {
   return (
-    <>
-      <SagentHero title={title} subtitle={subtitle} />
-      <section className="section-block">
-        <div className="section-block-wide max-w-3xl mx-auto flex flex-col gap-8 sm:gap-9">
+    <div className="w-full py-12 flex flex-col items-center justify-center relative overflow-hidden bg-gradient-to-b from-background to-[#E8DFF4]">
+      {/* Decorative gradient glow behind content */}
+      <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[350px] h-[350px] rounded-full bg-brand/10 blur-[90px] pointer-events-none" />
+      <div className="absolute bottom-20 left-1/3 w-[300px] h-[300px] rounded-full bg-[#a175fb]/80 opacity-10 blur-[100px] pointer-events-none" />
+
+      <div className="w-full max-w-4xl px-4 sm:px-6 relative z-10">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-6xl font-normal leading-[1.1] font-serif text-[#37322F] mb-4">
+            {title}
+          </h1>
+          <p className="text-[#605A57] text-sm md:text-base font-medium font-sans">
+            {subtitle}
+          </p>
+        </div>
+
+        {/* Content Card with Glassmorphism */}
+        <div className="w-full bg-white/70 backdrop-blur-md border border-white/60 shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] rounded-[32px] p-6 sm:p-10 md:p-12 flex flex-col gap-8 sm:gap-10">
           {sections.map((section) => (
-            <div key={section.title} className="flex flex-col gap-3">
-              <h2 className="text-[#49423D] text-2xl font-semibold leading-8 font-sans">{section.title}</h2>
+            <div key={section.title} className="flex flex-col gap-3.5 border-b border-[rgba(55,50,47,0.06)] pb-8 last:border-b-0 last:pb-0">
+              <h2 className="text-[#37322F] text-xl sm:text-2xl font-semibold leading-8 font-sans">
+                {section.title}
+              </h2>
               <LinkifiedText
                 text={section.body}
                 as="p"
-                className="text-[#605A57] text-base font-normal leading-7 font-sans"
+                className="text-[#524B47] text-sm sm:text-base font-normal leading-7 font-sans whitespace-pre-line"
               />
             </div>
           ))}
         </div>
-      </section>
-    </>
+      </div>
+    </div>
   )
 }
 

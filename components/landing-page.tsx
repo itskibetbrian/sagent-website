@@ -337,7 +337,7 @@ export default function LandingPage() {
               </div>
             </ScrollReveal>
 
-            {/* Documentation Section */}
+            {/* Documentation / How it works Section */}
             <ScrollReveal>
               <DocumentationSection />
             </ScrollReveal>
@@ -348,7 +348,7 @@ export default function LandingPage() {
             </ScrollReveal>
 
             {/* Pricing Section */}
-            <ScrollReveal className="w-full border-b border-[rgba(55,50,47,0.12)] flex flex-col justify-center items-center">
+            <ScrollReveal id="pricing" className="w-full border-b border-[rgba(55,50,47,0.12)] flex flex-col justify-center items-center">
               <div className="section-block-inner max-w-2xl pt-12 pb-6">
                 <div className="w-full text-center flex justify-center flex-col text-[#49423D] text-3xl md:text-5xl font-semibold leading-tight md:leading-[1.15] font-sans tracking-tight text-balance">
                   Use it for free now. Try Pro later if you are a power user.
@@ -380,14 +380,14 @@ export default function LandingPage() {
               </div>
             </ScrollReveal>
 
+            {/* Founder's Note Section - above FAQ */}
+            <ScrollReveal>
+              <FoundersNoteSection />
+            </ScrollReveal>
+
             {/* FAQ Section */}
             <ScrollReveal>
               <FAQSection />
-            </ScrollReveal>
-
-            {/* Founder's Note Section */}
-            <ScrollReveal>
-              <FoundersNoteSection />
             </ScrollReveal>
 
             {/* CTA Section */}

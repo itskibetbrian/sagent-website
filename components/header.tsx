@@ -11,9 +11,9 @@ import {
 } from "@/components/ui/sheet"
 
 const navItems = [
-  { href: "/how-it-works", label: "How it works" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/contact", label: "Contact" },
+  { href: "#how-it-works", label: "How it works" },
+  { href: "#pricing", label: "Pricing" },
+  { href: "#contact", label: "Contact" },
 ]
 
 const navLinkClass =
@@ -43,9 +43,9 @@ export function Header() {
               aria-label="Main navigation"
             >
               {navItems.map((item) => (
-                <Link key={item.href} href={item.href} className={navLinkClass}>
+                <a key={item.href} href={item.href} className={navLinkClass}>
                   {item.label}
-                </Link>
+                </a>
               ))}
             </nav>
           </div>
@@ -77,14 +77,14 @@ export function Header() {
               <SheetTitle className="sr-only">Navigation menu</SheetTitle>
               <nav className="flex flex-col gap-1 px-4 pt-14 pb-6" aria-label="Mobile navigation">
                 {navItems.map((item) => (
-                  <Link
+                  <a
                     key={item.href}
                     href={item.href}
                     className={mobileNavLinkClass}
                     onClick={() => setMenuOpen(false)}
                   >
                     {item.label}
-                  </Link>
+                  </a>
                 ))}
                 <div className="mt-4 border-t border-[rgba(55,50,47,0.12)] pt-4">
                   <button

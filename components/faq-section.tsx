@@ -9,8 +9,16 @@ interface FAQItem {
 
 const faqData: FAQItem[] = [
   {
-    question: "I already save messages in Notes.",
-    answer: "Sagent stores all your messages in one app, never lose a message. Send a message quickly with Sagent (much faster than copy pasting).",
+    question: "What is Sagent?",
+    answer: "Sagent is a mobile app that lets you save, organize, and instantly send your most-used messages across any messaging platform — WhatsApp, Gmail, LinkedIn, SMS, and more — in under 10 seconds.",
+  },
+  {
+    question: "How does Sagent work?",
+    answer: "Save your messages once in Sagent, organize them into folders, then share them to any app using your phone's native share sheet. Tap a message, pick a platform, and send. No copy-pasting, no switching between apps.",
+  },
+  {
+    question: "Who is Sagent built for?",
+    answer: "Anyone who sends the same messages repeatedly — sales reps, recruiters, customer support agents, real estate agents, freelancers, and small business owners. If you type the same thing more than once, Sagent saves you time.",
   },
   {
     question: "Does it work in WhatsApp?",
@@ -29,8 +37,24 @@ const faqData: FAQItem[] = [
     answer: "Not to start. You can download and start immediately. An account is only required if you upgrade to Pro to protect your subscription.",
   },
   {
+    question: "What is the difference between Free and Pro?",
+    answer: "The Free plan gives you 50 message sends per month, smart folders, favourites, and the share sheet integration. Pro unlocks unlimited sends, removes the 'Sent via Sagent' watermark, and provides priority support — all for $8.99/month or $80.99/year.",
+  },
+  {
     question: "What happens when I hit 50 free sends?",
-    answer: "Upgrade to Pro for unlimited sends. Or wait, your count resets every month.",
+    answer: "Upgrade to Pro for unlimited sends. Or wait — your count resets every month.",
+  },
+  {
+    question: "Can I organize my messages into folders?",
+    answer: "Absolutely. Sagent lets you create custom folders to group your messages by client, campaign, category, or anything else. Pin your most-used messages as favourites for one-tap access.",
+  },
+  {
+    question: "Does Sagent read or store my conversations?",
+    answer: "No. Sagent only stores message templates that you create. It never reads, accesses, or transmits your actual conversations on any messaging platform.",
+  },
+  {
+    question: "How do I cancel my Pro subscription?",
+    answer: "You can cancel anytime through your Google Play or App Store subscription settings. You will keep Pro benefits until the end of your current billing period.",
   },
 ]
 
@@ -57,15 +81,15 @@ export default function FAQSection() {
   }
 
   return (
-    <div className="section-block w-full">
+    <div id="faq" className="section-block w-full">
       <div className="section-block-wide flex flex-col lg:flex-row justify-start items-start gap-8 lg:gap-12">
         {/* Left Column - Header */}
         <div className="w-full lg:flex-1 flex flex-col justify-center items-start gap-4 lg:py-5">
           <div className="w-full flex flex-col justify-center text-[#49423D] font-semibold leading-tight md:leading-[44px] font-sans text-4xl tracking-tight">
-            Quick answers.
+            FAQ
           </div>
           <div className="w-full text-[#605A57] text-base font-normal leading-7 font-sans">
-            Got questions about Sagent? We have got answers.
+            Everything you need to know about Sagent, answered.
           </div>
         </div>
 

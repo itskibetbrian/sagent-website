@@ -298,15 +298,15 @@ export default function WebPricing() {
           />
 
           {/* Modal */}
-          <div className="relative w-full max-w-md glass bg-white/70 rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.15)] border border-white/60 overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+          <div className="relative w-full max-w-md glass bg-white/95 backdrop-blur-xl rounded-3xl shadow-[0_25px_60px_rgba(0,0,0,0.25)] border border-white/80 overflow-hidden animate-in fade-in zoom-in-95 duration-200">
             {/* Header */}
-            <div className="px-6 pt-6 pb-4 border-b border-[rgba(55,50,47,0.08)]">
+            <div className="px-6 pt-6 pb-4 border-b border-[rgba(55,50,47,0.12)]">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-lg font-semibold text-[#37322F] font-sans">
+                  <h3 className="text-xl font-bold text-[#181512] font-sans">
                     Subscribe to Pro
                   </h3>
-                  <p className="text-sm text-[#605A57] font-sans mt-1">
+                  <p className="text-sm text-[#3F3A36] font-medium font-sans mt-1">
                     {billingInterval === "monthly"
                       ? "$8.99/month"
                       : "$80.99/year"}{" "}
@@ -318,7 +318,7 @@ export default function WebPricing() {
                     setShowCheckout(false)
                     setError("")
                   }}
-                  className="w-8 h-8 rounded-full bg-[rgba(55,50,47,0.06)] flex items-center justify-center hover:bg-[rgba(55,50,47,0.12)] transition-colors"
+                  className="w-8 h-8 rounded-full bg-[rgba(55,50,47,0.08)] flex items-center justify-center hover:bg-[rgba(55,50,47,0.15)] transition-colors"
                 >
                   <svg
                     width="14"
@@ -328,8 +328,8 @@ export default function WebPricing() {
                   >
                     <path
                       d="M11 3L3 11M3 3l8 8"
-                      stroke="#605A57"
-                      strokeWidth="1.5"
+                      stroke="#181512"
+                      strokeWidth="2"
                       strokeLinecap="round"
                     />
                   </svg>
@@ -342,11 +342,11 @@ export default function WebPricing() {
               <div className="flex flex-col gap-1.5">
                 <label
                   htmlFor="checkout-email"
-                  className="text-sm font-medium text-[#49423D] font-sans"
+                  className="text-sm font-bold text-[#181512] font-sans"
                 >
                   Email address
                 </label>
-                <p className="text-xs text-[#847971] font-sans">
+                <p className="text-xs text-[#524B47] font-medium font-sans">
                   Use the same email you signed up with in the Sagent app
                 </p>
                 <input
@@ -361,36 +361,36 @@ export default function WebPricing() {
                   onKeyDown={(e) => {
                     if (e.key === "Enter") handleCheckout()
                   }}
-                  className="w-full h-11 px-4 bg-white border border-[#E0DEDB] rounded-lg text-sm text-[#37322F] font-sans placeholder:text-[#B0AAA5] focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-all"
+                  className="w-full h-11 px-4 bg-white border border-[#B0AAA5] rounded-xl text-sm text-[#181512] font-semibold font-sans placeholder:text-[#847971] focus:outline-none focus:ring-2 focus:ring-brand/40 focus:border-brand transition-all"
                   autoFocus
                 />
               </div>
 
               {error && (
-                <div className="text-sm text-red-600 font-sans bg-red-50 px-3 py-2 rounded-lg border border-red-100">
+                <div className="text-sm text-red-700 font-semibold font-sans bg-red-50 px-3 py-2 rounded-lg border border-red-200">
                   {error}
                 </div>
               )}
 
               {/* Plan summary */}
-              <div className="bg-[rgba(55,50,47,0.03)] rounded-lg p-4 flex flex-col gap-2">
+              <div className="bg-[#F5F2F9] border border-[rgba(161,117,251,0.15)] rounded-xl p-4 flex flex-col gap-2">
                 <div className="flex justify-between text-sm font-sans">
-                  <span className="text-[#605A57]">Plan</span>
-                  <span className="text-[#37322F] font-medium">
+                  <span className="text-[#3F3A36] font-medium">Plan</span>
+                  <span className="text-[#181512] font-bold">
                     Pro {billingInterval === "monthly" ? "Monthly" : "Yearly"}
                   </span>
                 </div>
                 <div className="flex justify-between text-sm font-sans">
-                  <span className="text-[#605A57]">Price</span>
-                  <span className="text-[#37322F] font-medium">
+                  <span className="text-[#3F3A36] font-medium">Price</span>
+                  <span className="text-[#181512] font-bold">
                     {billingInterval === "monthly"
                       ? "$8.99/mo"
                       : "$80.99/yr"}
                   </span>
                 </div>
                 <div className="flex justify-between text-sm font-sans">
-                  <span className="text-[#605A57]">vs App Store</span>
-                  <span className="text-green-600 font-medium">
+                  <span className="text-[#3F3A36] font-medium">vs App Store</span>
+                  <span className="text-green-700 font-bold">
                     {billingInterval === "monthly"
                       ? "Save $1.00/mo"
                       : "Save $9.00/yr"}
@@ -401,7 +401,7 @@ export default function WebPricing() {
               <button
                 onClick={handleCheckout}
                 disabled={isLoading}
-                className="w-full h-11 bg-[#37322F] text-white text-sm font-medium rounded-full hover:bg-primary hover:shadow-[0_0_20px_rgba(124,58,237,0.4)] disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 font-sans flex items-center justify-center gap-2"
+                className="w-full h-11 relative text-white bg-[length:200%_100%] animate-shimmer bg-gradient-to-r from-brand via-white/30 to-brand border border-brand/50 shadow-[0_0_20px_rgba(124,58,237,0.4)] overflow-hidden rounded-full flex justify-center items-center hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(124,58,237,0.6)] disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 font-sans font-bold gap-2"
               >
                 {isLoading ? (
                   <>
@@ -431,7 +431,7 @@ export default function WebPricing() {
                 )}
               </button>
 
-              <div className="flex items-center justify-center gap-2 text-xs text-[#847971] font-sans">
+              <div className="flex items-center justify-center gap-2 text-xs text-[#3F3A36] font-semibold font-sans">
                 <svg
                   width="12"
                   height="12"
@@ -441,12 +441,14 @@ export default function WebPricing() {
                   <path
                     d="M9.5 5.5H2.5C2.22386 5.5 2 5.72386 2 6V10C2 10.2761 2.22386 10.5 2.5 10.5H9.5C9.77614 10.5 10 10.2761 10 10V6C10 5.72386 9.77614 5.5 9.5 5.5Z"
                     stroke="currentColor"
+                    strokeWidth="1.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
                   <path
                     d="M4 5.5V3.5C4 2.39543 4.89543 1.5 6 1.5C7.10457 1.5 8 2.39543 8 3.5V5.5"
                     stroke="currentColor"
+                    strokeWidth="1.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />

@@ -1,9 +1,46 @@
 "use client"
 
+import React, { useRef, useState } from "react"
+import { motion } from "framer-motion"
+
 export default function FoundersNoteSection() {
+  const divRef = useRef<HTMLDivElement>(null)
+  const [position, setPosition] = useState({ x: 0, y: 0 })
+  const [opacity, setOpacity] = useState(0)
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!divRef.current) return
+    const div = divRef.current
+    const rect = div.getBoundingClientRect()
+    setPosition({ x: e.clientX - rect.left, y: e.clientY - rect.top })
+  }
+
+  const handleMouseEnter = () => {
+    setOpacity(1)
+  }
+
+  const handleMouseLeave = () => {
+    setOpacity(0)
+  }
+
   return (
-    <section className="section-block border-t border-b border-[rgba(55,50,47,0.12)] py-16 flex justify-center items-center bg-[#FBFAF9]">
-      <div className="section-block-inner max-w-xl px-6 flex flex-col gap-6 text-left">
+    <section
+      ref={divRef}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className="section-block border-t border-b border-[rgba(55,50,47,0.12)] py-16 flex justify-center items-center relative overflow-hidden bg-white cursor-default"
+    >
+      {/* Mouse follow gradient background */}
+      <motion.div
+        className="pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-300 z-0"
+        style={{
+          opacity,
+          background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(124, 58, 237, 0.15), transparent 50%)`,
+        }}
+      />
+
+      <div className="section-block-inner max-w-xl px-6 flex flex-col gap-6 text-left relative z-10">
         <div className="text-[#847971] text-xs font-medium uppercase tracking-wider font-sans">
           A Note from the Founder
         </div>
@@ -32,3 +69,4 @@ export default function FoundersNoteSection() {
     </section>
   )
 }
+

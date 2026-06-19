@@ -103,7 +103,7 @@ function SuccessContent() {
             <p className="text-[#605A57] text-sm font-sans">{error}</p>
           </div>
           <Link
-            href="/pricing"
+            href="/#pricing"
             className="px-6 py-2.5 bg-[#37322F] text-white text-sm font-medium rounded-full hover:bg-primary transition-colors font-sans"
           >
             Back to pricing

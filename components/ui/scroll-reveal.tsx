@@ -9,6 +9,7 @@ interface ScrollRevealProps {
   delay?: number;
   yOffset?: number;
   duration?: number;
+  id?: string;
 }
 
 export function ScrollReveal({
@@ -17,9 +18,11 @@ export function ScrollReveal({
   delay = 0,
   yOffset = 40,
   duration = 0.6,
+  id,
 }: ScrollRevealProps) {
   return (
     <motion.div
+      id={id}
       initial={{ opacity: 0, y: yOffset }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}

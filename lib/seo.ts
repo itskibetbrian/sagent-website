@@ -22,24 +22,6 @@ export const seoRoutes = [
     priority: 1,
   },
   {
-    path: "/how-it-works",
-    title: "How Sagent Works | Save & Send Messages Fast",
-    description: "Learn how Sagent works: Save messages in templates, organize them in folders, and send personalized replies instantly from any device.",
-    priority: 0.9,
-  },
-  {
-    path: "/pricing",
-    title: "Sagent Pricing Plans | Free & Pro Options",
-    description: "Choose Sagent's flexible pricing: Free with 50 monthly sends or Pro with unlimited sends. No credit card required.",
-    priority: 0.8,
-  },
-  {
-    path: "/contact",
-    title: "Contact Sagent | Get Support & Feedback",
-    description: "Contact Sagent for customer support, product inquiries, partnerships, and feature requests.",
-    priority: 0.7,
-  },
-  {
     path: "/privacy",
     title: "Sagent Privacy Policy | Your Data Protection",
     description: "Sagent's privacy policy: Learn how we protect your messages, handle local storage, and manage third-party integrations securely.",

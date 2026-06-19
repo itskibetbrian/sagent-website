@@ -1,5 +1,6 @@
 import { BrandMark } from "@/components/brand-mark"
 import Link from "next/link"
+import { ContactModal } from "./contact-modal"
 
 export default function FooterSection() {
   return (
@@ -13,7 +14,7 @@ export default function FooterSection() {
             <BrandMark />
           </div>
           <div className="text-[rgba(73,66,61,0.90)] text-sm font-medium leading-[18px] font-sans">
-            Made for closers worldwide
+             Made for closers worldwide
           </div>
 
           {/* Social Media Icons */}
@@ -73,18 +74,18 @@ export default function FooterSection() {
               Product
             </div>
             <div className="flex flex-col items-start justify-start gap-2 sm:gap-3">
-              <Link
-                href="/how-it-works"
+              <a
+                href="#how-it-works"
                 className="text-[#49423D] text-xs sm:text-sm font-normal leading-4 sm:leading-5 font-sans transition-colors hover:text-brand"
               >
                 How it works
-              </Link>
-              <Link
-                href="/pricing"
+              </a>
+              <a
+                href="#pricing"
                 className="text-[#49423D] text-xs sm:text-sm font-normal leading-4 sm:leading-5 font-sans transition-colors hover:text-brand"
               >
                 Pricing
-              </Link>
+              </a>
               <div className="text-[#49423D] text-xs sm:text-sm font-normal leading-4 sm:leading-5 font-sans transition-colors hover:text-brand cursor-pointer">
                 Features
               </div>
@@ -106,12 +107,14 @@ export default function FooterSection() {
               <div className="text-[#49423D] text-xs sm:text-sm font-normal leading-4 sm:leading-5 font-sans transition-colors hover:text-brand cursor-pointer">
                 Careers
               </div>
-              <Link
-                href="/contact"
-                className="text-[#49423D] text-xs sm:text-sm font-normal leading-4 sm:leading-5 font-sans transition-colors hover:text-brand"
-              >
-                Contact
-              </Link>
+              <ContactModal>
+                <button
+                  type="button"
+                  className="text-left text-[#49423D] text-xs sm:text-sm font-normal leading-4 sm:leading-5 font-sans transition-colors hover:text-brand cursor-pointer"
+                >
+                  Contact
+                </button>
+              </ContactModal>
               <div className="text-[#49423D] text-xs sm:text-sm font-normal leading-4 sm:leading-5 font-sans transition-colors hover:text-brand cursor-pointer">
                 Team
               </div>

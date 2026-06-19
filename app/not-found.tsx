@@ -49,17 +49,17 @@ export default function NotFound() {
         <div className="pt-6 border-t border-[rgba(55,50,47,0.12)] text-center">
           <p className="text-sm text-[#605A57] mb-4">You might find this helpful:</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center flex-wrap">
-            <Link href="/how-it-works" className="text-sm text-[#37322F] hover:underline">
+            <a href="/#how-it-works" className="text-sm text-[#37322F] hover:underline">
               How it works
-            </Link>
+            </a>
             <span className="text-[#605A57] hidden sm:inline">•</span>
-            <Link href="/pricing" className="text-sm text-[#37322F] hover:underline">
+            <a href="/#pricing" className="text-sm text-[#37322F] hover:underline">
               Pricing
-            </Link>
+            </a>
             <span className="text-[#605A57] hidden sm:inline">•</span>
-            <Link href="/contact" className="text-sm text-[#37322F] hover:underline">
+            <a href="/#contact" className="text-sm text-[#37322F] hover:underline">
               Contact us
-            </Link>
+            </a>
             <span className="text-[#605A57] hidden sm:inline">•</span>
             <Link href="/blog" className="text-sm text-[#37322F] hover:underline">
               Blog
