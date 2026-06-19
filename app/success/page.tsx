@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { Suspense, useEffect, useState } from "react"
 import { useSearchParams } from "next/navigation"
 import Link from "next/link"
 import { Header } from "@/components/header"
@@ -222,7 +222,21 @@ export default function SuccessPage() {
     <div className="page-shell">
       <Header />
       <main className="page-container-bordered min-h-screen">
-        <SuccessContent />
+        <Suspense fallback={
+          <div className="section-block-inner max-w-xl py-24">
+            <div className="flex flex-col items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-[rgba(55,50,47,0.06)] flex items-center justify-center">
+                <svg className="animate-spin h-6 w-6 text-[#605A57]" viewBox="0 0 24 24" fill="none">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                </svg>
+              </div>
+              <p className="text-[#605A57] text-sm font-sans">Loading...</p>
+            </div>
+          </div>
+        }>
+          <SuccessContent />
+        </Suspense>
       </main>
       <div className="page-container-bordered">
         <FooterSection />

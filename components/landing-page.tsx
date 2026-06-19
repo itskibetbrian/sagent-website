@@ -13,7 +13,8 @@ import FAQSection from "@/components/faq-section"
 import CTASection from "@/components/cta-section"
 import FooterSection from "@/components/footer-section"
 import { Header } from "@/components/header"
-import { SagentHomeSections, SagentPricing } from "@/components/sagent-marketing-sections"
+import { SagentHomeSections } from "@/components/sagent-marketing-sections"
+import WebPricing from "@/components/web-pricing"
 import FoundersNoteSection from "@/components/founders-note-section"
 
 // Reusable Badge Component
@@ -354,7 +355,7 @@ export default function LandingPage() {
                   Use it for free now. Try Pro later if you are a power user.
                 </div>
               </div>
-              <SagentPricing />
+              <WebPricing />
               <div className="w-full flex flex-col items-center gap-3 py-8 px-4">
                 <div className="flex flex-col sm:flex-row justify-center items-stretch sm:items-center gap-3 w-full max-w-md sm:max-w-none">
                   <Link
