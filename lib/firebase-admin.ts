@@ -26,6 +26,11 @@ function getFirebaseAdmin() {
 
   try {
     const serviceAccount = JSON.parse(serviceAccountJson)
+    
+    if (serviceAccount.private_key) {
+      serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, '\n')
+    }
+
     app = initializeApp({
       credential: cert(serviceAccount),
     })

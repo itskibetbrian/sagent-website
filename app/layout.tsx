@@ -96,7 +96,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${onest.variable} ${instrumentSerif.variable} antialiased`}>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased bg-white text-[#37322F] relative min-h-screen">
+        {/* Subtle Gradient Blobs for Glassmorphism Context */}
+        <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-[#7C3AED]/5 blur-[120px]" />
+          <div className="absolute top-[20%] right-[-10%] w-[30%] h-[50%] rounded-full bg-[#EC4899]/5 blur-[120px]" />
+          <div className="absolute bottom-[-10%] left-[20%] w-[50%] h-[40%] rounded-full bg-[#3B82F6]/5 blur-[120px]" />
+        </div>
+        {children}
+      </body>
     </html>
   )
 }

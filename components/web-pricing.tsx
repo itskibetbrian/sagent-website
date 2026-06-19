@@ -3,6 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { useRecaptcha } from "@/hooks/use-recaptcha"
+import { SpotlightCard } from "@/components/ui/spotlight-card"
 
 function CheckIcon({ light = false }: { light?: boolean }) {
   return (
@@ -45,8 +46,8 @@ const plans = [
     badge: "Save vs App Store",
     monthlyPrice: "$8.99",
     yearlyPrice: "$80.99",
-    monthlySubline: "per month",
-    yearlySubline: "per year (save $26.89)",
+    monthlySubline: "",
+    yearlySubline: "Save $26.89",
     appMonthlyPrice: "$9.99/mo on app",
     appYearlyPrice: "$89.99/yr on app",
     features: [
@@ -160,15 +161,17 @@ export default function WebPricing() {
             const isFree = plan.key === "free"
 
             return (
-              <div
+              <SpotlightCard
                 key={plan.key}
-                className={`self-stretch px-6 py-6 border overflow-hidden flex flex-col justify-start items-start gap-10 transition-all duration-300 ${
+                spotlightColor={highlighted ? "rgba(255, 255, 255, 0.15)" : "rgba(124, 58, 237, 0.15)"}
+                className={`self-stretch overflow-hidden transition-all duration-300 h-full ${
                   highlighted
-                    ? "bg-[#37322F] border-[rgba(55,50,47,0.12)] hover:shadow-[0_0_30px_rgba(124,58,237,0.15)]"
-                    : "bg-white border-[#E0DEDB] hover:border-[#37322F]/30"
+                    ? "!bg-black border-[rgba(255,255,255,0.1)] hover:shadow-[0_0_40px_rgba(124,58,237,0.2)]"
+                    : "glass hover:border-[#37322F]/20"
                 }`}
               >
-                <div className="self-stretch flex flex-col justify-start items-start gap-3">
+                <div className="flex flex-col justify-start items-start gap-10 h-full w-full px-6 py-6 relative z-10">
+                  <div className="self-stretch flex flex-col justify-start items-start gap-3">
                   {plan.key === "pro" && plan.badge && (
                     <div className="px-[14px] py-[6px] bg-gradient-to-r from-green-50 to-emerald-50 rounded-[90px] border border-green-200 text-green-700 text-xs font-medium leading-3 font-sans">
                       {plan.badge}
@@ -196,19 +199,21 @@ export default function WebPricing() {
                         ? plan.monthlyPrice
                         : plan.yearlyPrice}
                   </div>
-                  <div
-                    className={
-                      highlighted
-                        ? "text-[#D2C6BF] text-sm font-medium font-sans"
-                        : "text-[#847971] text-sm font-medium font-sans"
-                    }
-                  >
-                    {isFree
-                      ? plan.subline
-                      : billingInterval === "monthly"
-                        ? plan.monthlySubline
-                        : plan.yearlySubline}
-                  </div>
+                  {(isFree ? plan.subline : (billingInterval === "monthly" ? plan.monthlySubline : plan.yearlySubline)) ? (
+                    <div
+                      className={
+                        highlighted
+                          ? "text-[#D2C6BF] text-sm font-medium font-sans"
+                          : "text-[#847971] text-sm font-medium font-sans"
+                      }
+                    >
+                      {isFree
+                        ? plan.subline
+                        : billingInterval === "monthly"
+                          ? plan.monthlySubline
+                          : plan.yearlySubline}
+                    </div>
+                  ) : null}
                   {!isFree && (
                     <div className="text-[#847971] text-xs font-normal leading-5 font-sans flex items-center gap-1.5">
                       <span className="line-through opacity-60">
@@ -229,26 +234,6 @@ export default function WebPricing() {
                     </div>
                   )}
                 </div>
-
-                {isFree ? (
-                  <Link
-                    href="https://play.google.com/store/apps/details?id=com.sagent.app"
-                    className="self-stretch px-4 py-[10px] relative bg-[#37322F] shadow-[0px_2px_4px_rgba(55,50,47,0.12)] overflow-hidden rounded-[99px] flex justify-center items-center hover:bg-primary hover:shadow-[0_0_20px_rgba(124,58,237,0.5)] hover:scale-[1.02] transition-all duration-300"
-                  >
-                    <span className="text-[#FBFAF9] text-[13px] font-medium leading-5 font-sans">
-                      {plan.cta}
-                    </span>
-                  </Link>
-                ) : (
-                  <button
-                    onClick={handleSubscribe}
-                    className="self-stretch px-4 py-[10px] relative bg-[#FBFAF9] shadow-[0px_2px_4px_rgba(55,50,47,0.12)] overflow-hidden rounded-[99px] flex justify-center items-center hover:scale-[1.02] hover:shadow-[0_4px_15px_rgba(124,58,237,0.2)] transition-all duration-300 cursor-pointer"
-                  >
-                    <span className="text-[#37322F] text-[13px] font-medium leading-5 font-sans">
-                      {plan.cta}
-                    </span>
-                  </button>
-                )}
 
                 <div className="self-stretch flex flex-col justify-start items-start gap-2">
                   {plan.features.map((feature) => (
@@ -271,7 +256,30 @@ export default function WebPricing() {
                     </div>
                   ))}
                 </div>
+
+                <div className="mt-auto w-full">
+                  {isFree ? (
+                    <Link
+                      href="https://play.google.com/store/apps/details?id=com.sagent.app"
+                      className="self-stretch px-4 py-[10px] relative bg-[#37322F] shadow-[0px_2px_4px_rgba(55,50,47,0.12)] overflow-hidden rounded-[99px] flex justify-center items-center hover:bg-primary hover:shadow-[0_0_20px_rgba(124,58,237,0.5)] hover:scale-[1.02] transition-all duration-300"
+                    >
+                      <span className="text-[#FBFAF9] text-[13px] font-medium leading-5 font-sans">
+                        {plan.cta}
+                      </span>
+                    </Link>
+                  ) : (
+                    <button
+                      onClick={handleSubscribe}
+                      className="self-stretch px-4 py-[10px] relative text-white w-full bg-[length:200%_100%] animate-shimmer bg-gradient-to-r from-brand via-white/30 to-brand border border-brand/50 shadow-[0_0_20px_rgba(124,58,237,0.4)] overflow-hidden rounded-[99px] flex justify-center items-center hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(124,58,237,0.6)] transition-all duration-300 cursor-pointer"
+                    >
+                      <span className="text-white text-[14px] font-semibold leading-5 font-sans relative z-10">
+                        {plan.cta}
+                      </span>
+                    </button>
+                  )}
+                </div>
               </div>
+              </SpotlightCard>
             )
           })}
         </div>
@@ -290,7 +298,7 @@ export default function WebPricing() {
           />
 
           {/* Modal */}
-          <div className="relative w-full max-w-md bg-[#FBFAF9] rounded-2xl shadow-2xl border border-[rgba(55,50,47,0.12)] overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+          <div className="relative w-full max-w-md glass bg-white/70 rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.15)] border border-white/60 overflow-hidden animate-in fade-in zoom-in-95 duration-200">
             {/* Header */}
             <div className="px-6 pt-6 pb-4 border-b border-[rgba(55,50,47,0.08)]">
               <div className="flex items-center justify-between">

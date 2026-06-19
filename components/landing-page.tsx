@@ -16,6 +16,8 @@ import { Header } from "@/components/header"
 import { SagentHomeSections } from "@/components/sagent-marketing-sections"
 import WebPricing from "@/components/web-pricing"
 import FoundersNoteSection from "@/components/founders-note-section"
+import { ScrollReveal } from "@/components/ui/scroll-reveal"
+import { SpotlightCard } from "@/components/ui/spotlight-card"
 
 // Reusable Badge Component
 function Badge({ icon, text }: { icon: React.ReactNode; text: string }) {
@@ -83,7 +85,7 @@ export default function LandingPage() {
                   <div className="flex flex-col sm:flex-row justify-center items-center gap-4 w-full mt-10">
                     <Link
                       href="https://play.google.com/store/apps/details?id=com.sagent.app"
-                      className="h-14 px-8 w-full sm:w-auto relative bg-brand text-white shadow-[0_0_40px_rgba(124,58,237,0.5)] overflow-hidden rounded-full flex justify-center items-center hover:bg-brand-dark hover:scale-105 transition-all duration-300 font-semibold text-lg"
+                      className="h-14 px-8 w-full sm:w-auto relative text-white overflow-hidden rounded-full flex justify-center items-center hover:scale-105 transition-all duration-300 font-semibold text-lg bg-[length:200%_100%] animate-shimmer bg-gradient-to-r from-brand via-white/30 to-brand border border-brand/50 shadow-[0_0_40px_rgba(124,58,237,0.5)]"
                     >
                       Get it on Google Play
                     </Link>
@@ -98,7 +100,7 @@ export default function LandingPage() {
             </section>
 
             {/* Social Proof Section */}
-            <div className="section-block">
+            <ScrollReveal delay={0.2} className="section-block">
               <div className="section-block-inner max-w-2xl">
                 <div className="w-full flex flex-col justify-center items-center gap-3 sm:gap-4">
                   <Badge
@@ -194,10 +196,10 @@ export default function LandingPage() {
                   </div>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Bento Grid Section */}
-            <div className="section-block">
+            <ScrollReveal yOffset={60} className="section-block">
               <div className="section-block-inner max-w-2xl">
                 <div className="w-full flex flex-col items-center gap-3 sm:gap-4">
                   <Badge
@@ -236,9 +238,9 @@ export default function LandingPage() {
                   </div>
                 </div>
 
-                <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-0 border-l border-r border-[rgba(55,50,47,0.12)]">
+                <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 p-4 sm:p-6 lg:p-8">
                   {/* Top Left - Smart. Simple. Brilliant. */}
-                  <div className="border-b border-r-0 md:border-r border-[rgba(55,50,47,0.12)] p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-start items-start gap-4 sm:gap-6 transition-colors duration-300 hover:bg-primary-soft">
+                  <SpotlightCard className="p-4 sm:p-6 md:p-8 flex flex-col justify-start items-start gap-4 sm:gap-6">
                     <div className="flex flex-col gap-2">
                       <h3 className="text-[#37322F] text-lg sm:text-xl font-semibold leading-tight font-sans">
                         Save. Organize. Send.
@@ -255,10 +257,10 @@ export default function LandingPage() {
                         className="scale-50 sm:scale-65 md:scale-75 lg:scale-90"
                       />
                     </div>
-                  </div>
+                  </SpotlightCard>
 
                   {/* Top Right - Your work, in sync */}
-                  <div className="border-b border-[rgba(55,50,47,0.12)] p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-start items-start gap-4 sm:gap-6 transition-colors duration-300 hover:bg-primary-soft">
+                  <SpotlightCard className="p-4 sm:p-6 md:p-8 flex flex-col justify-start items-start gap-4 sm:gap-6">
                     <div className="flex flex-col gap-2">
                       <h3 className="text-[#37322F] font-semibold leading-tight font-sans text-lg sm:text-xl">
                         Message faster than ever
@@ -275,10 +277,10 @@ export default function LandingPage() {
                         className="w-full max-w-[400px] h-auto scale-75 sm:scale-90"
                       />
                     </div>
-                  </div>
+                  </SpotlightCard>
 
                   {/* Bottom Left - Effortless integration */}
-                  <div className="border-r-0 md:border-r border-[rgba(55,50,47,0.12)] p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-start items-start gap-4 sm:gap-6 bg-transparent transition-colors duration-300 hover:bg-primary-soft">
+                  <SpotlightCard className="p-4 sm:p-6 md:p-8 flex flex-col justify-start items-start gap-4 sm:gap-6">
                     <div className="flex flex-col gap-2">
                       <h3 className="text-[#37322F] text-lg sm:text-xl font-semibold leading-tight font-sans">
                         Works everywhere you do
@@ -294,10 +296,10 @@ export default function LandingPage() {
                       {/* Gradient mask for soft bottom edge */}
                       <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-[#EDE9F6] to-transparent pointer-events-none"></div>
                     </div>
-                  </div>
+                  </SpotlightCard>
 
                   {/* Bottom Right - Numbers that speak */}
-                  <div className="p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-start items-start gap-4 sm:gap-6 transition-colors duration-300 hover:bg-primary-soft">
+                  <SpotlightCard className="p-4 sm:p-6 md:p-8 flex flex-col justify-start items-start gap-4 sm:gap-6">
                     <div className="flex flex-col gap-2">
                       <h3 className="text-[#37322F] text-lg sm:text-xl font-semibold leading-tight font-sans">
                         10x your productivity
@@ -317,15 +319,8 @@ export default function LandingPage() {
                       </div>
                       {/* Gradient mask for soft bottom edge */}
                       <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-[#EDE9F6] to-transparent pointer-events-none"></div>
-                      {/* Fallback content if component doesn't render */}
-                      <div className="absolute inset-0 flex items-center justify-center opacity-20 hidden">
-                        <div className="flex flex-col items-center gap-2 p-4">
-                          <div className="w-3/4 h-full bg-green-500 rounded-full"></div>
-                        </div>
-                        <div className="text-sm text-green-600">Growth Rate</div>
-                      </div>
                     </div>
-                  </div>
+                  </SpotlightCard>
                 </div>
 
                 <div className="hidden sm:block w-4 md:w-8 lg:w-12 shrink-0 relative overflow-hidden">
@@ -340,16 +335,20 @@ export default function LandingPage() {
                   </div>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Documentation Section */}
-            <DocumentationSection />
+            <ScrollReveal>
+              <DocumentationSection />
+            </ScrollReveal>
 
             {/* Testimonials Section */}
-            <TestimonialsSection />
+            <ScrollReveal>
+              <TestimonialsSection />
+            </ScrollReveal>
 
             {/* Pricing Section */}
-            <div className="w-full border-b border-[rgba(55,50,47,0.12)] flex flex-col justify-center items-center">
+            <ScrollReveal className="w-full border-b border-[rgba(55,50,47,0.12)] flex flex-col justify-center items-center">
               <div className="section-block-inner max-w-2xl pt-12 pb-6">
                 <div className="w-full text-center flex justify-center flex-col text-[#49423D] text-3xl md:text-5xl font-semibold leading-tight md:leading-[1.15] font-sans tracking-tight text-balance">
                   Use it for free now. Try Pro later if you are a power user.
@@ -379,18 +378,22 @@ export default function LandingPage() {
                   Available on Android and iOS
                 </div>
               </div>
-            </div>
-
-
+            </ScrollReveal>
 
             {/* FAQ Section */}
-            <FAQSection />
+            <ScrollReveal>
+              <FAQSection />
+            </ScrollReveal>
 
             {/* Founder's Note Section */}
-            <FoundersNoteSection />
+            <ScrollReveal>
+              <FoundersNoteSection />
+            </ScrollReveal>
 
             {/* CTA Section */}
-            <CTASection />
+            <ScrollReveal>
+              <CTASection />
+            </ScrollReveal>
 
             {/* Footer Section */}
             <FooterSection />
