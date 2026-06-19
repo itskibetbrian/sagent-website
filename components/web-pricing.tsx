@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import { useRecaptcha } from "@/hooks/use-recaptcha"
 
 function CheckIcon({ light = false }: { light?: boolean }) {
   return (
@@ -67,6 +68,7 @@ export default function WebPricing() {
   const [checkoutEmail, setCheckoutEmail] = useState("")
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState("")
+  const executeRecaptcha = useRecaptcha()
 
   const handleSubscribe = () => {
     setError("")
@@ -89,12 +91,15 @@ export default function WebPricing() {
     setError("")
 
     try {
+      const recaptchaToken = await executeRecaptcha("checkout")
+
       const res = await fetch("/api/stripe/create-checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           email: checkoutEmail,
           plan: billingInterval,
+          recaptchaToken,
         }),
       })
 

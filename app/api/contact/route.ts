@@ -1,9 +1,22 @@
 import { NextRequest, NextResponse } from "next/server"
+import { verifyRecaptcha } from "@/lib/recaptcha"
 
 export async function POST(request: NextRequest) {
   try {
     const formData = await request.json()
-    const { name, email, subject, message } = formData
+    const { name, email, subject, message, recaptchaToken } = formData
+
+    // Verify reCAPTCHA
+    const recaptchaResult = await verifyRecaptcha(
+      recaptchaToken || "",
+      "contact"
+    )
+    if (!recaptchaResult.success) {
+      return NextResponse.json(
+        { error: recaptchaResult.error || "Spam protection check failed" },
+        { status: 403 }
+      )
+    }
 
     // Validate form data
     if (!name || !email || !subject || !message) {

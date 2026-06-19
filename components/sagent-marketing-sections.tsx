@@ -10,6 +10,7 @@ import { Button } from "./ui/button"
 import { Input } from "./ui/input"
 import { Textarea } from "./ui/textarea"
 import FAQSection from "./faq-section"
+import { useRecaptcha } from "@/hooks/use-recaptcha"
 
 const featureCards = [
   {
@@ -423,11 +424,56 @@ export function LegalPage({
 }
 
 export function ContactPageContent() {
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
+  const [errorMessage, setErrorMessage] = useState("")
+  const executeRecaptcha = useRecaptcha()
+
   const cards = [
     { title: "General enquiries", email: "hello@gosagent.com" },
     { title: "Bug reports & ideas", email: "support@gosagent.com" },
     { title: "Legal & privacy", email: "legal@gosagent.com" },
   ]
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setStatus("loading")
+    setErrorMessage("")
+
+    try {
+      const recaptchaToken = await executeRecaptcha("contact")
+
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          subject: "Contact Form Submission",
+          message,
+          recaptchaToken,
+        }),
+      })
+
+      const data = await res.json()
+
+      if (!res.ok) {
+        setStatus("error")
+        setErrorMessage(data.error || "Something went wrong")
+        return
+      }
+
+      setStatus("success")
+      setName("")
+      setEmail("")
+      setMessage("")
+    } catch (error) {
+      setStatus("error")
+      setErrorMessage("Network error. Please try again.")
+    }
+  }
 
   return (
     <>
@@ -452,15 +498,51 @@ export function ContactPageContent() {
           ))}
         </div>
         <div className="section-block-wide flex justify-center">
-          <form className="w-full max-w-xl flex flex-col gap-4">
-            <Input placeholder="Name" aria-label="Name" className="bg-white border-[#E0DEDB]" />
-            <Input placeholder="Email" aria-label="Email" type="email" className="bg-white border-[#E0DEDB]" />
-            <Textarea placeholder="Message" aria-label="Message" className="min-h-36 bg-white border-[#E0DEDB]" />
-            <Button type="submit" className="self-start bg-[#37322F] hover:bg-[#2A2520] text-white rounded-full px-8">
-              Send message
+          <form className="w-full max-w-xl flex flex-col gap-4" onSubmit={handleSubmit}>
+            {status === "success" && (
+              <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg text-sm mb-4">
+                Thank you! We received your message and will get back to you soon.
+              </div>
+            )}
+            {status === "error" && (
+              <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm mb-4">
+                {errorMessage}
+              </div>
+            )}
+            <Input 
+              placeholder="Name" 
+              aria-label="Name" 
+              className="bg-white border-[#E0DEDB]" 
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+              disabled={status === "loading"}
+            />
+            <Input 
+              placeholder="Email" 
+              aria-label="Email" 
+              type="email" 
+              className="bg-white border-[#E0DEDB]" 
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              disabled={status === "loading"}
+            />
+            <Textarea 
+              placeholder="Message" 
+              aria-label="Message" 
+              className="min-h-36 bg-white border-[#E0DEDB]" 
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              required
+              disabled={status === "loading"}
+            />
+            <Button type="submit" disabled={status === "loading"} className="self-start bg-[#37322F] hover:bg-[#2A2520] text-white rounded-full px-8 disabled:opacity-50">
+              {status === "loading" ? "Sending..." : "Send message"}
             </Button>
-            <div className="text-[#605A57] text-sm font-normal leading-6 font-sans">
+            <div className="text-[#605A57] text-sm font-normal leading-6 font-sans flex items-center gap-2">
               We aim to reply within 24 hours.
+              <span className="text-xs text-[#847971]">Protected by reCAPTCHA</span>
             </div>
           </form>
         </div>

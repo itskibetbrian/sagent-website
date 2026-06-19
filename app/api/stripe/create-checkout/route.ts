@@ -1,11 +1,25 @@
 import { NextRequest, NextResponse } from "next/server"
 import { stripe, PLANS, type PlanKey } from "@/lib/stripe"
+import { verifyRecaptcha } from "@/lib/recaptcha"
 
 export async function POST(request: NextRequest) {
   try {
-    const { email, plan } = (await request.json()) as {
+    const { email, plan, recaptchaToken } = (await request.json()) as {
       email?: string
       plan?: string
+      recaptchaToken?: string
+    }
+
+    // Verify reCAPTCHA
+    const recaptchaResult = await verifyRecaptcha(
+      recaptchaToken || "",
+      "checkout"
+    )
+    if (!recaptchaResult.success) {
+      return NextResponse.json(
+        { error: recaptchaResult.error || "Spam protection check failed" },
+        { status: 403 }
+      )
     }
 
     // Validate
