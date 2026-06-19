@@ -2,8 +2,14 @@ import Image from "next/image"
 import Link from "next/link"
 
 export function BrandMark({ className = "" }: { className?: string }) {
+  const handleScrollToTop = (e: React.MouseEvent) => {
+    e.preventDefault()
+    window.scrollTo({ top: 0, behavior: "smooth" })
+    window.history.pushState(null, "", "/")
+  }
+
   return (
-    <Link href="/" className={`flex items-center gap-3 ${className}`}>
+    <Link href="/" onClick={handleScrollToTop} className={`flex items-center gap-3 ${className}`}>
       <Image
         src="/icon.png"
         alt="Sagent logo"

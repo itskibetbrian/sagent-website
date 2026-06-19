@@ -277,9 +277,22 @@ export default function LandingPage() {
                         Send personalized messages to your network instantly without repetitive typing or manual work.
                       </p>
                     </div>
-                    <div className="w-full rounded-lg overflow-hidden relative bg-transparent h-[200px] xs:h-[220px] sm:h-[250px] md:h-[280px] mt-4 flex items-center justify-center">
+                    {/* Mobile container */}
+                    <div className="md:hidden w-full rounded-lg overflow-hidden relative bg-transparent h-[200px] xs:h-[220px] sm:h-[250px] mt-4 flex items-center justify-center">
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <div style={{ width: '400px', height: '260px', transformOrigin: 'center center' }} className="scale-[0.7] xs:scale-[0.8] sm:scale-[0.85] md:scale-[0.9] lg:scale-100">
+                        <div style={{ width: '400px', height: '260px', transformOrigin: 'center center' }} className="scale-[0.7] xs:scale-[0.8] sm:scale-[0.85]">
+                          <YourWorkInSync
+                            width={400}
+                            height={260}
+                            theme="light"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    {/* Laptop/Desktop container */}
+                    <div className="hidden md:flex w-full h-[250px] md:h-[280px] rounded-lg overflow-hidden relative items-center justify-center mt-4">
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div style={{ width: '400px', height: '260px', transformOrigin: 'center center' }} className="scale-[0.65] lg:scale-[0.75] xl:scale-[0.85]">
                           <YourWorkInSync
                             width={400}
                             height={260}

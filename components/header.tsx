@@ -34,6 +34,11 @@ export function Header() {
           <div className="flex min-w-0 items-center justify-center">
             <Link
               href="/"
+              onClick={(e) => {
+                e.preventDefault()
+                window.scrollTo({ top: 0, behavior: "smooth" })
+                window.history.pushState(null, "", "/")
+              }}
               className="flex flex-col justify-center font-sans text-sm font-medium leading-5 text-[#2F3037] transition-colors hover:text-brand sm:text-base md:text-lg lg:text-xl"
             >
               Sagent

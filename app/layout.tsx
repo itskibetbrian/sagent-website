@@ -96,6 +96,31 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${onest.variable} ${instrumentSerif.variable} antialiased`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              "name": "Sagent",
+              "operatingSystem": "iOS, Android",
+              "applicationCategory": "BusinessApplication, ProductivityApplication",
+              "description": defaultDescription,
+              "offers": {
+                "@type": "Offer",
+                "price": "0.00",
+                "priceCurrency": "USD"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "ratingCount": "1050"
+              }
+            })
+          }}
+        />
+      </head>
       <body className="font-sans antialiased bg-white text-[#37322F] relative min-h-screen">
         {/* Subtle Gradient Blobs for Glassmorphism Context */}
         <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">

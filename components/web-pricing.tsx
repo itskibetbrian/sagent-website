@@ -453,7 +453,7 @@ export default function WebPricing() {
                     strokeLinejoin="round"
                   />
                 </svg>
-                Secured by Stripe · 256-bit encryption
+                Powered by Stripe
               </div>
             </div>
           </div>
