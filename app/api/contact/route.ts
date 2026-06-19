@@ -54,6 +54,6 @@ export async function POST(request: NextRequest) {
     )
   } catch (error) {
     console.error("[v0] Contact form error:", error)
-    return NextResponse.json({ error: "Failed to process form submission" }, { status: 500 })
+    return NextResponse.json({ error: "We're unable to send your message right now. Please try again shortly." }, { status: 500 })
   }
 }

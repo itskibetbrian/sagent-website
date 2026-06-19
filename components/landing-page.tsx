@@ -47,51 +47,51 @@ export default function LandingPage() {
 
           <div className="w-full flex flex-col items-stretch gap-4 sm:gap-6 md:gap-8 lg:gap-12 relative z-10">
             {/* Start sending faster today CTA Section */}
-            <section className="section-block pt-12 sm:pt-16 md:pt-20 lg:pt-24 relative overflow-hidden min-h-[400px] flex items-center justify-center">
+            <section className="w-full relative overflow-hidden min-h-[85vh] flex items-center justify-center">
               {/* Background Video Player */}
-              <div className="absolute inset-0 w-full h-full z-0 bg-[#EDE9F6]">
+              <div className="absolute inset-0 w-full h-full z-0 bg-black">
                 {videos.map((src, idx) => (
                   <video
                     key={src}
                     src={src}
                     autoPlay={idx === activeVideo}
                     muted
+                    loop={videos.length === 1}
                     playsInline
                     onEnded={() => setActiveVideo((prev) => (prev + 1) % videos.length)}
-                    className={`absolute inset-0 w-full h-full object-cover mix-blend-multiply transition-opacity duration-1000 ${
-                      idx === activeVideo ? "opacity-30" : "opacity-0"
+                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                      idx === activeVideo ? "opacity-100" : "opacity-0"
                     }`}
                     style={{ pointerEvents: "none" }}
                   />
                 ))}
-                <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-[#EDE9F6]/80" />
+                {/* Deep dark overlay for high text contrast */}
+                <div className="absolute inset-0 bg-black/60" />
+                {/* Gradient overlay to blend with the rest of the page */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-white" />
               </div>
 
-              <div className="section-block-inner max-w-xl relative z-10">
-                  <div className="self-stretch flex flex-col justify-start items-start gap-3">
-                    <div className="self-stretch text-center flex justify-center flex-col text-[#49423D] text-3xl md:text-5xl font-semibold leading-tight md:leading-[56px] font-sans tracking-tight">
+              <div className="w-full max-w-3xl relative z-10 px-4 sm:px-6 mb-24">
+                  <div className="flex flex-col justify-center items-center gap-6">
+                    <h1 className="text-center text-white text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight drop-shadow-xl">
                       Send any message in under 10 seconds.
-                    </div>
-                    <div className="self-stretch text-center text-[#605A57] text-base leading-7 font-sans font-medium">
+                    </h1>
+                    <p className="text-center text-white/90 text-lg md:text-2xl leading-relaxed font-medium drop-shadow-lg max-w-2xl">
                       Save your best messages. Send to any app. Done.
-                    </div>
+                    </p>
                   </div>
-                  <div className="flex flex-col sm:flex-row justify-center items-stretch sm:items-center gap-3 w-full max-w-md sm:max-w-none">
+                  <div className="flex flex-col sm:flex-row justify-center items-center gap-4 w-full mt-10">
                     <Link
                       href="https://play.google.com/store/apps/details?id=com.sagent.app"
-                      className="h-10 px-8 py-[6px] w-full sm:w-auto relative bg-[#37322F] shadow-[0px_0px_0px_2.5px_rgba(255,255,255,0.08)_inset] overflow-hidden rounded-full flex justify-center items-center hover:bg-primary hover:shadow-[0_0_20px_rgba(124,58,237,0.4)] hover:scale-[1.02] transition-all duration-300"
+                      className="h-14 px-8 w-full sm:w-auto relative bg-brand text-white shadow-[0_0_40px_rgba(124,58,237,0.5)] overflow-hidden rounded-full flex justify-center items-center hover:bg-brand-dark hover:scale-105 transition-all duration-300 font-semibold text-lg"
                     >
-                      <span className="flex flex-col justify-center text-white text-[13px] font-medium leading-5 font-sans">
-                        Get it on Google Play
-                      </span>
+                      Get it on Google Play
                     </Link>
                     <Link
                       href="#appstore"
-                      className="h-10 px-8 py-[6px] w-full sm:w-auto bg-white shadow-[0px_1px_2px_rgba(55,50,47,0.12)] overflow-hidden rounded-full flex justify-center items-center hover:text-primary hover:border-primary hover:shadow-[0_4px_15px_rgba(124,58,237,0.2)] hover:scale-[1.02] transition-all duration-300 border border-[rgba(55,50,47,0.12)]"
+                      className="h-14 px-8 w-full sm:w-auto bg-white/10 backdrop-blur-md text-white border border-white/30 shadow-lg overflow-hidden rounded-full flex justify-center items-center hover:bg-white/20 hover:scale-105 transition-all duration-300 font-semibold text-lg"
                     >
-                      <span className="flex flex-col justify-center text-[#37322F] text-[13px] font-medium leading-5 font-sans">
-                        Download on App Store
-                      </span>
+                      Download on App Store
                     </Link>
                   </div>
               </div>

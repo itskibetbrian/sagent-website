@@ -48,8 +48,9 @@ export async function POST(request: NextRequest) {
     const selectedPlan = PLANS[plan as PlanKey]
 
     if (!selectedPlan.priceId) {
+      console.error(`[Stripe] Configuration Error: Price ID missing for plan '${plan}'`)
       return NextResponse.json(
-        { error: "Stripe price ID not configured. Check your environment variables." },
+        { error: "We're unable to process subscriptions right now. Please try again shortly." },
         { status: 500 }
       )
     }
@@ -107,7 +108,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error("[Stripe] Checkout session error:", error)
     return NextResponse.json(
-      { error: "Failed to create checkout session" },
+      { error: "We're unable to process subscriptions right now. Please try again shortly." },
       { status: 500 }
     )
   }

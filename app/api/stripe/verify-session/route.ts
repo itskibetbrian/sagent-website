@@ -28,7 +28,7 @@ export async function GET(request: NextRequest) {
   } catch (error) {
     console.error("[Stripe] Verify session error:", error)
     return NextResponse.json(
-      { error: "Failed to verify session" },
+      { error: "We're unable to verify your session at this moment. Please try again shortly." },
       { status: 500 }
     )
   }

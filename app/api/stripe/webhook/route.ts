@@ -136,7 +136,7 @@ export async function POST(request: NextRequest) {
   if (!webhookSecret) {
     console.error("[Webhook] STRIPE_WEBHOOK_SECRET is not set")
     return NextResponse.json(
-      { error: "Webhook secret not configured" },
+      { error: "Internal server error." },
       { status: 500 }
     )
   }
@@ -146,8 +146,9 @@ export async function POST(request: NextRequest) {
     const signature = request.headers.get("stripe-signature")
 
     if (!signature) {
+      console.error("[Webhook] Missing stripe-signature header")
       return NextResponse.json(
-        { error: "Missing stripe-signature header" },
+        { error: "Bad request" },
         { status: 400 }
       )
     }
@@ -160,7 +161,7 @@ export async function POST(request: NextRequest) {
       const message = err instanceof Error ? err.message : "Unknown error"
       console.error("[Webhook] Signature verification failed:", message)
       return NextResponse.json(
-        { error: `Webhook signature verification failed: ${message}` },
+        { error: "Bad request" },
         { status: 400 }
       )
     }
@@ -222,7 +223,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error("[Webhook] Error processing webhook:", error)
     return NextResponse.json(
-      { error: "Webhook handler failed" },
+      { error: "Internal server error." },
       { status: 500 }
     )
   }

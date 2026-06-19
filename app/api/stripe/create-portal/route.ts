@@ -20,8 +20,9 @@ export async function POST(request: NextRequest) {
     const doc = await docRef.get()
 
     if (!doc.exists || !doc.data()?.stripeCustomerId) {
+      console.warn(`[Stripe] Portal access attempted for email without subscription: ${email}`)
       return NextResponse.json(
-        { error: "No subscription found for this email" },
+        { error: "We couldn't find an active subscription associated with this email address." },
         { status: 404 }
       )
     }
@@ -39,7 +40,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error("[Stripe] Portal session error:", error)
     return NextResponse.json(
-      { error: "Failed to create portal session" },
+      { error: "We're unable to access the billing portal right now. Please try again shortly." },
       { status: 500 }
     )
   }
