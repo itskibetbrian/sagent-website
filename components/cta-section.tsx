@@ -30,7 +30,7 @@ export default function CTASection() {
               Stop typing. Start closing.
             </div>
             <div className="self-stretch text-center text-[#605A57] text-base leading-7 font-sans font-medium">
-              Send your first message in under 60 seconds.
+              Send your first message in under 10 seconds.
             </div>
           </div>
           <div className="w-full max-w-[497px] flex flex-col justify-center items-center gap-4">
