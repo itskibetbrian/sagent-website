@@ -2,7 +2,13 @@ import { NextRequest, NextResponse } from "next/server"
 import { verifyRecaptcha } from "@/lib/recaptcha"
 import { Resend } from "resend"
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+let _resend: Resend | null = null
+function getResend() {
+  if (!_resend) {
+    _resend = new Resend(process.env.RESEND_API_KEY)
+  }
+  return _resend
+}
 const contactEmail = process.env.CONTACT_EMAIL || "hello@gosagent.com"
 
 export async function POST(request: NextRequest) {
@@ -33,7 +39,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Invalid email address" }, { status: 400 })
     }
 
-    const { data, error } = await resend.emails.send({
+    const { data, error } = await getResend().emails.send({
       from: "Sagent Contact Form <onboarding@resend.dev>",
       to: [contactEmail],
       replyTo: email,

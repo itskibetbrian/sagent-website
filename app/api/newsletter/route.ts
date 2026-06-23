@@ -2,7 +2,13 @@ import { NextRequest, NextResponse } from "next/server"
 import { verifyRecaptcha } from "@/lib/recaptcha"
 import { Resend } from "resend"
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+let _resend: Resend | null = null
+function getResend() {
+  if (!_resend) {
+    _resend = new Resend(process.env.RESEND_API_KEY)
+  }
+  return _resend
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -34,7 +40,7 @@ export async function POST(request: NextRequest) {
     const audienceId = process.env.RESEND_AUDIENCE_ID
     
     if (audienceId) {
-      const { data, error } = await resend.contacts.create({
+      const { data, error } = await getResend().contacts.create({
         email: email,
         audienceId: audienceId,
       })
