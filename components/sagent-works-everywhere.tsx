@@ -1,12 +1,12 @@
 import type React from "react"
 
-interface EffortlessIntegrationProps {
+interface SagentWorksEverywhereProps {
   width?: number | string
   height?: number | string
   className?: string
 }
 
-const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 482, height = 300, className = "" }) => {
+const SagentWorksEverywhere: React.FC<SagentWorksEverywhereProps> = ({ width = 482, height = 300, className = "" }) => {
   const centerX = 250
   const centerY = 179
   const rings = [
@@ -311,4 +311,4 @@ const EffortlessIntegration: React.FC<EffortlessIntegrationProps> = ({ width = 4
   )
 }
 
-export default EffortlessIntegration
+export default SagentWorksEverywhere

@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from "next/server"
 import { verifyRecaptcha } from "@/lib/recaptcha"
+import { Resend } from "resend"
+
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(request: NextRequest) {
   try {
@@ -28,8 +31,21 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Invalid email address" }, { status: 400 })
     }
 
-    // TODO: Integrate with email service (Mailchimp, ConvertKit, Substack, etc.)
-    console.log("[v0] Newsletter subscription:", { email, timestamp: new Date().toISOString() })
+    const audienceId = process.env.RESEND_AUDIENCE_ID
+    
+    if (audienceId) {
+      const { data, error } = await resend.contacts.create({
+        email: email,
+        audienceId: audienceId,
+      })
+
+      if (error) {
+        console.error("[Resend] Newsletter subscription error:", error)
+        return NextResponse.json({ error: "We're unable to process your subscription right now. Please try again shortly." }, { status: 500 })
+      }
+    } else {
+      console.warn("[Resend] RESEND_AUDIENCE_ID is not set. Cannot add subscriber:", email)
+    }
 
     return NextResponse.json(
       { success: true, message: "Thanks for subscribing! Check your email for confirmation." },

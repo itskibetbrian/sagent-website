@@ -1,6 +1,6 @@
 import type React from "react"
 
-interface NumbersThatSpeakProps {
+interface SagentProductivityMetricsProps {
   /** Fixed width from Figma: 482px */
   width?: number | string
   /** Fixed height from Figma: 300px */
@@ -16,7 +16,7 @@ interface NumbersThatSpeakProps {
  * Generated from Figma via MCP with exact measurements (482×300px)
  * Single-file component following the v0-ready pattern used in this repo.
  */
-const NumbersThatSpeak: React.FC<NumbersThatSpeakProps> = ({
+const SagentProductivityMetrics: React.FC<SagentProductivityMetricsProps> = ({
   width = 482,
   height = 300,
   className = "",
@@ -537,4 +537,4 @@ const NumbersThatSpeak: React.FC<NumbersThatSpeakProps> = ({
   )
 }
 
-export default NumbersThatSpeak
+export default SagentProductivityMetrics

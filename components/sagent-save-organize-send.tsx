@@ -1,6 +1,6 @@
 import type React from "react"
 
-interface SmartSimpleBrilliantProps {
+interface SagentSaveOrganizeSendProps {
   /** Fixed width from Figma: 482px */
   width?: number | string
   /** Fixed height from Figma: 300px */
@@ -16,7 +16,7 @@ interface SmartSimpleBrilliantProps {
  * Generated from Figma via MCP with exact measurements (482×300px)
  * Single-file component following the v0-ready pattern used in this repo.
  */
-const SmartSimpleBrilliant: React.FC<SmartSimpleBrilliantProps> = ({
+const SagentSaveOrganizeSend: React.FC<SagentSaveOrganizeSendProps> = ({
   width = 482,
   height = 300,
   className = "",
@@ -333,4 +333,4 @@ const SmartSimpleBrilliant: React.FC<SmartSimpleBrilliantProps> = ({
   )
 }
 
-export default SmartSimpleBrilliant
+export default SagentSaveOrganizeSend

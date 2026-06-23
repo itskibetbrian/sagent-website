@@ -3,10 +3,10 @@
 import React, { useState } from "react"
 
 import Link from "next/link"
-import SmartSimpleBrilliant from "@/components/smart-simple-brilliant"
-import YourWorkInSync from "@/components/your-work-in-sync"
-import EffortlessIntegration from "@/components/effortless-integration-updated"
-import NumbersThatSpeak from "@/components/numbers-that-speak"
+import SagentSaveOrganizeSend from "@/components/sagent-save-organize-send"
+import SagentMessageFaster from "@/components/sagent-message-faster"
+import SagentWorksEverywhere from "@/components/sagent-works-everywhere"
+import SagentProductivityMetrics from "@/components/sagent-productivity-metrics"
 import DocumentationSection from "@/components/documentation-section"
 import TestimonialsSection from "@/components/testimonials-section"
 import FAQSection from "@/components/faq-section"
@@ -257,7 +257,7 @@ export default function LandingPage() {
                     <div className="w-full rounded-lg overflow-hidden relative bg-transparent h-[200px] xs:h-[220px] sm:h-[250px] md:h-[280px] mt-4 flex items-center justify-center">
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div style={{ width: '350px', height: '260px', transformOrigin: 'center center' }} className="scale-[0.65] xs:scale-[0.75] sm:scale-[0.8] md:scale-[0.85] lg:scale-[0.95]">
-                          <SmartSimpleBrilliant
+                          <SagentSaveOrganizeSend
                             width={350}
                             height={260}
                             theme="light"
@@ -281,7 +281,7 @@ export default function LandingPage() {
                     <div className="md:hidden w-full rounded-lg overflow-hidden relative bg-transparent h-[200px] xs:h-[220px] sm:h-[250px] mt-4 flex items-center justify-center">
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div style={{ width: '400px', height: '260px', transformOrigin: 'center center' }} className="scale-[0.7] xs:scale-[0.8] sm:scale-[0.85]">
-                          <YourWorkInSync
+                          <SagentMessageFaster
                             width={400}
                             height={260}
                             theme="light"
@@ -293,7 +293,7 @@ export default function LandingPage() {
                     <div className="hidden md:flex w-full h-[250px] md:h-[280px] rounded-lg overflow-hidden relative items-center justify-center mt-4">
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div style={{ width: '400px', height: '260px', transformOrigin: 'center center' }} className="scale-[0.65] lg:scale-[0.75] xl:scale-[0.85]">
-                          <YourWorkInSync
+                          <SagentMessageFaster
                             width={400}
                             height={260}
                             theme="light"
@@ -316,7 +316,7 @@ export default function LandingPage() {
                     <div className="w-full rounded-lg overflow-hidden relative bg-transparent h-[200px] xs:h-[220px] sm:h-[250px] md:h-[280px] mt-4 flex items-center justify-center">
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div style={{ width: '400px', height: '250px', transformOrigin: 'center center' }} className="scale-[0.7] xs:scale-[0.8] sm:scale-[0.85] md:scale-[0.9] lg:scale-100">
-                          <EffortlessIntegration width={400} height={250} />
+                          <SagentWorksEverywhere width={400} height={250} />
                         </div>
                       </div>
                       {/* Gradient mask for soft bottom edge */}
@@ -337,7 +337,7 @@ export default function LandingPage() {
                     <div className="w-full rounded-lg overflow-hidden relative bg-transparent h-[200px] xs:h-[220px] sm:h-[250px] md:h-[280px] mt-4 flex items-center justify-center">
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div style={{ width: '420px', height: '280px', transformOrigin: 'center center' }} className="scale-[0.65] xs:scale-[0.75] sm:scale-[0.8] md:scale-[0.85] lg:scale-[0.95]">
-                          <NumbersThatSpeak
+                          <SagentProductivityMetrics
                             width={420}
                             height={280}
                             theme="light"

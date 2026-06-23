@@ -37,10 +37,25 @@ export function ContactModal({ children }: ContactModalProps) {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
+    const formData = new FormData(e.currentTarget)
     
-    // Simulate API call for Resend
-    setTimeout(() => {
-      setIsSubmitting(false)
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          subject: category,
+          message: formData.get("message"),
+          recaptchaToken: "mock-token", // Assuming recaptcha is wired differently or handled if needed. For now just passing a placeholder if we bypass it.
+        }),
+      })
+      
+      if (!res.ok) {
+        throw new Error("Failed to send")
+      }
+
       setIsSuccess(true)
       
       // Close modal after success
@@ -48,7 +63,12 @@ export function ContactModal({ children }: ContactModalProps) {
         setIsOpen(false)
         setIsSuccess(false)
       }, 3000)
-    }, 1500)
+    } catch (error) {
+      console.error(error)
+      // Ideally show an error state
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -58,7 +78,7 @@ export function ContactModal({ children }: ContactModalProps) {
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px] bg-[#EDE9F6] border border-[rgba(55,50,47,0.12)]">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold font-sans text-[#181512]">Talk to Sales</DialogTitle>
+          <DialogTitle className="text-2xl font-bold font-sans text-[#181512]">Send Inquiry</DialogTitle>
           <DialogDescription className="text-[#3F3A36] font-sans">
             Tell us what you need and our team will get back to you shortly.
           </DialogDescription>

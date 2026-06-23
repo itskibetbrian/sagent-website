@@ -1,6 +1,6 @@
 import type React from "react"
 
-interface YourWorkInSyncProps {
+interface SagentMessageFasterProps {
   /** Fixed width from Figma: 482px */
   width?: number | string
   /** Fixed height from Figma: 300px */
@@ -16,7 +16,7 @@ interface YourWorkInSyncProps {
  * Generated from Figma via MCP with exact measurements (482×300px)
  * Single-file component following the v0-ready pattern used in this repo.
  */
-const YourWorkInSync: React.FC<YourWorkInSyncProps> = ({
+const SagentMessageFaster: React.FC<SagentMessageFasterProps> = ({
   width = 482,
   height = 300,
   className = "",
@@ -313,4 +313,4 @@ const YourWorkInSync: React.FC<YourWorkInSyncProps> = ({
   )
 }
 
-export default YourWorkInSync
+export default SagentMessageFaster

@@ -55,14 +55,7 @@ export function Header() {
             </nav>
           </div>
 
-          {/* Desktop login */}
-          <div className="hidden h-6 items-center sm:flex sm:h-7 md:h-8">
-            <div className="flex items-center justify-center overflow-hidden rounded-full bg-white px-2 py-1 shadow-[0px_1px_2px_rgba(55,50,47,0.12)] transition-colors hover:bg-brand/10 sm:px-3 md:px-[14px] md:py-[6px]">
-              <span className="flex flex-col justify-center font-sans text-xs font-medium leading-5 text-[#37322F] md:text-[13px]">
-                Log in
-              </span>
-            </div>
-          </div>
+          {/* Desktop login removed */}
 
           {/* Mobile menu */}
           <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
@@ -91,14 +84,7 @@ export function Header() {
                     {item.label}
                   </a>
                 ))}
-                <div className="mt-4 border-t border-[rgba(55,50,47,0.12)] pt-4">
-                  <button
-                    type="button"
-                    className="flex w-full items-center justify-center rounded-full bg-[#37322F] px-4 py-3 text-sm font-medium text-white transition-colors hover:bg-brand font-sans"
-                  >
-                    Log in
-                  </button>
-                </div>
+                {/* Mobile login removed */}
               </nav>
             </SheetContent>
           </Sheet>
