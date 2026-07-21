@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next"
 import { absoluteUrl, seoRoutes } from "@/lib/seo"
-import { blogPosts } from "@/components/blog-section"
-import { helpArticles } from "@/components/help-center"
+import { blogPosts } from "@/lib/blog-data"
+import { helpArticles } from "@/lib/help-data"
 
 function parseDate(dateStr: string): Date {
   const parsed = new Date(dateStr)

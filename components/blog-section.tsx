@@ -2,93 +2,7 @@
 
 import Link from "next/link"
 import { useState } from "react"
-
-export interface BlogPost {
-  id: string
-  title: string
-  excerpt: string
-  content: string
-  date: string
-  category: string
-  readTime: string
-  author: string
-  slug: string
-}
-
-export const blogPosts: BlogPost[] = [
-  {
-    id: "1",
-    title: "10 Sales Message Templates That Convert",
-    slug: "10-sales-message-templates-that-convert",
-    excerpt: "Proven message templates for sales professionals that drive engagement and close deals faster.",
-    content: `Sales messaging is an art and a science. In this guide, we share 10 battle-tested templates that sales reps use daily to reach out, follow up, and convert prospects. Each template is designed to be personalized and optimized for conversion. Learn how to adapt these templates to your industry and audience.
-
-Key templates covered:
-1. Cold outreach that gets responses
-2. Follow-up sequences that don't feel pushy
-3. Value-prop messages that stick
-4. Objection handling replies
-5. Close-worthy final follow-ups
-
-And 5 more proven performers used by top sales teams.`,
-    date: "May 15, 2026",
-    category: "Sales",
-    readTime: "5 min read",
-    author: "Sagent Team",
-  },
-  {
-    id: "2",
-    title: "How to Boost Your Response Rate by 40%",
-    slug: "boost-response-rate-by-40-percent",
-    excerpt: "Data-driven strategies to increase message response rates and engagement metrics.",
-    content: `Response rates matter. Whether you're in sales, recruiting, or support, getting people to reply to your messages is crucial. This article breaks down what research shows about message effectiveness and how Sagent users have achieved a 40% boost in response rates.
-
-Discover the psychology behind effective messaging, timing strategies, personalization tactics, and how pre-built templates combined with customization creates the perfect balance for maximum engagement.`,
-    date: "May 10, 2026",
-    category: "Growth",
-    readTime: "8 min read",
-    author: "Sagent Team",
-  },
-  {
-    id: "3",
-    title: "Recruiter Guide: Message Templates for Passive Candidates",
-    slug: "recruiter-message-templates-passive-candidates",
-    excerpt: "Reach more passive candidates with compelling, personalized recruitment messages.",
-    content: `Recruiting top talent requires a different approach than sales. Passive candidates are less likely to respond to generic outreach. In this guide, we share templates and strategies that experienced recruiters use to stand out in crowded inboxes and attract passive candidates.
-
-Learn about voice in recruiting messages, how to highlight career growth, why personalization matters beyond just using names, and how to build pipelines with consistent, thoughtful outreach.`,
-    date: "May 5, 2026",
-    category: "Recruiting",
-    readTime: "6 min read",
-    author: "Sagent Team",
-  },
-  {
-    id: "4",
-    title: "Save Hours Weekly: Why Sales Reps Love Sagent",
-    slug: "save-hours-weekly-why-sales-reps-love-sagent",
-    excerpt: "Real stories from sales professionals about how Sagent saves time and boosts productivity.",
-    content: `Time is your most valuable asset in sales. Every minute saved is a minute you can spend closing deals or building relationships. We interviewed dozens of sales reps to understand how Sagent transforms their daily workflow.
-
-From reducing typing time to organizing message libraries to sending faster than ever, discover real-world productivity gains and how they translate to more closes and higher commissions.`,
-    date: "April 28, 2026",
-    category: "Sales",
-    readTime: "7 min read",
-    author: "Sagent Team",
-  },
-  {
-    id: "5",
-    title: "Best Practices for Building Your Message Library",
-    slug: "best-practices-building-message-library",
-    excerpt: "How to organize and maintain an effective library of message templates that scale.",
-    content: `A well-organized message library is the foundation of using Sagent effectively. This guide covers best practices for categorizing, tagging, and maintaining your templates so they're always accessible and easy to use.
-
-Learn folder structure recommendations, naming conventions that work, when to retire old templates, how to keep templates fresh, and best practices for team sharing and collaboration.`,
-    date: "April 20, 2026",
-    category: "Tips & Tricks",
-    readTime: "5 min read",
-    author: "Sagent Team",
-  },
-]
+import { blogPosts, type BlogPost } from "@/lib/blog-data"
 
 export function BlogIndex() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
@@ -99,7 +13,6 @@ export function BlogIndex() {
   return (
     <section className="w-full flex justify-center items-start border-b border-[rgba(55,50,47,0.12)]">
       <div className="section-block-wide flex flex-col justify-start items-stretch gap-10 sm:gap-12">
-        {/* Header */}
         <div className="w-full flex flex-col justify-start items-start gap-4">
           <div className="text-[#37322F] text-4xl md:text-5xl font-semibold leading-tight font-sans">
             Sagent Blog
@@ -109,7 +22,6 @@ export function BlogIndex() {
           </p>
         </div>
 
-        {/* Category Filter */}
         <div className="w-full flex flex-wrap gap-3">
           <button
             onClick={() => setSelectedCategory(null)}
@@ -136,7 +48,6 @@ export function BlogIndex() {
           ))}
         </div>
 
-        {/* Blog Grid */}
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {filteredPosts.map((post) => (
             <Link key={post.id} href={`/blog/${post.slug}`}>
@@ -174,7 +85,6 @@ export function BlogPostDetail({ post }: { post: BlogPost }) {
   return (
     <section className="w-full flex justify-center items-start">
       <div className="w-full max-w-[800px] px-4 md:px-8 py-16 md:py-24">
-        {/* Post Header */}
         <article className="w-full">
           <div className="mb-6 flex items-center gap-2">
             <span className="text-xs font-medium text-[#605A57] bg-white/50 px-3 py-1 rounded-full">
@@ -192,7 +102,6 @@ export function BlogPostDetail({ post }: { post: BlogPost }) {
             <span className="text-sm text-[#605A57]">{post.date}</span>
           </div>
 
-          {/* Featured Image Section */}
           <div className="w-full h-56 sm:h-80 md:h-96 bg-gradient-to-br from-[#EDE9F6] to-[#E8DFF4] rounded-lg flex items-center justify-center mb-8 sm:mb-12">
             <div className="text-center">
               <div className="text-6xl mb-2">📚</div>
@@ -200,7 +109,6 @@ export function BlogPostDetail({ post }: { post: BlogPost }) {
             </div>
           </div>
 
-          {/* Post Content */}
           <div className="prose prose-lg text-[#49423D] leading-relaxed max-w-none">
             {post.content.split("\n\n").map((paragraph, idx) => (
               <p key={idx} className="mb-6 text-base leading-7 font-sans">
@@ -209,7 +117,6 @@ export function BlogPostDetail({ post }: { post: BlogPost }) {
             ))}
           </div>
 
-          {/* CTA */}
           <div className="mt-12 p-6 md:p-8 bg-[rgba(237,233,246,0.5)] rounded-lg border border-[rgba(55,50,47,0.12)]">
             <h3 className="text-lg font-semibold text-[#37322F] mb-2">Ready to save more time?</h3>
             <p className="text-sm text-[#605A57] mb-4">
