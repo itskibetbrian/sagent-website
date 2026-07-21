@@ -22,6 +22,18 @@ export const seoRoutes = [
     priority: 1,
   },
   {
+    path: "/help",
+    title: "Sagent Help Center | Getting Started & FAQ",
+    description: "Find answers to common questions about using Sagent. Learn how to create templates, send messages, and more.",
+    priority: 0.6,
+  },
+  {
+    path: "/blog",
+    title: "Sagent Blog | Sales & Recruiting Tips",
+    description: "Read articles about sales messaging, recruiting strategies, and productivity tips from the Sagent blog.",
+    priority: 0.6,
+  },
+  {
     path: "/privacy",
     title: "Sagent Privacy Policy | Your Data Protection",
     description: "Sagent's privacy policy: Learn how we protect your messages, handle local storage, and manage third-party integrations securely.",
@@ -32,6 +44,13 @@ export const seoRoutes = [
     title: "Sagent Terms & Conditions | Legal Agreement",
     description: "Review Sagent's terms and conditions, usage guidelines, and legal agreement for using our messaging platform.",
     priority: 0.4,
+  },
+  {
+    path: "/success",
+    title: "Payment Successful | Sagent",
+    description: "Your payment was processed successfully. Thank you for subscribing to Sagent.",
+    priority: 0,
+    noIndex: true,
   },
 ] as const
 
@@ -44,11 +63,17 @@ export function createPageMetadata({
   description,
   path,
   noIndex = false,
+  publishedTime,
+  modifiedTime,
+  authors,
 }: {
   title: string
   description: string
   path: string
   noIndex?: boolean
+  publishedTime?: string
+  modifiedTime?: string
+  authors?: string[]
 }): Metadata {
   const url = absoluteUrl(path)
 
@@ -71,6 +96,9 @@ export function createPageMetadata({
           alt: title,
         },
       ],
+      ...(publishedTime ? { publishedTime } : {}),
+      ...(modifiedTime ? { modifiedTime } : {}),
+      ...(authors ? { authors } : {}),
     },
     twitter: {
       card: "summary_large_image",

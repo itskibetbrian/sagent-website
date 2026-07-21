@@ -1,7 +1,7 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Instrument_Serif, Onest } from "next/font/google"
-import { defaultDescription, iconPath, ogImage, ogImagePath, siteName, siteUrl, themeColor } from "@/lib/seo"
+import { defaultDescription, iconPath, ogImage, ogImagePath, siteName, siteUrl, themeColor, absoluteUrl } from "@/lib/seo"
 import "./globals.css"
 
 const onest = Onest({
@@ -103,21 +103,64 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
-              "name": "Sagent",
-              "operatingSystem": "iOS, Android",
-              "applicationCategory": "BusinessApplication, ProductivityApplication",
-              "description": defaultDescription,
-              "offers": {
+              name: "Sagent",
+              operatingSystem: "iOS, Android",
+              applicationCategory: "BusinessApplication, ProductivityApplication",
+              description: defaultDescription,
+              offers: {
                 "@type": "Offer",
-                "price": "0.00",
-                "priceCurrency": "USD"
+                price: "0.00",
+                priceCurrency: "USD",
               },
-              "aggregateRating": {
+              aggregateRating: {
                 "@type": "AggregateRating",
-                "ratingValue": "4.8",
-                "ratingCount": "1050"
-              }
-            })
+                ratingValue: "4.8",
+                ratingCount: "1050",
+              },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Sagent",
+              url: siteUrl,
+              logo: absoluteUrl("/icon.png"),
+              sameAs: [
+                "https://facebook.com/gosagent",
+                "https://x.com/sagentsales",
+                "https://instagram.com/sagentsales",
+                "https://youtube.com/sagentsales",
+              ],
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "customer support",
+                url: siteUrl,
+              },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: siteName,
+              url: siteUrl,
+              description: defaultDescription,
+              potentialAction: {
+                "@type": "SearchAction",
+                target: {
+                  "@type": "EntryPoint",
+                  urlTemplate: `${siteUrl}/search?q={search_term_string}`,
+                },
+                "query-input": "required name=search_term_string",
+              },
+            }),
           }}
         />
       </head>
